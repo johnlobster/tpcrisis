@@ -1,26 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+// import * as ReactDOM from "react-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+// import Tp crisis react components
+import TpHeader from "./components/TpHeader/TpHeader";
+import Home from "./pages/Home/Home";
+
+import * as globalTypes from  "./globals/globalTypes";
+
+enum ScreenType {Mobile, Tablet, Desktop}
+
+interface Props { }
+
+interface State {
+  currentScreen:globalTypes.ScreenType ;
+};
+
+class App extends React.Component<Props, State>{
+
+  state:State = {
+    currentScreen: globalTypes.ScreenType.Mobile // Mobile first
+  }
+
+  render () {
+    return(
+      
+
+      <Router>
+        <div className="App">
+          <TpHeader />
+        </div>
+
+        <Switch>
+          <Route exact path='/' component={Home} />
+        </Switch>
+      </Router>
   );
+  }
 }
-
 export default App;
