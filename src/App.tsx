@@ -4,7 +4,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // import Tp crisis react components
 import TpHeader from "./components/TpHeader/TpHeader";
+import TpNav from "./components/TpNav/TpNav"
 import Home from "./pages/Home/Home";
+import TpFooter from "./components/TpFooter/TpFooter";
+
 
 import * as globalTypes from  "./globals/globalTypes";
 
@@ -24,17 +27,28 @@ class App extends React.Component<Props, State>{
 
   render () {
     return(
-      
+      <div>
 
-      <Router>
-        <div className="App">
+        
+
+        <Router>
+
           <TpHeader />
-        </div>
+          <TpNav />
 
-        <Switch>
-          <Route exact path='/' component={Home} />
-        </Switch>
-      </Router>
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/Home' component={Home} />
+
+          </Switch>
+
+          <TpFooter />
+
+        </Router>
+
+
+      </div>
+      
   );
   }
 }
