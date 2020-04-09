@@ -1,0 +1,30 @@
+/* Toilet paper crisis colours */
+
+/* base colours */
+$tpPrimary: blue;
+$tpSecondary: grey;
+
+$headerBackground: #d9d2d2;
+$navBackground: scale-color($headerBackground, $saturation: +10%,$lightness: -20%);
+$pageBackground: scale-color($headerBackground, $saturation: -10%, $lightness: +20%);
+$footerBackground: scale-color($headerBackground, $lightness: -20%);
+
+$titleTextColour: #020944; /* very dark blue */
+
+/* Darker shades */
+$tpPrimary-d1: scale-color($tpPrimary, $lightness: -20%); 
+$tpPrimary-d2: scale-color($tpPrimary, $lightness: -40%); 
+$tpPrimary-d3: scale-color($tpPrimary, $lightness: -60%); 
+
+$tpSecondary-d1: scale-color($tpSecondary, $lightness: -20%); 
+$tpSecondary-d2: scale-color($tpSecondary, $lightness: -40%); 
+$tpSecondary-d3: scale-color($tpSecondary, $lightness: -60%); 
+
+/* Lighter shades */
+$tpPrimary-l1: scale-color($tpPrimary, $lightness: +15%); 
+$tpPrimary-l2: scale-color($tpPrimary, $lightness: +30%); 
+$tpPrimary-l3: scale-color($tpPrimary, $lightness: +45%); 
+
+$tpSecondary-l1: scale-color($tpSecondary, $lightness: +15%); 
+$tpSecondary-l2: scale-color($tpSecondary, $lightness: +30%); 
+$tpSecondary-l3: scale-color($tpSecondary, $lightness: +45%); 

@@ -65,12 +65,13 @@
         animation-timing-function: linear;
         animation-direction: normal;
 
+        z-index: 1000;
       }
     </style>
 
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>You need to enable JavaScript to see this website</noscript>
     
     <!-- <img id="loadingSpinner" src= "%PUBLIC_URL%/assets/images/tRoll2.png" alt="Toilet paper"> -->
     <img id="loadingSpinner" src="assets/images/tRoll2.png" alt="Toilet paper">
@@ -90,6 +91,13 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"></script>
+
+    <!-- When everything is ready, get rid of the spinner. Might be better to do this in App.tsx -->
+    <script>
+      $(document).ready(function () {
+        console.log("Everything loaded");
+        $("#loadingSpinner").hide();
+      });
+    </script>
   </body>
 </html>
-

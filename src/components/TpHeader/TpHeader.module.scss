@@ -1,0 +1,52 @@
+@import "../../globals/colours";
+@import "../../globals/fonts";
+
+@keyframes bouncy {
+  0% { transform: rotate(0) translateX(0);}
+  20% {transform: rotate(-7deg) translateX(-5px);}
+  30% {transform: rotate(-7deg) translateX(-5px);}
+  60% {transform: rotate(5deg) translateX(2px);}
+  80% {transform: rotate(5deg) translateX(2px);}
+  100% { transform: rotate(0) translateX(0);}
+
+
+}
+.tpContainer {
+  background-color: $headerBackground;
+}
+
+.imBox {
+  justify-content:space-around;
+}
+
+.im {
+  animation-name: bouncy;
+  animation-iteration-count:infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+
+  height: 12vw;
+  padding: 0.3em;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.imVirus {
+  animation-duration: 2s;
+}
+
+.imTP {
+  animation-duration: 1.75s;
+}
+
+.title {
+  font-family: $titleFont;
+  font-weight: bold;
+  font-size: 3em;
+  letter-spacing: 0.08em;
+  color: $titleTextColour;
+  text-align: center;
+  margin-top:auto;
+  margin-bottom: auto;
+  
+}
