@@ -96,7 +96,9 @@ You’re either on a roll or taking shit from someone`,
 `So many people are stockpiling toilet paper because of the Coronavirus
 They must be shitting themselves`,
 
-  `I can't believe I pay so much money per year for toilet paper
+`If you need 200 toilet rolls for quarantine, then you should have seen a doctor a long time ago`,
+
+`I can't believe I pay so much money per year for toilet paper
 It's a total rip-off`
 ];
 

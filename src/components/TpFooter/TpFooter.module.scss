@@ -1,0 +1,36 @@
+@import "../../globals/colours";
+@import "../../globals/fonts";
+
+.noBreak {
+  white-space: nowrap;
+}
+.tpContainer {
+  background-color: $headerBackground;
+}
+
+.cookieBox {
+  padding-right: 0.3em;
+  padding-left: 0.3em;
+}
+.cookie {
+  width: 100%;
+  padding: 0.3em;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.noCookiesBox {
+  padding-left: 0.3em;
+}
+
+.footerTitle {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 1.1em;
+  font-style: italic;
+}

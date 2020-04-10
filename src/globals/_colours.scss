@@ -1,15 +1,21 @@
 /* Toilet paper crisis colours */
 
 /* base colours */
+/* backgrounds */
 $tpPrimary: blue;
 $tpSecondary: grey;
 
 $headerBackground: #d9d2d2;
-$navBackground: scale-color($headerBackground, $saturation: +10%,$lightness: -20%);
+$headerBackgroundShade: scale-color($headerBackground, $lightness: -70%);
+$navBackground: scale-color($headerBackground, $saturation: +10%, $lightness: -20%);
 $pageBackground: scale-color($headerBackground, $saturation: -10%, $lightness: +20%);
 $footerBackground: scale-color($headerBackground, $lightness: -20%);
 
-$titleTextColour: #020944; /* very dark blue */
+$bodyBackground: scale-color($headerBackground, $lightness: 70%);
+$covidBackground: scale-color($bodyBackground, $hue: 30%);
+$covidLinkBackground: scale-color($covidBackground, $lightness: -25%, $hue: -10%);
+
+
 
 /* Darker shades */
 $tpPrimary-d1: scale-color($tpPrimary, $lightness: -20%); 
@@ -28,3 +34,17 @@ $tpPrimary-l3: scale-color($tpPrimary, $lightness: +45%);
 $tpSecondary-l1: scale-color($tpSecondary, $lightness: +15%); 
 $tpSecondary-l2: scale-color($tpSecondary, $lightness: +30%); 
 $tpSecondary-l3: scale-color($tpSecondary, $lightness: +45%); 
+
+/* text colours */
+$titleTextColour: #020944; /* very dark blue */
+$tpTextColour: #2c2e52;
+$tpLinkTextColour: scale-color($tpTextColour, $lightness: +25%, $saturation: 10%);
+$covidText: #742e2e; /* dark red */
+$covidTextLink: #0f4c81; // Pantone colour of the year 2020
+$covidTextLinkHover: scale-color($covidTextLink, $lightness: 10%); 
+
+/* Lighter shades */
+$titleTextColour-l1: scale-color($titleTextColour, $lightness: +15%);
+$titleTextColour-l1: scale-color($titleTextColour, $lightness: +30%);
+$titleTextColour-l1: scale-color($titleTextColour, $lightness: +40%);
+

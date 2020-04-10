@@ -7,6 +7,7 @@ import TpHeader from "./components/TpHeader/TpHeader";
 import TpNav from "./components/TpNav/TpNav"
 import Home from "./pages/Home/Home";
 import TpFooter from "./components/TpFooter/TpFooter";
+import "./App.scss";
 
 
 import * as globalTypes from  "./globals/globalTypes";

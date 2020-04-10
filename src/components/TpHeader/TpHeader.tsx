@@ -22,20 +22,32 @@ const TpHeader: React.FunctionComponent<{}> = () => {
         </div>
 
         <div className={styles.imBox + " col-6 col-md-2 d-block d-md-none"}>
-          <img className={`${styles.im}  ${styles.imTP}`} src={roll} alt="Toilet paper"></img>
+          <Link
+          to="/Home"
+          role="button" aria-haspopup="true" aria-expanded="false">
+            <img className={`${styles.im}  ${styles.imTP}`} src={roll} alt="Toilet paper"></img>
+          </Link>
         </div>
 
         <div className={styles.title + " col-12 col-md-8"}>
-          Toilet Paper Crisis
+          <Link
+            to="/Home"
+            role="button" aria-haspopup="true" aria-expanded="false">
+              Toilet Paper Crisis
+          </Link>
         </div>
         
         <div className={styles.imBox + " col-6 col-md-2 d-none d-md-block"}>
-          <img className={`${styles.im} ${styles.imTP}`}src={roll} alt="Toilet paper"></img>
+          <Link
+            to="/Home"
+            role="button" aria-haspopup="true" aria-expanded="false">
+            <img className={`${styles.im}  ${styles.imTP}`} src={roll} alt="Toilet paper"></img>
+          </Link>
         </div>
 
       </div>
 
-  </div>
+    </div>
   );
 };
 

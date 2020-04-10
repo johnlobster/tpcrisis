@@ -1,7 +1,24 @@
 // Lugosi by Bumbayo Font Fabrik
+// used for app title in header
+// rough display font
 @font-face {
   font-family: Lugosi;
   src: url(../fonts/Lugosi.otf);
 } 
-
 $titleFont: Lugosi;
+
+$paragraphFont: Sen;
+
+//Sen – a Geohumanist sans, is Philatype’s first typeface released
+// used for paragraphs
+// set up in App.scss
+// font-family: 'Sen', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+
+@font-face {
+  font-family: LuxisSansBold;
+  src: url(../fonts/luxisb-webfont.woff) format('woff');
+}
+
+$covidFont: LuxisSansBold;

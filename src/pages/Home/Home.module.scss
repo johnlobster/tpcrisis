@@ -5,5 +5,27 @@
   background-color: $pageBackground;
 }
 .covid19 {
-  font-size: 1.25em;
+  font-size: 1.4em;
+  // This font only has a single weight - bold
+  font-family: $covidFont, -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+  color: $covidText;
+  line-height: 1.35em;
+  background-color: $covidBackground;
+  
+  & a {
+    color: $covidTextLink;
+  }
+
+  & a:hover {
+    color: $covidTextLinkHover;
+    background-color: $covidLinkBackground;
+  }
+}
+
+.covidTitle {
+  font-size: 1.6em;
+}
+
+.gap {
+  height: 0.25em;
 }

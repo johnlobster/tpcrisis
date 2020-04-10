@@ -8,8 +8,11 @@
   60% {transform: rotate(5deg) translateX(2px);}
   80% {transform: rotate(5deg) translateX(2px);}
   100% { transform: rotate(0) translateX(0);}
-
-
+}
+@keyframes bouncyHover {
+  0% { transform: scale(1.1) rotate(0) ;}
+  50% {transform: scale(1.1) rotate(180deg) ;}
+  100% { transform: scale(1.1) rotate(360deg) translateX(0);}
 }
 .tpContainer {
   background-color: $headerBackground;
@@ -26,9 +29,15 @@
   animation-direction: normal;
 
   height: 12vw;
+  min-height: 120px;
   padding: 0.3em;
   margin-left:auto;
   margin-right: auto;
+}
+
+// hover behavior tricky. Can't easily do box-shadow on a png image. Rotate instead of bounce
+.im:hover {
+  animation-name: bouncyHover;
 }
 
 .imVirus {
@@ -40,13 +49,22 @@
 }
 
 .title {
-  font-family: $titleFont;
+  font-family: $titleFont, serif;
   font-weight: bold;
   font-size: 3em;
-  letter-spacing: 0.08em;
-  color: $titleTextColour;
+  letter-spacing: 0.1em;
   text-align: center;
   margin-top:auto;
   margin-bottom: auto;
-  
+
+  &:hover {
+    transition: scale 0.25s;
+    transform: scale(1.04,1.04);
+  }
+
+  & a {
+    color: $titleTextColour; // has to be here, otherwise does not get styled
+  }
+
 }
+
