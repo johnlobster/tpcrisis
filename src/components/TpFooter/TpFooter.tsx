@@ -38,10 +38,16 @@ const TpFooter: React.FunctionComponent<{}> = () => {
 
       <div className="row">
         <div className="col-12">
-          <p>About link and donations go here</p>
+          <p>Send new stuff about toilet paper</p>
         </div>
       </div>
 
+      <div className="row">
+        <div className="col-12">
+          <p>About link and donations go here</p>
+        </div>
+      
+      </div>
       <div className="row pb-2">
         <div className={styles.copyright + " col-12"}>
           © 2019 Copyright John Webster
@@ -53,4 +59,3 @@ const TpFooter: React.FunctionComponent<{}> = () => {
 
 export default TpFooter;
 
-// Note at the "This website serves no <span>cookies" &nbsp is used. This means no break space
