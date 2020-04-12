@@ -1,10 +1,10 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
 
-import styles from "./Facts.module.scss";
+import styles from "./Insanity.module.scss";
 
 
-const Facts: React.FunctionComponent<{}> = () => {
+const Insanity: React.FunctionComponent<{}> = () => {
   return (
     <div className={styles.page + " container-sm"}>
       <div className="col-12">
@@ -13,4 +13,4 @@ const Facts: React.FunctionComponent<{}> = () => {
     </div>
   );
 }
-export default Facts;
+export default Insanity;
