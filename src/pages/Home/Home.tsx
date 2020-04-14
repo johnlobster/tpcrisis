@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import TpLink from "../../components/TpLink/TpLink";
+
 import Calc from "./Calc";
 import Jokes from "./Jokes";
 import styles from "./Home.module.scss";
@@ -12,7 +14,7 @@ const Gap: React.FunctionComponent<{}> = () => {
 
 }
 
-const Home: React.FunctionComponent<{}> = (props) => {
+const Home: React.FunctionComponent<{}> = () => {
   return( 
     <div className={styles.page + " container-sm"}>
       <div className="row">
@@ -58,7 +60,26 @@ const Home: React.FunctionComponent<{}> = (props) => {
           </div>
         </div>
       </div>
-      <Calc />
+      <div className="row">
+        <div className={styles.temp + " col-12"}>
+          <br></br>
+            <TpLink to="#">
+              Test link #1
+            </TpLink>
+            <TpLink to="/somewhere">
+              Test link #2
+            </TpLink>
+          <TpLink to="/somewhereelse">
+            Test link #3
+            </TpLink>
+            <TpLink to="/nowhere">
+              Test link #4
+            </TpLink>
+          <br></br>
+        </div>
+        <Calc />
+      </div>
+      
       <Jokes />
     </div>
   );

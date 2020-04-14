@@ -5,7 +5,7 @@
   background-color: $pageBackground;
 }
 .covid19 {
-  font-size: 1.4em;
+  font-size: 1.2em;
   // This font only has a single weight - bold
   font-family: $covidFont, -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
   color: $covidText;
@@ -28,4 +28,9 @@
 
 .gap {
   height: 0.25em;
+}
+
+// used for link testing
+.temp {
+  background-color: $pageBackground;
 }

@@ -1,0 +1,36 @@
+@import "../../globals/colours";
+@import "../../globals/fonts";
+
+.linkStyle a {
+  border-radius: 0.2em;
+  color: $tpTextLinkColour;
+}
+
+.linkStyle {
+
+  // ToDo add box-shadow to hover/visited
+
+  & a:link {
+    color: $tpTextLinkColour;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    padding-bottom: 0.1em;
+  }
+
+  & a:visited {
+    color: $tpVisitedColour;
+  }
+
+  & a:hover {
+    color: $tpLinkHoverColour;
+    background-color: $tpLinkHoverBackground;
+  }
+
+  // ToDo active - animation for active similar to Material Design
+  & a:active {
+    color: $tpLinkActiveColour;
+    background-color: $tpLinkActiveBackground;
+  }
+
+  
+}

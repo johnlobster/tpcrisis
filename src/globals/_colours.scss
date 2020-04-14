@@ -5,13 +5,13 @@
 $tpPrimary: blue;
 $tpSecondary: grey;
 
-$headerBackground: #d9d2d2;
+$headerBackground: #afadad;
 $headerBackgroundShade: scale-color($headerBackground, $lightness: -70%);
 $navBackground: scale-color($headerBackground, $saturation: +10%, $lightness: -20%);
-$pageBackground: scale-color($headerBackground, $saturation: -10%, $lightness: +20%);
-$footerBackground: scale-color($headerBackground, $lightness: -20%);
+$pageBackground: scale-color($headerBackground, $saturation: -10%, $lightness: +40%);
+$footerBackground: $headerBackground;
 
-$bodyBackground: scale-color($headerBackground, $lightness: 70%);
+$bodyBackground: $pageBackground;
 $covidBackground: scale-color($bodyBackground, $hue: 30%);
 $covidLinkBackground: scale-color($covidBackground, $lightness: -25%, $hue: -10%);
 
@@ -38,10 +38,20 @@ $tpSecondary-l3: scale-color($tpSecondary, $lightness: +45%);
 /* text colours */
 $titleTextColour: #020944; /* very dark blue */
 $tpTextColour: #2c2e52;
-$tpLinkTextColour: scale-color($tpTextColour, $lightness: +25%, $saturation: 10%);
 $covidText: #742e2e; /* dark red */
 $covidTextLink: #0f4c81; // Pantone colour of the year 2020
 $covidTextLinkHover: scale-color($covidTextLink, $lightness: 10%); 
+
+/* Link colours */
+$tpTextLinkColour: scale-color($tpTextColour, $lightness: +25%, $saturation: 10%);
+$tpLinkHoverColour: scale-color($tpTextLinkColour, $lightness: -20%, $saturation: 10%);
+$tpLinkActiveColour: red;
+// $tpVisitedColour: scale-color($tpTextLinkColour, $lightness: -30%);
+$tpVisitedColour: green;
+
+$tpLinkHoverBackground: scale-color($bodyBackground, $lightness: -25%, $hue: -10%);
+$tpLinkActiveBackground: scale-color($bodyBackground, $lightness: -25%, $hue: -10%);
+// Note - Hover and Active should be different, do that can see when button pressed on desktop //
 
 /* Lighter shades */
 $titleTextColour-l1: scale-color($titleTextColour, $lightness: +15%);

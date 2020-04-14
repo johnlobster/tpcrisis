@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import styles from "./About.module.scss";
 
 
 const About: React.FunctionComponent<{}> = () => {
   return (
-    <div className={styles.tpContainer + " container-sm"} >
+    <div className={styles.page + " container-sm"} >
+
       <div className="row">
         
         <div className={styles.copyBox + " col-12"}>

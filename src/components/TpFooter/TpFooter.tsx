@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
+import TpLink from "../TpLink/TpLink";
 import styles from "./TpFooter.module.scss";
 import cookie from "../../images/cookie.gif";
 
@@ -27,10 +27,9 @@ const TpFooter: React.FunctionComponent<{}> = () => {
             so no secret cookies, tracking, 0 pixel ads, or anything like that. Not even Facebook and Google will know that 
             you are here. I hope that doesn't make you feel lonely.
             <br />
-            <Link to="/About"
-              role="button" aria-haspopup="true" aria-expanded="false">
+            <TpLink to="/About">
               Click here to find out more about cookies
-            </Link>
+            </TpLink>
           </p>
           
         </div>
@@ -50,7 +49,9 @@ const TpFooter: React.FunctionComponent<{}> = () => {
       </div>
       <div className="row pb-2">
         <div className={styles.copyright + " col-12"}>
-          © 2019 Copyright John Webster
+          <TpLink to="/about">
+            © 2020 John Webster MIT licence
+          </TpLink>
         </div>
       </div>
     </div>
