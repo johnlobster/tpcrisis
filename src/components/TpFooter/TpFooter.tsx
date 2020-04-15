@@ -1,24 +1,20 @@
 import React from 'react';
 
 import TpLink from "../TpLink/TpLink";
+import NoBreak from "../NoBreak/NoBreak";
 import styles from "./TpFooter.module.scss";
 import cookie from "../../images/cookie.gif";
 
-const NoBreak: React.FunctionComponent<{}> = (props) => {
-  return (
-    <span className={styles.noBreak}>{props.children}</span>
-  );
 
-}
 
 const TpFooter: React.FunctionComponent<{}> = () => {
   return (
     <div  className = {styles.tpContainer + " container-sm" } >
       <div className="row pt-2">
-        <div className={styles.cookieBox + " col-12 col-md-5"}>
+        <div className={styles.cookieBox + " col-12 col-md-4"}>
           <img src={cookie} alt="No cookies here" className={styles.cookie}/>
         </div>
-        <div className={styles.noCookiesBox + " col-12 col-md-7"}>
+        <div className={styles.noCookiesBox + " col-12 col-md-8"}>
           <p className={styles.footerTitle}>
               This website serves no <NoBreak>cookies !!</NoBreak>
           </p>
@@ -36,27 +32,40 @@ const TpFooter: React.FunctionComponent<{}> = () => {
       </div>
 
       <div className="row">
-        <div className="col-12">
-          <p>Send new stuff about toilet paper</p>
+        <div className="col-12 col-md-6">
+          <div>
+            Have the best toilet paper joke on the planet ? Know something cool ? 
+          </div>
+          <TpLink to ="/Contribute">
+            Click here to send me some great stuff
+          </TpLink>
+          <TpLink to="/About">
+            Click here to find out more about this website
+          </TpLink>
         </div>
+
+        <div className="col-12 col-md-6">
+            
+          <TpLink to="/About">
+            Click here to make a donation
+          </TpLink>
+        </div>
+
       </div>
 
-      <div className="row">
-        <div className="col-12">
-          <p>About link and donations go here</p>
-        </div>
-      
-      </div>
-      <div className="row pb-2">
+      <div className="row pb-2 pt-2">
         <div className={styles.copyright + " col-12"}>
-          <TpLink to="/about">
+          <TpLink to="/About">
             © 2020 John Webster MIT licence
           </TpLink>
         </div>
       </div>
+
     </div>
   );
 };
 
 export default TpFooter;
+
+// ToDo add coin gif or something similar to the donate box. Probably whole thing should be clickable
 

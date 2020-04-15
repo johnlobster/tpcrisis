@@ -15,6 +15,7 @@ import Covid19 from "./pages/Covid19/Covid19";
 import Facts from "./pages/Facts/Facts";
 import Insanity from "./pages/Insanity/Insanity";
 import Alternatives from "./pages/Alternatives/Alternatives";
+import Contribute from "./pages/Contribute/Contribute";
 
 import "./App.scss";
 
@@ -49,8 +50,12 @@ class App extends React.Component<Props, State>{
           <Route path='/Covid19' component={Covid19} />
           <Route path='/Facts' component={Facts} />
           <Route path='/Insanity' component={Insanity} />
-          <Route path='*' component={Tp404} />
-        
+          <Route path='/Contribute' component={Contribute} />
+
+          <Route 
+            path='*' 
+            component = {Tp404} 
+          />
         </Switch>
         
         <TpFooter />
@@ -61,3 +66,8 @@ class App extends React.Component<Props, State>{
   }
 }
 export default App;
+
+/* <Route
+  path='*'
+  render={() => <Tp404 hyperlinkTarget="Here we are" />}
+/> */

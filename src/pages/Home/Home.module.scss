@@ -4,6 +4,9 @@
 .page {
   background-color: $pageBackground;
 }
+
+
+
 .covid19 {
   font-size: 1.2em;
   // This font only has a single weight - bold
@@ -19,7 +22,16 @@
   & a:hover {
     color: $covidTextLinkHover;
     background-color: $covidLinkBackground;
+    text-decoration: none;
   }
+}
+
+// ToDo full styling for covid links (or maybe convert to TpLink)
+// add :link :visited :active
+
+.hyperlink {
+  color: red;
+  padding-bottom: 0.1em;
 }
 
 .covidTitle {
@@ -27,10 +39,22 @@
 }
 
 .gap {
-  height: 0.25em;
+  height: 0.4em;
 }
 
 // used for link testing
 .temp {
   background-color: $pageBackground;
+}
+
+// ToDo consider making the padding (margins) responsive
+.covidLinkBox {
+  padding-top: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+// Instructions in regular text colour
+.clickMe {
+  color: $tpTextColour;
 }

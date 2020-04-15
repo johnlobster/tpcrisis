@@ -4,6 +4,9 @@
 .linkStyle a {
   border-radius: 0.2em;
   color: $tpTextLinkColour;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+  padding-bottom: 0.1em;
 }
 
 .linkStyle {
@@ -12,9 +15,7 @@
 
   & a:link {
     color: $tpTextLinkColour;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
-    padding-bottom: 0.1em;
+    
   }
 
   & a:visited {
@@ -24,6 +25,7 @@
   & a:hover {
     color: $tpLinkHoverColour;
     background-color: $tpLinkHoverBackground;
+    text-decoration: none;
   }
 
   // ToDo active - animation for active similar to Material Design

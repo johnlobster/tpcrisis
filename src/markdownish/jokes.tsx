@@ -38,7 +38,7 @@ He was quite Charmin, I must say`,
 But I do know how to brown one side`,
 
 `Why did the toilet paper cross the road? 
-To wipe the chickens ass!`,
+To wipe the chickens butt!`,
 
 `Cheap toilet paper is like John Wayne
 It’s rough, tough, leaves a mark, and doesn’t take shit from anybody`,

@@ -1,7 +1,61 @@
 @import "../../globals/colours";
+@import "../../globals/fonts";
 
+// ToDo center and align everything properly
 
+$flashColour: rgb(255, 0, 0);
+$flashColour2: rgb(255, 95, 0);
+@keyframes flashing {
+    0% { transform: scale(1) ; color: $flashColour;}
+    50% { transform: scale(1.08) ; color: $flashColour2; }
+    100% { transform: scale(1) ; color: $flashColour; }
+
+}
 .page {
     background-color: $pageBackground;
 
+}
+
+.hazard {
+    animation-name: flashing;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite ;
+
+    font-size: 2rem;
+    font-weight: bold;
+    color: $flashColour;
+    text-align: center;
+}
+
+.sign {
+    height: 3.5rem;
+}
+.reflect {
+    transform: rotateY(180deg);
+}
+
+.title4 {
+    font-family: $titleFont, serif;
+    font-weight: bold;
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+.tp img {
+    height: 8rem;
+}
+
+.lost {
+    font-size: 1.25rem;
+}
+
+.goHome {
+    padding-top: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.cats {
+    color: red;
 }

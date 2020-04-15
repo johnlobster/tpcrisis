@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import TpLink from "../../components/TpLink/TpLink";
+import hlink from "../../icons/icons8-linking-24.png";
 
 import Calc from "./Calc";
 import Jokes from "./Jokes";
@@ -45,22 +46,47 @@ const Home: React.FunctionComponent<{}> = () => {
             This page contains a toilet paper calculator, that works out how long you will be able to live in lock down
             without having to raid your neighbors' supplies. There are also some simple jokes about toilet paper
           </p>
-          <p>
-            Please click on the following links, or use the navigation menu to explore. 
-          </p>
-          <div>
+          
+          <div className={styles.covidLinkBox}>
+            <p className={styles.clickMe}>
+              Please click on the following links, or use the navigation menu to explore.
+            </p>
             <Link to="/Covid19" role="button" aria-haspopup="true" aria-expanded="false">
-              Click here for more information about the Coronavirus<br/>
+              Information about the Coronavirus <img src={hlink} alt="Hyperlink" className={styles.hyperlink}/><br/>
+            </Link>
+            <Gap />
+            <Link to="/#tpCalculator" role="button" aria-haspopup="true" aria-expanded="false">
+              Toilet paper calculator, how close are we to the end of times ?<br />
+            </Link>
+            <Gap />
+            <Link to="/#tpJokes" role="button" aria-haspopup="true" aria-expanded="false">
+              Toilet paper jokes, no guarantee of quality<br />
             </Link>
             <Gap />
             <Link to="/Alternatives" role="button" aria-haspopup="true" aria-expanded="false">
-              Click here to find some alternatives to toilet paper, you may need this<br/>
+              Alternatives to toilet paper, you may need this<br/>
+            </Link>
+            <Gap />
+            <Link to="/Facts" role="button" aria-haspopup="true" aria-expanded="false">
+              Interesting (or not) facts about toilet paper<br />
+            </Link>
+            <Gap />
+            <Link to="/Insanity" role="button" aria-haspopup="true" aria-expanded="false">
+              Crazy and funny things about toilet paper during pandemic<br />
+            </Link>
+            <Gap />
+            <Link to="/Insanity" role="button" aria-haspopup="true" aria-expanded="false">
+              Send new things about toilet paper or comments to this website<br />
+            </Link>
+            <Gap />
+            <Link to="/About" role="button" aria-haspopup="true" aria-expanded="false">
+              About this website and how to donate if you think throwing away money is a good idea<br />
             </Link>
             <Gap />
           </div>
         </div>
       </div>
-      <div className="row">
+      <div className="row" id="tpCalculator">
         <div className={styles.temp + " col-12"}>
           <br></br>
             <TpLink to="#">
@@ -80,7 +106,10 @@ const Home: React.FunctionComponent<{}> = () => {
         <Calc />
       </div>
       
-      <Jokes />
+      <div id="tpJokes">
+        <Jokes />
+      </div >
+
     </div>
   );
 };
