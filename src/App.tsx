@@ -35,6 +35,21 @@ class App extends React.Component<Props, State>{
       currentScreen : global.ScreenType.Mobile 
   };
 
+  componentDidMount() { 
+    // When everything is ready, get rid of the spinner
+    const fred = document.getElementById("loadingSpinner");
+    console.log("App components is mounting");
+    console.log(fred);
+    if (fred) {
+      setTimeout(() => { 
+        fred.style.display = "none";
+        console.log("spinner display written to");
+      }, 2000);
+      
+    }
+    
+  }
+
   render () { 
     return(
       <Router>

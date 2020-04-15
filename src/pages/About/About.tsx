@@ -10,11 +10,7 @@ const About: React.FunctionComponent<{}> = () => {
     <div className="row">
       <div className="col-12">
         <h3>Stuff I used</h3>
-        <p>
-            <a target="_blank" href="https://icons8.com/icons/set/external-link-squared">Linking icon</a> 
-            icon by 
-            <a target="_blank" href="https://icons8.com">Icons8</a>
-        </p>
+        
       </div>
     </div>
       <div className="row">

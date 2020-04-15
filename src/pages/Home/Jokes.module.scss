@@ -1,0 +1,14 @@
+@import "../../globals/colours";
+@import "../../globals/fonts";
+
+// The joke stuff needs to be a fixed height so different length jokes can scroll down
+.jokeBox {
+  height: 18em;
+}
+
+.title {
+  font-family: $titleFont, serif;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 0.08rem;
+}
