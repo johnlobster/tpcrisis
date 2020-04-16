@@ -6,9 +6,59 @@
   height: 18em;
 }
 
+@keyframes HandleFlushAnimation {
+  0%   {transform: rotate(0);}
+  50%  {transform: rotate(45deg);}
+  100% {transform: rotate(0);}
+}
+
+// throw away toilet paper, shrink, rotate, and move off screen
+@keyframes tpDispose {
+  0% {transform: scale(1) opacity(1) rotateX(0) rotateY(0) translate(0,0) ;}
+  100% {transform: scale(0) opacity(0.6) rotateX(360deg) rotateY(180) translate(50vh,50vh) ;}
+}
 .title {
   font-family: $titleFont, serif;
-    font-weight: bold;
-    font-size: 2rem;
-    letter-spacing: 0.08rem;
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 0.08rem;
+}
+
+.tHandle {
+  height: auto;
+  width: 90%;
+  
+}
+
+.tHandleFlush {
+  animation-name: handleFlushAnimation;
+  animation-duration: 1.5s ;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+
+}
+
+.tpJoke {
+  padding: 1em;
+  width: 60%;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: $tpJokesBorderColour;
+  background-color: $tpJokesBackgroundColour ;
+  // box-shadow: 
+}
+// Joke animation
+// Unroll
+// Throw away
+// - initially, just shrink to nothing, goes down off page
+// Later, crumple and throw into toilet bowl (may be too hard)
+
+.tpFlush {
+  animation-name: tpDispose;
+  animation-delay: 0.5s;
+  animation-duration: 1.5s ;
+  animation-iteration-count: 1;
+}
+.tpUnroll {
+
 }

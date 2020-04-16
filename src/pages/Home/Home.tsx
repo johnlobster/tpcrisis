@@ -55,11 +55,11 @@ const Home: React.FunctionComponent<{}> = () => {
               Information about the Coronavirus <img src={hlink} alt="Hyperlink" className={styles.hyperlink}/><br/>
             </Link>
             <Gap />
-            <Link to="/#tpCalculator" role="button" aria-haspopup="true" aria-expanded="false">
+            <Link to="#tpCalculator" role="button" aria-haspopup="true" aria-expanded="false">
               Toilet paper calculator, how close are we to the end of times ?<br />
             </Link>
             <Gap />
-            <Link to="/#tpJokes" role="button" aria-haspopup="true" aria-expanded="false">
+            <Link to="#tpJokes" role="button" aria-haspopup="true" aria-expanded="false">
               Toilet paper jokes, no guarantee of quality<br />
             </Link>
             <Gap />
@@ -86,6 +86,7 @@ const Home: React.FunctionComponent<{}> = () => {
           </div>
         </div>
       </div>
+
       <div className="row" id="tpCalculator">
         <div className={styles.temp + " col-12"}>
           <br></br>

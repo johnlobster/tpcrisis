@@ -8,9 +8,9 @@ interface  TpLinkProps {
 }
 const TpLink: React.FunctionComponent<TpLinkProps> = (props) => {
   return (
-    <div className={styles.linkStyle}>
+    <span className={styles.linkStyle}>
       <Link to={props.to}>{props.children}</Link>
-    </div>
+    </span>
   );
 };
 

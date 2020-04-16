@@ -37,9 +37,10 @@ class App extends React.Component<Props, State>{
 
   componentDidMount() { 
     // When everything is ready, get rid of the spinner
+    // access spinner directly because it is not in react app hierarchy
     const fred = document.getElementById("loadingSpinner");
     console.log("App components is mounting");
-    console.log(fred);
+    // console.log(fred);
     if (fred) {
       setTimeout(() => { 
         fred.style.display = "none";
