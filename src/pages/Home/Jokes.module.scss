@@ -104,7 +104,7 @@ $jokeOffset: -7em ;
   animation-delay: 0.5s;
   animation-duration: 2s ;
   animation-iteration-count: 1;
-  animation-fill-mode: forward; // maintains properties of last animation frame
+  animation-fill-mode: forward; // maintains properties of last animation frame. This is what I needed
 }
 // Joke animation
 // Unroll
