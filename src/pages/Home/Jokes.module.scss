@@ -1,12 +1,20 @@
 @import "../../globals/colours";
 @import "../../globals/fonts";
 
+// use variables for animation duration - easier to change
+$flushTime: 2s;
+$jokeHeight: 8em;
+$jokeOffset: -7em ;
+
+// ToDo everything should be centered better
+
 // The joke stuff needs to be a fixed height so different length jokes can scroll down
+// ToDo 
 .jokeBox {
-  height: 18em;
+  background-color: $covidBackground;
 }
 
-@keyframes HandleFlushAnimation {
+@keyframes handleFlushAnimation {
   0%   {transform: rotate(0);}
   50%  {transform: rotate(45deg);}
   100% {transform: rotate(0);}
@@ -14,9 +22,25 @@
 
 // throw away toilet paper, shrink, rotate, and move off screen
 @keyframes tpDispose {
-  0% {transform: scale(1) opacity(1) rotateX(0) rotateY(0) translate(0,0) ;}
-  100% {transform: scale(0) opacity(0.6) rotateX(360deg) rotateY(180) translate(50vh,50vh) ;}
+  0% {transform: scale(1) rotate(0) translate(0,0) ; opacity: 1;}
+  25% {transform: scale(1.05) rotate(0) translate(0,0) ; opacity: 1;}
+
+  100% {transform: scale(0.1) rotate(270deg) translate(0,300px) ; opacity: 0;}
 }
+
+// @keyframes tpDispose {
+//   0% {transform: scale(1)  rotateX(0) rotateY(0) translate(0,0) ;}
+//   100% {transform: scale(0.1)  rotateX(360deg) rotateY(180) translate(0,400px) ;}
+// }
+
+// unroll a new joke
+// probably needs to use translate, start under tp picture above, then roll itself out
+// try end image 
+@keyframes unroll {
+  0% {transform: translate(0,$jokeOffset)}
+  100% {transform: translate(0,0)}
+}
+
 .title {
   font-family: $titleFont, serif;
   font-weight: bold;
@@ -30,12 +54,38 @@
   
 }
 
+// toDo change pointer to arrow
+.flushMe {
+  padding: 0.2em;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 0.08rem;
+}
+
 .tHandleFlush {
   animation-name: handleFlushAnimation;
-  animation-duration: 1.5s ;
+  animation-duration: $flushTime ;
   animation-iteration-count: 1;
   animation-timing-function: linear;
 
+}
+
+// ToDo - tiled background, like a toilet ....
+.upperBox {
+      background-color: $covidBackground;
+
+}
+
+// The joke container is sized to be big enough for any of the jokes
+.paperBox {
+  height: $jokeHeight;
+}
+
+// This container hides overflow, so that joke can scroll in
+// ToDo. On mobile, height should be specific
+.tpJokeBox {
+  overflow: hidden;
+  height: auto;
 }
 
 .tpJoke {
@@ -45,7 +95,16 @@
   border-radius: 5px;
   border-color: $tpJokesBorderColour;
   background-color: $tpJokesBackgroundColour ;
-  // box-shadow: 
+  box-shadow: 2px 2px $tpJokesShadowColour;
+
+  opacity: 0;
+
+  // unrolls as soon as enabled
+  animation-name: unroll ;
+  animation-delay: 0.5s;
+  animation-duration: 2s ;
+  animation-iteration-count: 1;
+  animation-fill-mode: forward; // maintains properties of last animation frame
 }
 // Joke animation
 // Unroll
@@ -55,10 +114,6 @@
 
 .tpFlush {
   animation-name: tpDispose;
-  animation-delay: 0.5s;
-  animation-duration: 1.5s ;
+  animation-duration: $flushTime ;
   animation-iteration-count: 1;
-}
-.tpUnroll {
-
 }

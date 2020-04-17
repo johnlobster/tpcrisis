@@ -42,10 +42,11 @@ class App extends React.Component<Props, State>{
     console.log("App components is mounting");
     // console.log(fred);
     if (fred) {
+      // using a timeout might be overkill. Perhaps also fade in react app
       setTimeout(() => { 
         fred.style.display = "none";
         console.log("spinner display written to");
-      }, 2000);
+      }, 1000);
       
     }
     

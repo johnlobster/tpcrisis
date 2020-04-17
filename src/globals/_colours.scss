@@ -12,12 +12,13 @@ $pageBackground: scale-color($headerBackground, $saturation: -10%, $lightness: +
 $footerBackground: $headerBackground;
 
 $bodyBackground: $pageBackground;
-$covidBackground: scale-color($bodyBackground, $hue: 30%);
+$covidBackground: scale-color($bodyBackground, $hue: 30%, $lightness: +40%);
 $covidLinkBackground: scale-color($covidBackground, $lightness: -25%, $hue: -10%);
 
 /* short Jokes on a toilet roll */
 $tpJokesBorderColour: #6f7065;
 $tpJokesBackgroundColour:  #e4e7bc;
+$tpJokesShadowColour: #313131; 
 
 
 /* Darker shades */
