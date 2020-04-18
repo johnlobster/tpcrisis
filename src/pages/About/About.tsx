@@ -34,22 +34,29 @@ const About: React.FunctionComponent<{}> = () => {
       <div id="tpDonate" className="row">
         <div className="col-12">
           <h3>Donations</h3>
-          <p>Some information about how to donate</p>
+          <p>Animated dollar bill. Some information about how to donate</p>
         </div>
       </div>
 
       <div className="row">
         <div className="col-12">
           <h3>Key software used to build this website</h3>
-          <p>Image. react etc.</p>
+          <p>Image. react etc.stack overflow</p>
         </div>
       </div>
 
-      <div className="row">
+      <div id="tpStuff" className="row">
         <div className="col-12">
           <h3>Stuff I used</h3>
           <p>licenses, links to other stuff. Websites, Wikipedia etc.</p>
           <p>Humour inspired by Monty Python, Mad Magazine and a number of other sources too dubious to mention</p>
+        </div>
+      </div>
+
+      <div id="tpPrivcacy" className="row">
+        <div className="col-12">
+          <h3>Privacy and cookies</h3>
+          <p>This website collects no data and uses no cookies or other similar technologies</p>
         </div>
       </div>
 
