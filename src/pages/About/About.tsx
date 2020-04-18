@@ -9,7 +9,7 @@ const About: React.FunctionComponent<{}> = () => {
   return (
     <div className={styles.page + " container-sm"} >
 
-      <div className="row">
+      <div id="tpContact" className="row">
         <div className="col-9">
           <h3>Contact</h3>
           <p>My name is John Webster and I approve this website</p>
@@ -31,7 +31,7 @@ const About: React.FunctionComponent<{}> = () => {
       </div>
 
       
-      <div className="row">
+      <div id="tpDonate" className="row">
         <div className="col-12">
           <h3>Donations</h3>
           <p>Some information about how to donate</p>
@@ -53,7 +53,7 @@ const About: React.FunctionComponent<{}> = () => {
         </div>
       </div>
 
-      <div className="row">
+      <div id="tpCopyright" className="row">
         <div className="col-12">
           
           <h4>Copyright information for this website</h4>
