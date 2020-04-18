@@ -3,8 +3,8 @@
 
 // use variables for animation duration - easier to change
 $flushTime: 2s;
-$jokeHeight: 8em;
-$jokeOffset: -7em ;
+$jokeHeight: 10em;
+$jokeOffset: -8em ;
 
 // ToDo everything should be centered better
 
@@ -25,20 +25,15 @@ $jokeOffset: -7em ;
   0% {transform: scale(1) rotate(0) translate(0,0) ; opacity: 1;}
   25% {transform: scale(1.05) rotate(0) translate(0,0) ; opacity: 1;}
 
-  100% {transform: scale(0.1) rotate(270deg) translate(0,300px) ; opacity: 0;}
+  98% {transform: scale(0.1) rotate(270deg) translate(0,300px) ; opacity: 0.7;}
+  100% {transform: scale(0) rotate(270deg) translate(0,300px) ; opacity: 0;}
 }
 
-// @keyframes tpDispose {
-//   0% {transform: scale(1)  rotateX(0) rotateY(0) translate(0,0) ;}
-//   100% {transform: scale(0.1)  rotateX(360deg) rotateY(180) translate(0,400px) ;}
-// }
-
 // unroll a new joke
-// probably needs to use translate, start under tp picture above, then roll itself out
-// try end image 
+
 @keyframes unroll {
-  0% {transform: translate(0,$jokeOffset)}
-  100% {transform: translate(0,0)}
+  0% {transform: translate(0,$jokeOffset); opacity: 1;}
+  100% {transform: translate(0,0); opacity: 1}
 }
 
 .title {
@@ -48,9 +43,10 @@ $jokeOffset: -7em ;
   letter-spacing: 0.08rem;
 }
 
+// ToDo fix tHandle.png and use a different width (probably 80%)
 .tHandle {
   height: auto;
-  width: 90%;
+  width: 40%;
   
 }
 
@@ -70,6 +66,11 @@ $jokeOffset: -7em ;
 
 }
 
+.tRoll {
+  width: auto;
+  height: 4em;
+}
+
 // ToDo - tiled background, like a toilet ....
 .upperBox {
       background-color: $covidBackground;
@@ -85,7 +86,7 @@ $jokeOffset: -7em ;
 // ToDo. On mobile, height should be specific
 .tpJokeBox {
   overflow: hidden;
-  height: auto;
+  height: $jokeHeight;
 }
 
 .tpJoke {
@@ -97,14 +98,15 @@ $jokeOffset: -7em ;
   background-color: $tpJokesBackgroundColour ;
   box-shadow: 2px 2px $tpJokesShadowColour;
 
-  opacity: 0;
+
+  // opacity: 0;
 
   // unrolls as soon as enabled
-  animation-name: unroll ;
-  animation-delay: 0.5s;
-  animation-duration: 2s ;
-  animation-iteration-count: 1;
-  animation-fill-mode: forward; // maintains properties of last animation frame. This is what I needed
+  // animation-name: unroll ;
+  // animation-delay: 0.2s;
+  // animation-duration: 2.5s ;
+  // animation-iteration-count: 1;
+  // animation-fill-mode: forward; // maintains properties of last animation frame. This is what I needed
 }
 // Joke animation
 // Unroll
@@ -116,4 +118,11 @@ $jokeOffset: -7em ;
   animation-name: tpDispose;
   animation-duration: $flushTime ;
   animation-iteration-count: 1;
+}
+
+.tpUnroll {
+  animation-name: unroll;
+  animation-duration: $flushTime ;
+  animation-iteration-count: 1;
+  animation-fill-mode: forward; // maintains properties of last animation frame.
 }

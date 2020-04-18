@@ -18,9 +18,9 @@
   background-color: $headerBackground;
 }
 
-.imBox {
-  justify-content:space-around;
-}
+// .imBox {
+//   justify-content:space-around;
+// }
 
 .im {
   animation-name: bouncy;
@@ -30,7 +30,7 @@
 
   height: 12vw;
   min-height: 120px;
-  padding: 0.3em;
+  padding: 0.6em;
   margin-left:auto;
   margin-right: auto;
 }
@@ -58,6 +58,7 @@
   text-align: center;
   margin-top:auto;
   margin-bottom: auto;
+  padding: 0.6rem;
 
   &:hover {
     transition: scale 0.25s;

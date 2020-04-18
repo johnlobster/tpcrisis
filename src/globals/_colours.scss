@@ -43,6 +43,7 @@ $tpSecondary-l3: scale-color($tpSecondary, $lightness: +45%);
 $titleTextColour: #020944; /* very dark blue */
 $tpTextColour: #2c2e52;
 $covidText: #742e2e; /* dark red */
+$covidTextTitle: scale-color($covidText, $lightness: 30%, $saturation: 80% );
 $covidTextLink: #0f4c81; // Pantone colour of the year 2020
 $covidTextLinkHover: scale-color($covidTextLink, $lightness: 10%); 
 

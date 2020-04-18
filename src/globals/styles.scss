@@ -1,0 +1,10 @@
+/*
+  global styles for tpcrisis
+*/
+
+// when used on a tag, turns it into a flexbox and centers content verticallu and horizontally
+.tpFlexCenterContents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

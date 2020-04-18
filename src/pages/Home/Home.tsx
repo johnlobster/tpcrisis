@@ -25,11 +25,11 @@ const Home: React.FunctionComponent<{}> = () => {
             The Coronavirus is real
           </p>
           <p>
-            It has killed many people and will kill many more. Although this website is funny, the Coronavirus is not.
+            It's not a hoax. It has killed many people and will kill many more. Although this website is funny, the Coronavirus is not.
           </p>
           <p>
             <Link to="/Covid19" role="button" aria-haspopup="true" aria-expanded="false">
-              Click here for more information about the Coronavirus
+              Click here for information about the Coronavirus
             </Link>
           </p>
           <p>
@@ -39,8 +39,7 @@ const Home: React.FunctionComponent<{}> = () => {
           </p>
           <p>
             This website is dedicated to the humorous and satirical side of our obsession with toilet paper during a 
-            pandemic, partly because toilet humor has always been my specialty. I know that some may find some objectionable words on 
-            this site, but I'm afraid that that is always the result of discussing bodily functions 
+            pandemic Partly because toilet humor has always been my specialty, partly for, well, other reasons maybe. 
           </p>
           <p>
             This page contains a toilet paper calculator, that works out how long you will be able to live in lock down
@@ -48,7 +47,7 @@ const Home: React.FunctionComponent<{}> = () => {
           </p>
           
           <div className={styles.covidLinkBox}>
-            <p className={styles.clickMe}>
+            <p>
               Please click on the following links, or use the navigation menu to explore.
             </p>
             <Link to="/Covid19" role="button" aria-haspopup="true" aria-expanded="false">
@@ -88,22 +87,6 @@ const Home: React.FunctionComponent<{}> = () => {
       </div>
 
       <div className="row" id="tpCalculator">
-        <div className={styles.temp + " col-12"}>
-          <br></br>
-            <TpLink to="#">
-              Test link #1
-            </TpLink>
-            <TpLink to="/somewhere">
-              Test link #2
-            </TpLink>
-          <TpLink to="/somewhereelse">
-            Test link #3
-            </TpLink>
-            <TpLink to="/nowhere">
-              Test link #4
-            </TpLink>
-          <br></br>
-        </div>
         <Calc />
       </div>
       

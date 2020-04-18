@@ -7,9 +7,9 @@ import * as globalTypes from "../../globals/globalTypes";
 // ToDo convert <cr> in shortJokes to <br>
 import {allJokes} from "../../markdownish/shortJokes";
 import handle from "../../images/tHandle.png";
+import roll from "../../images/FlatTP1.jpg";
 
-const flushTime: number = 1900; // milliseconds
-// The flush time is slightly more than animation time (2s). State changes at that point causing new joke to be fed down
+
 
 interface Props { }
 
@@ -22,29 +22,27 @@ enum FlushState  { Flush = "FLUSH", NoFlush = "NOFLUSH"};
 
 
 interface JokesState {
-  badJokes: globalTypes.JokeList;
   flush: FlushState;
-  currentJoke: string;
 };
+
+const flushTime: number = 2100; // milliseconds
+// The flush time is slightly more than animation time (2s). State changes at that point causing new joke to be fed down
 
 class Jokes extends React.Component<Props, Partial<JokesState>> {
 
-  
+  private currentJoke: string = "Flush the toilet for a joke, if you dare";
+  private badJokes: globalTypes.JokeList = allJokes;
 
   state: JokesState = {
-    badJokes: allJokes,
-    flush: FlushState.NoFlush,
-    currentJoke: "Flush the toilet for a joke, if you dare"
+    flush: FlushState.NoFlush
   };
 
 
 
   getJoke: () => string = () =>  {
-    let jokeSize: number = this.state.badJokes.length;
-    return this.state.badJokes[Math.floor(Math.random()* jokeSize)];
+    let jokeSize: number = this.badJokes.length;
+    return this.badJokes[Math.floor(Math.random()* jokeSize)];
   }
-
-  private nJoke: string = "Flush the toilet for a joke, if you dare";
 
   flushHandler: () => void = () => {
     // enable animation setting up next joke
@@ -61,11 +59,10 @@ class Jokes extends React.Component<Props, Partial<JokesState>> {
 
       // wait until animations done before accepting next flush
       setTimeout(() => {
-        this.nJoke = this.getJoke();
+        this.currentJoke = this.getJoke();
 
         this.setState({
-          flush: FlushState.NoFlush,
-          currentJoke: newJoke
+          flush: FlushState.NoFlush
         });
         console.log("Flush released");
 
@@ -102,16 +99,16 @@ class Jokes extends React.Component<Props, Partial<JokesState>> {
           <div className={styles.paperBox + " col-12 col-md-8 justify-content-center"}>
             <div>
               <div>
-                Toilet roll
+                <img src={roll} alt="Toilet paper dispenser" className={styles.tRoll} />
               </div>
               <div className={styles.tpJokeBox}>
                 <div className={(this.state.flush === FlushState.NoFlush) ? (
-                  styles.tpJoke
+                  styles.tpJoke + " " + styles.tpUnroll
                 ) : (
-                    styles.tpJoke + " " + styles.tpFlush
+                  styles.tpJoke + " " + styles.tpFlush
                   )}
                 >
-                  {this.nJoke}
+                  {this.currentJoke}
                 </div>
               </div>
             </div>
