@@ -50,8 +50,7 @@ $covidTextLinkHover: scale-color($covidTextLink, $lightness: 10%);
 $tpTextLinkColour: scale-color($tpTextColour, $lightness: +25%, $saturation: 10%);
 $tpLinkHoverColour: scale-color($tpTextLinkColour, $lightness: -20%, $saturation: 10%);
 $tpLinkActiveColour: red;
-// $tpVisitedColour: scale-color($tpTextLinkColour, $lightness: -30%);
-$tpVisitedColour: green;
+$tpVisitedColour: scale-color($tpTextLinkColour, $lightness: -30%);
 
 $tpLinkHoverBackground: scale-color($bodyBackground, $lightness: -25%, $hue: -10%);
 $tpLinkActiveBackground: scale-color($bodyBackground, $lightness: -25%, $hue: -10%);
