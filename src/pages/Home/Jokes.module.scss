@@ -1,10 +1,12 @@
 @import "../../globals/colours";
 @import "../../globals/fonts";
+@import "../../globals/styles";
+
 
 // use variables for animation duration - easier to change
 $flushTime: 2s;
-$jokeHeight: 10em;
-$jokeOffset: -8em ;
+$jokeHeight: 20em;
+$jokeOffset: -16em ;
 
 // ToDo everything should be centered better
 
@@ -41,21 +43,42 @@ $jokeOffset: -8em ;
   font-weight: bold;
   font-size: 2rem;
   letter-spacing: 0.08rem;
+  margin-bottom: 0.5em;
 }
 
+.flusherBox {
+  display: flex;
+  justify-content: center;
+}
 // ToDo fix tHandle.png and use a different width (probably 80%)
+// ToDo center tHandle.png
 .tHandle {
   height: auto;
   width: 40%;
+
+  &:hover {
+    transform: scale(1.08);
+  }
+  
   
 }
 
 // toDo change pointer to arrow
 .flushMe {
-  padding: 0.2em;
-  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  font-size: 2.5em;
   font-weight: bold;
   letter-spacing: 0.08rem;
+
+  &:hover {
+    background-color: change-color( $tpLinkHoverBackground, $alpha:0.25 );
+    border-radius: 20px;
+  }
+
+  &:active {
+    background-color: rgba(0,0,0,0)
+  }
 }
 
 .tHandleFlush {
@@ -69,11 +92,16 @@ $jokeOffset: -8em ;
 .tRoll {
   width: auto;
   height: 4em;
+  margin-top: 1.5em;
 }
 
 // ToDo - tiled background, like a toilet ....
 .upperBox {
-      background-color: $covidBackground;
+  background-color: $covidBackground;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
+
 
 }
 
@@ -97,16 +125,10 @@ $jokeOffset: -8em ;
   border-color: $tpJokesBorderColour;
   background-color: $tpJokesBackgroundColour ;
   box-shadow: 2px 2px $tpJokesShadowColour;
-
-
-  // opacity: 0;
-
-  // unrolls as soon as enabled
-  // animation-name: unroll ;
-  // animation-delay: 0.2s;
-  // animation-duration: 2.5s ;
-  // animation-iteration-count: 1;
-  // animation-fill-mode: forward; // maintains properties of last animation frame. This is what I needed
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  margin-left: auto;
+  margin-right: auto;
 }
 // Joke animation
 // Unroll
@@ -118,6 +140,7 @@ $jokeOffset: -8em ;
   animation-name: tpDispose;
   animation-duration: $flushTime ;
   animation-iteration-count: 1;
+  animation-fill-mode: forward;
 }
 
 .tpUnroll {

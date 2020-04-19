@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 import styles from "./Jokes.module.scss";
 
 import * as globalTypes from "../../globals/globalTypes";
@@ -25,7 +26,7 @@ interface JokesState {
   flush: FlushState;
 };
 
-const flushTime: number = 2100; // milliseconds
+const flushTime: number = 1900; // milliseconds
 // The flush time is slightly more than animation time (2s). State changes at that point causing new joke to be fed down
 
 class Jokes extends React.Component<Props, Partial<JokesState>> {
@@ -38,7 +39,7 @@ class Jokes extends React.Component<Props, Partial<JokesState>> {
   };
 
 
-
+  // return a random joke
   getJoke: () => string = () =>  {
     let jokeSize: number = this.badJokes.length;
     return this.badJokes[Math.floor(Math.random()* jokeSize)];
@@ -48,7 +49,6 @@ class Jokes extends React.Component<Props, Partial<JokesState>> {
     // enable animation setting up next joke
     console.log("Flush pressed");
     console.log(this.state.flush);
-    const newJoke: string = this.getJoke();
 
     // only allow a flush if animations not already underway 
     if ( this.state.flush === FlushState.NoFlush) {
@@ -82,23 +82,25 @@ class Jokes extends React.Component<Props, Partial<JokesState>> {
           </div>
         </div>
 
-        <div className={styles.upperBox + " row "}>
-          <div className="col-12 col-md-4 justify-content-center">
-            <div onClick={this.flushHandler}>
-              <img src={handle} alt="Toilet handle, flush me" 
-                className={(this.state.flush === FlushState.NoFlush) ? (
-                  styles.tHandle 
-                ) : (
-                  styles.tHandle + " " + styles.tHandleFlush
-                )}   
-              />
-              <p className={styles.flushMe} onClick={this.flushHandler} >Flush Me</p>
+        <div className={styles.upperBox + " row"}>
+          <div className={styles.flusherBox + " col-12 col-md-4"}>
+            <div>
+              <div>
+                <img src={handle} alt="Toilet handle, flush me" onClick={this.flushHandler}
+                  className={(this.state.flush === FlushState.NoFlush) ? (
+                    styles.tHandle
+                  ) : (
+                      styles.tHandle + " " + styles.tHandleFlush
+                    )}
+                />
+              </div>
+              <div className={styles.flushMe} onClick={this.flushHandler} >Flush Me</div>
             </div>
           </div>
 
-          <div className={styles.paperBox + " col-12 col-md-8 justify-content-center"}>
+          <div className={styles.paperBox + " col-12 col-md-8"}>
             <div>
-              <div>
+              <div className="tpFlexCenterContents">
                 <img src={roll} alt="Toilet paper dispenser" className={styles.tRoll} />
               </div>
               <div className={styles.tpJokeBox}>
@@ -115,9 +117,13 @@ class Jokes extends React.Component<Props, Partial<JokesState>> {
           </div>
         </div>
 
+        <div className="row"></div>
+
       </div>
     );
   }
 };
 
 export default Jokes;
+
+// ToDo "Flush me" should change pointer and look different on hover

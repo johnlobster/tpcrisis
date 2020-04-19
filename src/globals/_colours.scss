@@ -1,10 +1,10 @@
 /* Toilet paper crisis colours */
 
 /* base colours */
-/* backgrounds */
 $tpPrimary: blue;
 $tpSecondary: grey;
 
+/* backgrounds */
 $headerBackground: #afadad;
 $headerBackgroundShade: scale-color($headerBackground, $lightness: -70%);
 $navBackground: scale-color($headerBackground, $saturation: +10%, $lightness: -20%);
