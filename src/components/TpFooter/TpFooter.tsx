@@ -11,7 +11,7 @@ const TpFooter: React.FunctionComponent<{}> = () => {
   return (
     <div  className = {styles.tpContainer + " container-sm" } >
       <div className="row pt-2">
-        <div className={styles.cookieBox + " col-12 col-md-4"}>
+        <div className={styles.cookieBox + " col-12 col-md-4 tpFlexCenterContents"}>
           <img src={cookie} alt="No cookies here" className={styles.cookie}/>
         </div>
         <div className={styles.noCookiesBox + " col-12 col-md-8"}>
@@ -23,22 +23,27 @@ const TpFooter: React.FunctionComponent<{}> = () => {
             so no secret cookies, tracking, 0 pixel ads, or anything like that. Not even Facebook and Google will know that 
             you are here. I hope that doesn't make you feel lonely.
             <br />
+            <br />
             <TpLink to="/About">
-              Click here to find out more about cookies
+              Click here to find out more about the lack of cookies
             </TpLink>
           </p>
+            
           
         </div>
       </div>
 
-      <div className="row">
+      <div className="row mt-2">
         <div className="col-12 col-md-6">
           <div>
-            Have the best toilet paper joke on the planet ? Know something cool ? 
+            Have the best toilet paper joke on the planet ? 
+            <br />
+            Know something cool ? 
           </div>
           <TpLink to ="/Contribute">
             Click here to send me some great stuff
           </TpLink>
+          <br />
           <TpLink to="/About">
             Click here to find out more about this website
           </TpLink>
@@ -46,9 +51,9 @@ const TpFooter: React.FunctionComponent<{}> = () => {
 
         <div className="col-12 col-md-6">
             
-          <TpLink to="/About">
+          {/* <TpLink to="/About">
             Click here to make a donation
-          </TpLink>
+          </TpLink> */}
         </div>
 
       </div>
@@ -68,4 +73,6 @@ const TpFooter: React.FunctionComponent<{}> = () => {
 export default TpFooter;
 
 // ToDo add coin gif or something similar to the donate box. Probably whole thing should be clickable
+
+// ToDo add donation link etc.
 

@@ -10,31 +10,56 @@ const About: React.FunctionComponent<{}> = () => {
     <div className={styles.page + " container-sm"} >
 
       <div id="tpContact" className="row">
-        <div className="col-9">
+        <div className="col-12">
           <h3>Contact</h3>
+        </div>
+      </div>
+      
+      <div className="row">
+        <div className="col-10 col-md-9">
+          
           <p>My name is John Webster and I approve this website</p>
           <p>If you wish to send comments or toilet paper related items (digital only please) for use in this website, please navigate or click below to 
             reach the contributions page
           </p>
           <p>
             <TpLink to="/Contribute">
-              Comment on website or send cool stuff about toilet paper to the site
+              Comment on website or send cool stuff about toilet paper to me
             </TpLink>
           </p>
-          <p>If you wish to find out more about me, please feel free to click on the LinkedIn logo opposite, which leaves this website</p>
+          <p>If you wish to find out more about me, please feel free to click on the LinkedIn logo, which leaves this website</p>
         </div>
-        <div className="col-3">
+        <div className="col-8 col-md-3">
           <a href="https://www.linkedin.com/in/JohnWWebster">
-            <img src={LinkedIn} alt="Clickable LinkedIn logo"  className={styles.contactLI} />
+            <img src={LinkedIn} alt="Clickable LinkedIn logo, find out more about me"  className={styles.contactLI} />
           </a>
         </div>
       </div>
 
+
       
-      <div id="tpDonate" className="row">
+      {/* <div id="tpDonate" className="row">
         <div className="col-12">
           <h3>Donations</h3>
           <p>Animated dollar bill. Some information about how to donate</p>
+        </div>
+      </div> */}
+
+      <div id="tpStuff" className="row">
+        <div className="col-12">
+          <h3>Stuff I used</h3>
+          <p>Humour inspired by Monty Python, Mad Magazine and a number of other sources too dubious to mention</p>
+          <h5>Sources (links to external pages)</h5>
+          <p>
+            <TpLink to="http://www.toiletpaperhistory.net">History of toilet paper</TpLink><br />
+            <TpLink to="https://trueplumbers.com/blog/do-you-use-more-toilet-paper-than-the-average-person/">
+              trueplumbers.com Toilet paper usage</TpLink><br />
+            <TpLink to="https://www.tissueworldmagazine.com/">Tissue world magazine Industry newsletter for pulp products</TpLink><br />
+            <TpLink to="https://en.wikipedia.org/wiki/Toilet_paper">
+              Wikipedia on toilet paper - I don't know how they could keep a straight face writing this
+            </TpLink> <br />
+          </p>
+          {/* <h5>Licenses</h5> */}
         </div>
       </div>
 
@@ -45,18 +70,32 @@ const About: React.FunctionComponent<{}> = () => {
         </div>
       </div>
 
-      <div id="tpStuff" className="row">
-        <div className="col-12">
-          <h3>Stuff I used</h3>
-          <p>licenses, links to other stuff. Websites, Wikipedia etc.</p>
-          <p>Humour inspired by Monty Python, Mad Magazine and a number of other sources too dubious to mention</p>
-        </div>
-      </div>
-
       <div id="tpPrivcacy" className="row">
         <div className="col-12">
           <h3>Privacy and cookies</h3>
-          <p>This website collects no data and uses no cookies or other similar technologies</p>
+          <p>
+            This website collects no data and uses no cookies or other similar technologies, 
+            which is one way to meet the requirements of GPDR, CCPR, LGPD and any other standard.
+          </p>
+          <p>
+            I know I'm making a big fuss about this, but I'm amazed by all the sneaky methods some companies use to track people.
+            Examples include
+            <br />
+            <ul>
+              <li>
+                Google (and similar) analytics. Provides the website owner with lots of useful information about how the website is being used,
+                but also supplies information about individual users
+              </li>
+              <li>
+                Social media share buttons. I would love you to talk about my website with your friends, but guess what ....
+              </li>
+            </ul>
+          </p>
+          <p>
+            In many ways all this tracking doesn't bother me that much. It allows companies that are offering free services for us to make
+            money from those services, and companies should be able to make money. The privacy aspect makes me nervous though, but let's face it,
+            I'm the kind of person that doesn't have a facebook account ...
+          </p>
         </div>
       </div>
 
@@ -64,7 +103,7 @@ const About: React.FunctionComponent<{}> = () => {
         <div className="col-12">
           
           <h4>Copyright information for this website</h4>
-          <p>There has to be some small print somewhere, so here it is</p>
+          <p>There has to be some small print somewhere, so here it is.</p>
           <p>This website is licensed using the MIT license - you are free to copy or change things, but if you are foolish enough
           to want to use a large chunk
           of the site, then include the following notice

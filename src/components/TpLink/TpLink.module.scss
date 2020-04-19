@@ -4,8 +4,9 @@
 .linkStyle a {
   border-radius: 0.2em;
   color: $tpTextLinkColour;
-  margin-left: 0.3em;
-  margin-right: 0.3em;
+  display: inline-block; // otherwise padding doesn't pad long lines
+  padding-left: 0.3em;
+  padding-right: 0.3em;
   padding-bottom: 0.1em;
 }
 

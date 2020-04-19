@@ -5,6 +5,7 @@ $tpPrimary: blue;
 $tpSecondary: grey;
 
 /* backgrounds */
+
 $headerBackground: #afadad;
 $headerBackgroundShade: scale-color($headerBackground, $lightness: -70%);
 $navBackground: scale-color($headerBackground, $saturation: +10%, $lightness: -20%);
@@ -48,7 +49,7 @@ $covidTextLink: #0f4c81; // Pantone colour of the year 2020
 $covidTextLinkHover: scale-color($covidTextLink, $lightness: 10%); 
 
 /* Link colours */
-$tpTextLinkColour: scale-color($tpTextColour, $lightness: +25%, $saturation: 10%);
+$tpTextLinkColour: scale-color($tpTextColour, $lightness: +40%, $saturation: 85%);
 $tpLinkHoverColour: scale-color($tpTextLinkColour, $lightness: -20%, $saturation: 10%);
 $tpLinkActiveColour: red;
 $tpVisitedColour: scale-color($tpTextLinkColour, $lightness: -30%);

@@ -1,24 +1,24 @@
 @import "../../globals/colours";
 @import "../../globals/fonts";
-
+@import "../../globals/styles";
 
 .tpContainer {
-  background-color: $headerBackground;
+  background-color: $headerBackground; // header and footer the same
 }
 
 .cookieBox {
   padding-right: 0.3em;
   padding-left: 0.3em;
 }
+
+// the cookie monster himself
 .cookie {
-  width: 100%;
-  padding: 0.3em;
-  margin-left:auto;
-  margin-right: auto;
+  width: auto;
+  height: 8em;
+  // padding: 0.3em;
 }
 
 .noCookiesBox {
-  padding-left: 0.3em;
 }
 
 .footerTitle {
