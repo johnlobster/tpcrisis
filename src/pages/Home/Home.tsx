@@ -36,11 +36,11 @@ const Home: React.FunctionComponent<{}> = () => {
             <p>
               The toilet paper crisis is also real, which is much stranger. If Monty Python did a sketch about all the
               shelves being empty of toilet paper, we would laugh, but think that it was too far-fetched. Yet here we
-              are, running low on bathroom supplies
+              are, running low on bathroom supplies.
           </p>
             <p>
               This website is dedicated to the humorous and satirical side of our obsession with toilet paper during a
-              pandemic Partly because toilet humor has always been my specialty, partly for, well, other reasons maybe.
+              pandemic. Partly because toilet humor has always been my specialty, partly for, well, other reasons.
           </p>
             <p>
               This page contains a toilet paper calculator, that works out how long you will be able to live in lock down
