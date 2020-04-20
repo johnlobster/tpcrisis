@@ -184,4 +184,3 @@ class Calc extends React.Component<Props, Partial<CalcState>> {
 
 export default Calc;
 
-{/* <div onSubmit={this.handleSubmit} className={styles.tpInputBox + " col-12 col-md-8"}> */ }

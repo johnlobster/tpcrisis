@@ -49,6 +49,7 @@ class App extends React.Component<Props, State>{
       }, 1000);
       
     }
+    // set up window size event to change this.currentScreen if necessary
     
   }
 
@@ -57,7 +58,7 @@ class App extends React.Component<Props, State>{
       <Router>
       
         <TpHeader />
-        <TpNav />
+        <TpNav cScreen={this.state.currentScreen} />
         
         <Switch>
           <Route exact path='/' component={Home} />
