@@ -1,0 +1,22 @@
+@import "../../globals/colours";
+@import "../../globals/fonts";
+@import "../../globals/styles";
+
+
+.calculatorBox {
+  background-color: $pageBackground;
+  padding-top: 1em;
+  
+}
+.title {
+  font-family: $titleFont, serif;
+  font-weight: bold;
+  font-size: 2em;
+  letter-spacing: 0.08rem;
+  // margin-left: auto;
+  // margin-right: auto;
+}
+.howLong {
+  font-size: 2em;
+
+}

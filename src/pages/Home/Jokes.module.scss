@@ -13,7 +13,8 @@ $jokeOffset: -16em ;
 // The joke stuff needs to be a fixed height so different length jokes can scroll down
 // ToDo 
 .jokeBox {
-  background-color: $covidBackground;
+  background-color: $pageBackground;
+  padding-top: 1em;
 }
 
 @keyframes handleFlushAnimation {
@@ -41,7 +42,7 @@ $jokeOffset: -16em ;
 .title {
   font-family: $titleFont, serif;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 2em;
   letter-spacing: 0.08rem;
   margin-bottom: 0.5em;
 }

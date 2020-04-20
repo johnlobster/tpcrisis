@@ -72,7 +72,7 @@ class Jokes extends React.Component<Props, Partial<JokesState>> {
   }
   render() {
     return (
-      <div className=" container-sm">
+      <div className={styles.jokeBox + " container-sm"}>
 
         <div className="row justify-content-center mt-4">
           <div className="col-10 col-md-8">
