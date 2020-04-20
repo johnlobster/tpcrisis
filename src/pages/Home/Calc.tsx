@@ -3,7 +3,7 @@ import TpLink from "../../components/TpLink/TpLink";
 import NoBreak from "../../components/NoBreak/NoBreak";
 
 import styles from "./Calc.module.scss";
-
+import tpMath from "./tpMath";
 
 
 interface Props { }
@@ -12,69 +12,40 @@ interface Props { }
 interface CalcState {
   rollsPerYear: number,
   rollsLeft: number,
-  announce: string
+  numPeople: number,
 };
 class Calc extends React.Component<Props, Partial<CalcState>> {
 
   state: CalcState = {
     rollsPerYear: 100,
     rollsLeft: 12,
-    announce: "Start me up ..."
+    numPeople: 2
   };
-
-  // ToDo tpCalc doesn't work properly when loaded. Need to change tpCalc to work off inputs, then use in HandleChange() 
-
-  // calculate how much toilet paper left and return as a string
-  tpMath: () => string = () => {
-    const weeksToGo: number = this.state.rollsLeft / (this.state.rollsPerYear / 52);
-    const daysLeft: number = Math.floor(weeksToGo % 7);
-    const weeksLeft: number = Math.floor(weeksToGo);
-    console.log("Weeks " + weeksToGo + " Weeks left " + weeksLeft + " days " + daysLeft)
-    let outString: string = "";
-    if ( weeksLeft === 0) {
-      if ( daysLeft === 0) {
-        outString = "TPCRISIS NO TOILET PAPER";
-      } 
-      else if (daysLeft === 1) {
-        outString = "OH NO! ONLY ONE DAY LEFT";
-      } else {
-        outString = "OH NO! ONLY " + daysLeft.toFixed(0) + " DAYS LEFT";
-      }
-    }
-    else if ( weeksLeft === 1) {
-      if (daysLeft === 0) {
-        outString = "HELP, ONE WEEK LEFT";
-      } 
-      else if (daysLeft === 1) {
-        outString = "OH NO! ONLY ONE WEEK, ONE DAY LEFT";
-      }
-      else {
-        outString = "OH NO! ONLY ONE WEEK, " + daysLeft.toFixed(0) + " DAYS LEFT";
-      }
-    }
-    else {
-      outString = weeksLeft.toFixed(0) + " weeks, " + daysLeft.toFixed(0) + " days left";
-    }
-    return outString;
-  }
-
-  // componentDidMount() {
-  //   this.tpMath();
-  // }
 
   handleInputChange = (event: React.FormEvent<HTMLInputElement> ):void =>  {
     event.preventDefault();
-    const {name, value} = event.target as HTMLInputElement;
+    const {name, value} = event.target as HTMLInputElement; // target properties are strings
     console.log("Change event " + name + " new value " + value);
     if( name === "rPerYear") {
-      this.setState( {
-        rollsPerYear: Number(value)
-      })
+      if( Number(value) > 0 ) { // can't use no toilet paper
+        this.setState({
+          rollsPerYear: Number(value)
+        });
+      }
     }
+    else if( name === "nPeople") {
+      if (Number(value) >= 1) { // can't have less than 1 person
+        this.setState({
+          numPeople: Number(value)
+        });
+      }
+    } 
     else {
-      this.setState({
-        rollsLeft: Number(value)
-      })
+      if (Number(value) >= 0) { // can't have less than 0 rolls
+        this.setState({
+          rollsLeft: Number(value)
+        });
+      }
     }
   }
 
@@ -96,39 +67,82 @@ class Calc extends React.Component<Props, Partial<CalcState>> {
           <div className= {styles.showBox + " col-12 col-md-4"}>
             <div>
               <div className={styles.show}>
-                {this.state.announce}
+                {tpMath(this.state.rollsLeft, this.state.rollsPerYear, this.state.numPeople)}
               </div>
             </div>
           </div>
 
           <div className={styles.tpInputBox + " col-12 col-md-8"}>
+            <div className="row">
 
-            <div className={styles.rollBox}>
-              <div className="form-group">
-                <input
-                  className="form-control"
-                  id="rPerYear"
-                  type="number"
-                  name="rPerYear"
-                  value={this.state.rollsPerYear}
-                  onChange={this.handleInputChange}
-                />
+              <div className="col-6">
+                <div className={styles.rollBox}>
+                  <div className="form-group">
+                    <label htmlFor="rLeft">Rolls left</label>
+                    <input
+                      className="form-control"
+                      id="rLeft"
+                      type="number"
+                      name="rLeft"
+                      value={this.state.rollsLeft}
+                      onChange={this.handleInputChange}
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className={styles.rollBox}>
-              <div className="form-group">
-                <input
-                  className="form-control"
-                  id="rLeft"
-                  type="number"
-                  name="rLeft"
-                  value={this.state.rollsLeft}
-                  onChange={this.handleInputChange}
-                />
+
+              <div className="col-6">
+                Insert witty comment
               </div>
-              
+
             </div>
-            <div>Test</div>
+            
+            <div className="row">
+              <div className="col-6">
+                <div className={styles.rollBox}>
+                  <div className="form-group">
+                    <label htmlFor="nPeople">Number of people</label>
+                    <input
+                    className="form-control"
+                    id="nPeople"
+                    type="number"
+                    name="nPeople"
+                    value={this.state.numPeople}
+                    onChange={this.handleInputChange}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-6">
+                Insert witty comment
+              </div>
+
+            </div>
+
+            <div className="row">
+              <div className="col-6">
+                <div className={styles.rollBox}>
+                  <div className="form-group">
+                    <label htmlFor="rPerYear">Number of rolls per year</label>
+                    <input
+                      className="form-control"
+                      id="rPerYear"
+                      type="number"
+                      name="rPerYear"
+                      value={this.state.rollsPerYear}
+                      onChange={this.handleInputChange}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-6">
+                Insert witty comment
+              </div>
+
+            </div>
+
           </div>
         </div>
 
@@ -138,7 +152,11 @@ class Calc extends React.Component<Props, Partial<CalcState>> {
             <p>
               I did extensive research on this topic (Google and Bing), and found a huge variation in numbers
             </p>
-            <p>Between <strong>50 and 150</strong> rolls per year. I have used 100 as the starting point in the calculator, you can adjust up or down</p>
+            <p>
+              Between <strong>50 and 150</strong> rolls per year. I have used 100 as the starting point in the calculator, 
+              you can adjust up or down. That's two rolls a week per person. The 100 number is from a plumber's website. They
+              know more about what gets flushed down toilets than most people.
+            </p>
             <p>
               Of course, these numbers were quoted without analysis of how long the toilet roll was, how thick the sheets were and so on,
               really not very scientific at all.

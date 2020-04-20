@@ -46,12 +46,17 @@ $calcBoxBackground: scale-color($pageBackground, $lightness: 60%, $saturation: -
 
 .rollBox {
   background-color: $calcBoxBackground;
-  width:auto;
-  font-size: 2em;
+  font-size: 1.2em;
   padding: 0.5em 0.5em 0.5em 0.5em;
   margin: 0.5em;
   border-style: solid;
   border-color: black;
   border-width: 0.15em;
-  border-radius: 0.5em
+  border-radius: 0.5em;
+
+  width: 60%;
+
+  & input {
+    font-size: 2em;
+  }
 }
