@@ -2,7 +2,7 @@ import * as globalTypes from "../../globals/globalTypes";
 
 export const tpNavList: globalTypes.NavList = [
   [
-    "/",
+    "/Home",
     "Home page"
   ],
   [

@@ -1,24 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
-import * as global from "../../globals/globalTypes";
-
-// import styles from "./TpNavDesktop.module.scss";
-// import { tpNavList} from "./links";
+import TpLink from "../TpLink/TpLink";
+import styles from "./TpNavDesktop.module.scss";
+import { tpNavList} from "./links";
 
 
 
 const TpNavDesktop: React.FunctionComponent = () => {
   return (
     <div>
-      <div>
-        <h2>Desktop</h2>
-          
-        
-
-      </div>
-        
-
+      {tpNavList.map((item, index) => {
+        return (
+          <TpLink
+            to={item[0]}
+            key={`key_${index}`}
+          >
+            {item[1]}
+          </TpLink>
+        );
+      })}
     </div>
   );
 }

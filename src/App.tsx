@@ -8,6 +8,7 @@ import TpFooter from "./components/TpFooter/TpFooter";
 import TpNavMobile from "./components/TpNav/TpNavMobile";
 import TpNavDesktop from "./components/TpNav/TpNavDesktop";
 
+// instances Switch (react-router)
 import TpSwitch from "./components/TpSwitch/TpSwitch";
 
 import "./App.scss";

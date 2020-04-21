@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// import * as global from "../../globals/globalTypes";
-
 import styles from "./TpNavMobile.module.scss";
 import { tpNavList} from "./links";
 
 
+// ToDo - something nicer than Menu + button. Hamburger
+// ToDo - toilet paper theming of some kind. Drop shadow when open
 const TpNavMobile: React.FunctionComponent = () => {
   return (
     <div className={styles.topBox + " container-sm"}>

@@ -4,12 +4,15 @@ import styles from "./TpLink.module.scss";
 
 
 interface  TpLinkProps {
-  to: string
+  to: string,
+  className?: string
 }
 const TpLink: React.FunctionComponent<TpLinkProps> = (props) => {
   return (
     <span className={styles.linkStyle}>
-      <Link to={props.to}>{props.children}</Link>
+      <Link to={props.to} className={props.className}>
+        {props.children}
+      </Link>
     </span>
   );
 };
