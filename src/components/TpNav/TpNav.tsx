@@ -1,34 +1,61 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import * as global from "../../globals/globalTypes";
 
 import styles from "./TpNav.module.scss";
+import { tpNavList} from "./links";
 
 interface Props {
   cScreen: global.ScreenType
 }
 
-// ToDo make ScreenType string enum
 
 const TpNav: React.FunctionComponent<Props> = (props) => {
   return (
     <div>
-      <h1>I am a Navbar</h1>;
-      <h1>Screen size is {(props.cScreen === global.ScreenType.Mobile) ? (
+      <div>
+        <h2>
+          {(props.cScreen === global.ScreenType.Mobile) ? (
         "Mobile"
       ) : (
         "Desktop"
-      )}
-        
-      </h1>
-
+        )}
+        </h2>
+      </div> 
       <div className={(props.cScreen === global.ScreenType.Mobile) ? (
-        styles.navMobile
-      ) : (
-        styles.navDesktop
+          styles.mobileMenu
+        ) : (
+          styles.desktopMenu
         )}>
-          <h1>Colour me</h1>
+          <div className="container-sm">
+            <div className="row">
+              <div className="col-4">
+                <Link to="/Facts">Temporary link</Link>
+                <Link className="nav-link" to="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  MENU
+                  <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                    {tpNavList.map((item, index) => {
+                      return (
+                        <Link
+                          className="dropdown-item"
+                          to={item[0]}
+                          key={`key_${index}`}
+                        >
+                          {item[1]}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        
+
       </div>
+        
+
     </div>
   );
 }

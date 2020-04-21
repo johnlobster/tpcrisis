@@ -1,5 +1,12 @@
 /* Toilet paper crisis colours */
 
+/* bootstrap 4 window sizing breakpoints */
+$b4XSmall: 576; // less than 
+$b4small: 576;  // more than or equal
+$b4medium: 768;
+$b4large: 992;
+$b4XLarge: 1200;
+
 /* base colours */
 $tpPrimary: blue;
 $tpSecondary: grey;

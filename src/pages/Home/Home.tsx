@@ -26,7 +26,7 @@ const Home: React.FunctionComponent<{}> = () => {
               The Coronavirus is real
           </p>
             <p>
-              It's not a hoax. It has killed many people and will kill many more. Although this website is funny, the Coronavirus is not.
+              It's not a hoax, it's not a lie. It has killed many people and will kill many more. Although this website is funny, the Coronavirus is not.
           </p>
             <p>
               <Link to="/Covid19" role="button" aria-haspopup="true" aria-expanded="false">

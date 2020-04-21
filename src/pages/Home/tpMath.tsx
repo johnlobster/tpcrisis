@@ -5,7 +5,6 @@ export default function tpMath(rollsLeft: number, rollsPerYear: number, numPeopl
   const consumption: number = numPeople * (rollsPerYear / 52);
   const weeksLeft: number = Math.floor(rollsLeft / consumption);
   const daysLeft: number = Math.round(rollsLeft % consumption);
-  console.log("People " + numPeople + " Weeks " + (rollsLeft / consumption) + " Weeks left " + weeksLeft + " days " + daysLeft)
 
   let outString: string = "";
   if (weeksLeft === 0) {

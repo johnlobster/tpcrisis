@@ -1,13 +1,20 @@
 @import "../../globals/colours";
 @import "../../globals/fonts";
 
+// link needs to be easy to touch on mobile device
+// space out from others, slightly larger text
+// possibly style differently for mobile, background to make target larger ?
+
 .linkStyle a {
   border-radius: 0.2em;
+  font-size: 1.1em; 
   color: $tpTextLinkColour;
   display: inline-block; // otherwise padding doesn't pad long lines
   padding-left: 0.3em;
   padding-right: 0.3em;
-  padding-bottom: 0.1em;
+  padding-bottom: 0.2em;
+  padding-top: 0.2em;
+
 }
 
 .linkStyle {
