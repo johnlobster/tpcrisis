@@ -85,7 +85,7 @@ class Jokes extends React.Component<Props, Partial<JokesState>> {
         <div className={styles.upperBox + " row"}>
           <div className={styles.flusherBox + " col-12 col-md-4"}>
             <div>
-              <div>
+            <div className={styles.imageBox}>
                 <img src={handle} alt="Toilet handle, flush me" onClick={this.flushHandler}
                   className={(this.state.flush === FlushState.NoFlush) ? (
                     styles.tHandle
@@ -93,8 +93,10 @@ class Jokes extends React.Component<Props, Partial<JokesState>> {
                       styles.tHandle + " " + styles.tHandleFlush
                     )}
                 />
-              </div>
-              <div className={styles.flushMe} onClick={this.flushHandler} >Flush Me</div>
+            </div>
+            <div className={styles.flushMe} onClick={this.flushHandler} >
+              Flush Me
+            </div>
             </div>
           </div>
 
