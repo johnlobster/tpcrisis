@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import TpLink from "../../components/TpLink/TpLink";
+// import TpLink from "../../components/TpLink/TpLink";
 import hlink from "../../icons/icons8-linking-24.png";
 
 import Calc from "./Calc";
