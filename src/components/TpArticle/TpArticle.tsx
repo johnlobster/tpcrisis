@@ -8,14 +8,20 @@ interface  TpArticleProps {
 
 
 const TpArticle: React.FunctionComponent<TpArticleProps> = (props) => {
+
   const [open, setArticleState] = useState(false);
+
+  const [hoverMe, setHoverMeState] = useState(true);
 
   const openArticle = ():void  => {
     setArticleState(true);
+    setHoverMeState(false);
+
   }
 
   const closeArticle = (): void => {
     setArticleState(false);
+    setHoverMeState(true);
   }
 
   return (
@@ -25,7 +31,11 @@ const TpArticle: React.FunctionComponent<TpArticleProps> = (props) => {
       <div>
         {props.children}
       </div>
-      <div className={styles.topBox + " row"}>
+      <div className={ hoverMe ? (
+          styles.topBoxHover + " row"
+        ):(
+          styles.topBox + " row"
+        )}>
         <div className={styles.midBox + " col-12"}>
           {(open) ? (
             <div>

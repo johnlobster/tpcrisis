@@ -1,7 +1,16 @@
 @import "../../globals/colours";
 
-.topBox{
+.topBoxHover{
   background-color: orange;
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0.2em 0.2em darkslategrey ;
+  }
+}
+
+.topBox {
+    background-color: rgb(255, 94, 0);
 }
 
 .midBox {
