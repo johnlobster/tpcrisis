@@ -1,21 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import * as ReactDOM from "react-dom";
+import { BrowserRouter as Router } from 'react-router-dom';
 
 // import Tp crisis react components
 import TpHeader from "./components/TpHeader/TpHeader";
-import TpNav from "./components/TpNav/TpNav"
-
-// pages
-import Home from "./pages/Home/Home";
 import TpFooter from "./components/TpFooter/TpFooter";
-import About from "./pages/About/About";
-import Tp404 from "./pages/Tp404/Tp404"
-import Covid19 from "./pages/Covid19/Covid19";
-import Facts from "./pages/Facts/Facts";
-import Insanity from "./pages/Insanity/Insanity";
-import Alternatives from "./pages/Alternatives/Alternatives";
-import Contribute from "./pages/Contribute/Contribute";
+
+import TpNavMobile from "./components/TpNav/TpNavMobile";
+import TpNavDesktop from "./components/TpNav/TpNavDesktop";
+
+import TpSwitch from "./components/TpSwitch/TpSwitch";
 
 import "./App.scss";
 
@@ -89,24 +82,27 @@ class App extends React.Component<Props, State>{
       <Router>
       
         <TpHeader />
-        <TpNav cScreen={this.state.currentScreen} />
-        
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/Home' component={Home} />
-          <Route path="/About" component={About} />  
-          <Route path='/Alternatives' component={Alternatives} />
-          <Route path='/Covid19' component={Covid19} />
-          <Route path='/Facts' component={Facts} />
-          <Route path='/Insanity' component={Insanity} />
-          <Route path='/Contribute' component={Contribute} />
+        <div className="container">
+          {(this.state.currentScreen === global.ScreenType.Mobile) ? (
+            <React.Fragment>
+              <TpNavMobile />
+              <TpSwitch />
+            </React.Fragment>
+            
+          ) : (
+            <React.Fragment>
+              <div className="row">
+                <div className="col-3">
+                  <TpNavDesktop />
+                </div>
+                <div className="col-9">
+                  <TpSwitch />
+                </div>
+              </div> 
+            </React.Fragment>           
+          )}
+        </div>
 
-          <Route 
-            path='*' 
-            component = {Tp404} 
-          />
-        </Switch>
-        
         <TpFooter />
         
       </Router>
@@ -115,8 +111,3 @@ class App extends React.Component<Props, State>{
   }
 }
 export default App;
-
-/* <Route
-  path='*'
-  render={() => <Tp404 hyperlinkTarget="Here we are" />}
-/> */
