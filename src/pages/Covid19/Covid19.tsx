@@ -13,24 +13,22 @@ const Covid19: React.FunctionComponent<{}> = () => {
           <p>
             There are a number of names for what's going on
           </p>
-          <p>
-            <dl className={styles.indent}>
-              <dt>Pandemic:</dt>
-                <dd>The world wide spread of a disease</dd>
-              <dt>Coronavirus:</dt>
-                <dd>A type of virus</dd>
-              <dt>SARS-CoV-2: </dt>
+          <dl className={styles.indent}>
+            <dt>Pandemic:</dt>
+              <dd>The world wide spread of a disease</dd>
+            <dt>Coronavirus:</dt>
+              <dd>A type of virus</dd>
+            <dt>SARS-CoV-2: </dt>
               <dd>
                 The virus that's causing all the trouble. 
                 Severe Acute Respiratory Syndrome Coronavirus 2
               </dd>
-              <dt>COVID-19: </dt>
+            <dt>COVID-19: </dt>
               <dd>
                 The disease caused by this virus.
                 Coronavirus Disease 2019
               </dd>
-            </dl>
-          </p>
+          </dl>
           <p>
             I didn't get to pick those names
           </p>
@@ -49,7 +47,6 @@ const Covid19: React.FunctionComponent<{}> = () => {
             On this page, there a number of different topics. Click on one of the links below to go directly to that topic
             or read in sequence
           </p>
-          <p>
             <TpLink to="#coronavirusInformation">
               How to use different sources of information, not everything on the internet is true
             </TpLink>
@@ -66,7 +63,6 @@ const Covid19: React.FunctionComponent<{}> = () => {
               External websites with more information
             </TpLink>
             <br />
-          </p>
 
           <h5 id="coronavirusInformation">Information</h5>
           <p>
@@ -83,6 +79,7 @@ const Covid19: React.FunctionComponent<{}> = () => {
           </p>
           <p>
             Governments and Institutions have priorities that may not match yours. They have two important priorities
+          </p>
           <ol>
             <li>Don't create panic</li>
             <li>Make themselves and their associates look good</li>
@@ -91,7 +88,6 @@ const Covid19: React.FunctionComponent<{}> = () => {
             going out - everyone want to look good. For example, the World Health Organization (WHO) cannot afford to make any specific 
             country look bad. That could lead to loss of funding, but more importantly, loss of access to the health care system
             of that country, which interferes with the organizations purpose.
-          </p>
           <p>
             By incomplete information, I mean that a conclusion has been drawn from an accurate fact, but that not enough is known to 
             say whether the conclusion is true or not.
@@ -109,7 +105,6 @@ const Covid19: React.FunctionComponent<{}> = () => {
           <p>
             Information about the Coronavirus
           </p>
-          <p>
             <TpLink to="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">
               The World Health Organization's page on the Coronavirus<br />
               https://www.who.int/emergencies/diseases/novel-coronavirus-2019c
@@ -119,22 +114,18 @@ const Covid19: React.FunctionComponent<{}> = () => {
               source.<br />
               https://en.wikipedia.org/wiki/Coronavirus_disease_2019
             </TpLink><br />
-          </p>
 
           <p>
             Science information
           </p>
-          <p>
             <TpLink to="https://www.statnews.com/tag/coronavirus/">
               STAT news is a newspaper for Medical Professionals<br />
               https://www.statnews.com/tag/coronavirus/
             </TpLink>
-          </p>
 
           <p>
             News organizations
           </p>
-          <p>
             <TpLink to="https://www.bbc.com/news">
               News from the BBC (British Broadcasting Corporation)<br />
               https://www.bbc.com/news
@@ -143,7 +134,14 @@ const Covid19: React.FunctionComponent<{}> = () => {
               News from NPR (National Public Radio). Independent news in the United States<br />
               https://www.npr.org/series/812054919/the-coronavirus-crisis
             </TpLink>
+
+          <p>
+            Fake news
           </p>
+          <TpLink to="https://www.theonion.com">
+            Satire about the news. Funny, not true<br />
+            https://www.theonion.com
+          </TpLink>
         </div>
       </div>
       

@@ -80,17 +80,16 @@ const About: React.FunctionComponent<{}> = () => {
           <p>
             I know I'm making a big fuss about this, but I'm amazed by all the sneaky methods some companies use to track people.
             Examples include
-            <br />
-            <ul>
-              <li>
-                Google (and similar) analytics. Provides the website owner with lots of useful information about how the website is being used,
-                but also supplies information about individual users
-              </li>
-              <li>
-                Social media share buttons. I would love you to talk about my website with your friends, but guess what ....
-              </li>
-            </ul>
           </p>
+          <ul>
+            <li>
+              Google (and similar) analytics. Provides the website owner with lots of useful information about how the website is being used,
+              but also supplies information about individual users
+            </li>
+            <li>
+              Social media share buttons. I would love you to talk about my website with your friends, but guess what ....
+            </li>
+          </ul>
           <p>
             In many ways all this tracking doesn't bother me that much. It allows companies that are offering free services for us to make
             money from those services, and companies should be able to make money. The privacy aspect makes me nervous though, but let's face it,
@@ -117,7 +116,7 @@ const About: React.FunctionComponent<{}> = () => {
               The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
               THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             </p>
-            <p>From <a href="https://opensource.org/licenses/MIT" >https://opensource.org/licenses/MIT</a></p>          
+            From <a href="https://opensource.org/licenses/MIT" >https://opensource.org/licenses/MIT</a>          
           </div>
           
         </div>

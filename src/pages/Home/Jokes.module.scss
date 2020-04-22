@@ -132,7 +132,8 @@ $jokeOffset: -16em ;
   border-radius: 5px;
   border-color: $tpJokesBorderColour;
   background-color: $tpJokesBackgroundColour ;
-  box-shadow: 2px 2px $tpJokesShadowColour;
+  box-shadow: 
+    4px 4px 5px $tpShadowColour;
   margin-top: 0.75em;
   margin-bottom: 0.75em;
   margin-left: auto;

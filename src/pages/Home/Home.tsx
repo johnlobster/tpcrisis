@@ -26,13 +26,12 @@ const Home: React.FunctionComponent<{}> = () => {
               The Coronavirus is real
           </p>
             <p>
-              It's not a hoax, it's not a lie. It has killed many people and will kill many more. Although this website is funny, the Coronavirus is not.
+              It's not a hoax, it's not a lie. It is very infectious and has killed many people around the world and will kill many more. Although this website is funny, the Coronavirus is not.
           </p>
-            <p>
-              <Link to="/Covid19" role="button" aria-haspopup="true" aria-expanded="false">
+            <Link to="/Covid19" role="button" aria-haspopup="true" aria-expanded="false">
                 Click here for information about the Coronavirus
             </Link>
-            </p>
+            <br />
             <p>
               The toilet paper crisis is also real, which is much stranger. If Monty Python did a sketch about all the
               shelves being empty of toilet paper, we would laugh, but think that it was too far-fetched. Yet here we
@@ -50,7 +49,7 @@ const Home: React.FunctionComponent<{}> = () => {
             <div className={styles.covidLinkBox}>
               <p>
                 Please click on the following links, or use the navigation menu to explore.
-            </p>
+              </p>
               <Link to="/Covid19" role="button" aria-haspopup="true" aria-expanded="false">
                 Information about the Coronavirus <img src={hlink} alt="Hyperlink" className={styles.hyperlink} /><br />
               </Link>

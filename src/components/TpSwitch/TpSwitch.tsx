@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import Home from "../../pages/Home/Home";
 import Tp404 from "../../pages/Tp404/Tp404"
@@ -22,10 +22,8 @@ const TpSwitch: React.FunctionComponent = () => {
       <Route path='/Insanity' component={Insanity} />
       <Route path='/Contribute' component={Contribute} />
 
-      <Route
-        path='*'
-        component={Tp404}
-      />
+      {/*  Without path, routes anything*/}
+      <Route component={Tp404} />
     </Switch>
   );
 }

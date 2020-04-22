@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import TpLink from '../TpLink/TpLink';
 
 import styles from "./TpNavMobile.module.scss";
 import { tpNavList} from "./links";
@@ -13,20 +13,20 @@ const TpNavMobile: React.FunctionComponent = () => {
       <div className="row">
         <div className="col-3">
           <div className="dropdown">
-            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            <button className="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               Menu
               </button>
-            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div className={styles.dropdownBox + " dropdown-menu"} aria-labelledby="dropdownMenuButton">
               {tpNavList.map((item, index) => {
                 return (
-                  <Link
+                  <TpLink
                     className="dropdown-item"
                     to={item[0]}
                     key={`key_${index}`}
                   >
                     {item[1]}
-                  </Link>
+                  </TpLink>
                 );
               })}
             </div>
