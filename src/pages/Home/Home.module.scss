@@ -26,6 +26,18 @@
   }
 }
 
+// inherits all the .covid19 styles
+.tLinkStyle {
+  
+  color: $covidTextLink;
+  cursor: pointer;
+  
+  &:hover {
+    color: $covidTextLinkHover;
+    background-color: $covidLinkBackground;
+    text-decoration: none;
+  }
+}
 // ToDo full styling for covid links (or maybe convert to TpLink)
 // add :link :visited :active
 

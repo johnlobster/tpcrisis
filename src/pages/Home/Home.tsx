@@ -8,6 +8,32 @@ import Calc from "./Calc";
 import Jokes from "./Jokes";
 import styles from "./Home.module.scss";
 
+// TempLink allows this page to link to hashes on this page without going through react-router
+// add this functionality into TpLink later (detects hash, etc)
+// uses same (similar) styles as the other covid links
+
+interface tLink {
+  to: string
+}
+const TempLink: React.FunctionComponent<tLink> = (props) => {
+
+  const clickMe = (event: React.MouseEvent):void  =>  {
+    const element = document.querySelector(props.to);
+    if (element) {
+      console.log("Scrolling to " + props.to);
+      element.scrollIntoView()
+    } else {
+      console.log("COuldn't scroll to " + props.to);
+    }
+  }
+
+  return (
+    <span onClick={clickMe} className={styles.tLinkStyle} role="button" aria-haspopup="true" aria-expanded="false" >
+        {props.children}
+    </span>
+  );
+
+}
 const Gap: React.FunctionComponent<{}> = () => {
   return (
     <div className={styles.gap}></div>
@@ -54,18 +80,13 @@ const Home: React.FunctionComponent<{}> = () => {
                 Information about the Coronavirus <img src={hlink} alt="Hyperlink" className={styles.hyperlink} /><br />
               </Link>
               <Gap />
-              <Link to={{
-                pathname: "/",
-                hash: "#tpCalculator"
-              }}
-                role="button" aria-haspopup="true" aria-expanded="false"
-              >
+              <TempLink to="#tpCalculator">
                 Toilet paper calculator, how close are we to the end of times ?<br />
-              </Link>
+              </TempLink>
               <Gap />
-              <Link to="#tpJokes" role="button" aria-haspopup="true" aria-expanded="false">
-                Toilet paper jokes, no guarantee of quality<br />
-              </Link>
+              <TempLink to="#tpJokes">
+                Toilet paper jokes, no guarantee of quality or softness<br />
+              </TempLink>
               <Gap />
               <Link to="/Alternatives" role="button" aria-haspopup="true" aria-expanded="false">
                 Alternatives to toilet paper, you may need this<br />
