@@ -19,3 +19,20 @@ Starting with png
 
 Aim was for user to get first image as fast as possible. Shows spinning toilet roll. All styles, html in index.html
 
+#### Deploy testing with github pages
+
+Alter github settings, allow publishing to gh-pages branch
+
+```
+yarn add gh-pages
+gh-pages -d build
+```
+
+Basic build requires server
+yarn build
+```
+"build": "rm -rf build && react-scripts build",
+"predeploy": "yarn build",
+"deploy:gh": "gh-pages -d build",
+```
+

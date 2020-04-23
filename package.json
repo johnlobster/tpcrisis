@@ -2,6 +2,7 @@
   "name": "tpcrisis",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://johnlobster.github.io/tpcrisis",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -18,12 +19,15 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
+    "serve": "^11.3.0",
     "typescript": "~3.7.2",
     "yarn": "^1.22.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rm -rf build && react-scripts build",
+    "predeploy": "yarn build",
+    "deploy:gh": "yarn predeploy && gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

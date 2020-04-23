@@ -1,12 +1,13 @@
 import React from 'react';
 import TpLink from "../TpLink/TpLink";
-import styles from "./TpNavDesktop.module.scss";
+// import styles from "./TpNavDesktop.module.scss";
 import { tpNavList} from "./links";
 
+//     <div className={styles.topBox}>
 
 const TpNavDesktop: React.FunctionComponent = () => {
   return (
-    <div className={styles.topBox}>
+    <div >
       <h3>Menu</h3>
       {tpNavList.map((item, index) => {
         return (
