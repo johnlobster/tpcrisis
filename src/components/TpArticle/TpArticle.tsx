@@ -48,14 +48,6 @@ const TpArticle: React.FunctionComponent<TpArticleProps> = (props) => {
           </div>
 
           <div className={styles.midBox + " col-12"}>
-            <div>
-              {(articleOpen) ? (
-                <h2>Open</h2>
-                ) : (
-                <h2>Closed</h2>
-                )}
-            </div>
-                  
             <div className="btn btn-primary" onClick={openArticle}>Open</div>
             <div className="btn btn-primary" onClick={closeArticle}>Closed</div>
             <br />

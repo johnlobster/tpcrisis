@@ -1,43 +1,63 @@
 import React from 'react';
 
-import * as globals from "../../globals/globalTypes";
-
+import TpLink from "../../components/TpLink/TpLink";
 import TpArticle from "../../components/TpArticle/TpArticle";
 import factsArticles from "./FactsArticles";
 
 import styles from "./Facts.module.scss";
 
 // ToDo - add this into useEffect as anonymous function
+// ToDo - move into TpArticle
 const tfn: () => void = ()=> {
   factsArticles.forEach( (article) => {
     const x: HTMLElement | null = document.getElementById(article.tag);
     if (x) {
       x.innerHTML = article.body;
     }
-  })
-  
-  
-
+  });
 }
 
+// ToDo create a list of articles to navigate to. If gets long, should itself be able to expand. Possibly an article itself
+//      some confusion about how tag is used. Should be used for start of article, not to insert HTML. use insert_{tag}
 const Facts: React.FunctionComponent = () => {
 
   React.useEffect(tfn,[]);
 
-return (
-  <div className={styles.page + " container-sm"}>
-    <h3>I don't deserve to be here</h3>
-    {factsArticles.map( (article, aIndex)=> {
-      return (
-        <TpArticle key={article.index} articleObj={article}>
-          <div id={article.tag}>
-          </div>
-        </TpArticle>
-        );
-      })
-    } 
-  </div>
-    );
+  return (
+    <div className={styles.page + " container-sm"}>
+      <div className="row">
+        <div className={styles.pageTitle + " col-12"}>
+          Everything you ever wanted to know about toilet paper but were too embarrassed to ask
+        </div>
+      </div>
+
+      <div className="row">
+        <div className=" col-12">
+          <h4>List of articles</h4>
+          <ul>
+            {factsArticles.map((article) => {
+              return (
+                <li key={article.index}>
+                  {article.link}
+                </li>
+              )}
+            )}
+          </ul>
+        </div>
+        <br />
+      </div>
+
+      {factsArticles.map( (article)=> {
+        return (
+          <TpArticle key={article.index} articleObj={article}>
+            <div id={article.tag}>
+            </div>
+          </TpArticle>
+          );
+        })
+      } 
+    </div>
+  );
 }
 
 export default Facts;
