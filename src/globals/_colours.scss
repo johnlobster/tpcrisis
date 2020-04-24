@@ -31,6 +31,10 @@ $tpJokesBorderColour: scale-color($tpJokesBackgroundColour, $lightness: -25%);
 
 $tpShadowColour: darkslategray;
 
+/* Articles */
+
+$tpArticleBackground: scale-color($pageBackground, $hue: 30%, $lightness: +40%);
+
 /* Darker shades */
 $tpPrimary-d1: scale-color($tpPrimary, $lightness: -20%); 
 $tpPrimary-d2: scale-color($tpPrimary, $lightness: -40%); 

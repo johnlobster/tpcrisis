@@ -14,6 +14,18 @@ export const tpNavList: globalTypes.NavList = [
     "TP information"
   ],
   [
+    "/Insanity",
+    "Crazy stuff about toilet paper during pandemic"
+  ],
+  [
+    "/Alternatives",
+    "What to use instead of toilet paper"
+  ],
+  [
+    "/Contribute",
+    "Add some toilet paper"
+  ],
+  [
     "/About",
     "More about website"
   ]

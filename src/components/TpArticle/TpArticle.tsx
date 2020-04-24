@@ -1,68 +1,69 @@
 import React, { useState } from 'react';
 import styles from "./TpArticle.module.scss";
 
+import * as global from "../../globals/globalTypes";
 
-const temp: string = `
-Hello, I am a string
-<h3>Header a</h3>
-<h3>Header a</h3>
-Voluptate nisi aliquip id sint voluptate. Reprehenderit esse est et sit aute. Esse pariatur veniam enim nulla ut fugiat elit minim veniam nostrud est culpa eiusmod proident. Qui ad enim aliquip dolor.
-`;
 interface  TpArticleProps {
-  sampleText: string
+  articleObj: global.Article
 }
 
+// ToDo TpArticle ought to set up it's own html, not page that calls it, would stop an extra render
+
+// ToDo Image
 
 const TpArticle: React.FunctionComponent<TpArticleProps> = (props) => {
 
-  const [open, setArticleState] = useState(false);
-
-  const [hoverMe, setHoverMeState] = useState(true);
+  const [articleOpen, setArticleState] = useState(false);
 
   const openArticle = ():void  => {
     setArticleState(true);
-    setHoverMeState(false);
-
   }
+
+  // ToDo - put the tag at the top <div>
 
   const closeArticle = (): void => {
     setArticleState(false);
-    setHoverMeState(true);
   }
 
   return (
     <div>
       
-      <p>Sample text (prop) is {props.sampleText}</p>
-      <div className={ hoverMe ? (
-          styles.topBoxHover + " row"
-        ):(
+      <div className= {
+        articleOpen ? (
           styles.topBox + " row"
-        )}>
-        <div className={styles.midBox + " col-12"}>
-          <div>
-            {(open) ? (
-              <div>
-                <h2>Open</h2>
-              </div>
-            ) : (
-                <h2>Closed</h2>
-              )}
-            
-            <div>
-              {temp}
-            </div>
+        ):( 
+            styles.topBox + " " + styles.topBoxClosed + " row"
+        )}
+      >
+        <div className="col-12">
+          <h2>{props.articleObj.title}</h2>
 
-            <div>
+          <div className= { articleOpen ? (
+            styles.contentBox + " " + styles.contentBoxOpen
+            ): (
+              styles.contentBox
+            )}
+            >
               {props.children}
-            </div>
-            
           </div>
-              
+
+          <div className={styles.midBox + " col-12"}>
+            <div>
+              {(articleOpen) ? (
+                <h2>Open</h2>
+                ) : (
+                <h2>Closed</h2>
+                )}
+            </div>
+                  
+            <div className="btn btn-primary" onClick={openArticle}>Open</div>
+            <div className="btn btn-primary" onClick={closeArticle}>Closed</div>
+            <br />
+            <br />
+          </div> 
         </div>
-        <div className="btn btn-primary" onClick={openArticle}>Open</div>
-        <div className="btn btn-primary" onClick={closeArticle}>Closed</div>
-      </div> 
+        
+      </div>
     </div>
   );
 };
