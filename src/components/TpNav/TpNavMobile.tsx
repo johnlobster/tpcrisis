@@ -16,7 +16,7 @@ const TpNavMobile: React.FunctionComponent = () => {
             <button className="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               Menu
-              </button>
+            </button>
             <div className={styles.dropdownBox + " dropdown-menu"} aria-labelledby="dropdownMenuButton">
               {tpNavList.map((item, index) => {
                 return (
