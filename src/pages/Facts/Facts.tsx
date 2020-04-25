@@ -22,6 +22,13 @@ const Facts: React.FunctionComponent = () => {
 
   React.useEffect(tfn,[]);
 
+  React.useEffect( () => {
+    console.log("Entering Facts page");
+    let fred = process.env.PUBLIC_URL;
+    console.log(fred);
+
+  },[]);
+
   return (
     <div className={styles.page + " container-sm"}>
       <div className="row">

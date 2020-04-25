@@ -1,6 +1,7 @@
 
 import * as globalTypes  from "../../globals/globalTypes";
 
+const imageUrl = process.env.PUBLIC_URL + "/assets/images/pineTree.png";
 
 // list of articles. body can contain string literal or be read from another file
 // prebuild script would convert markdown files into strings in a file that could be written into factsArticles
@@ -41,6 +42,7 @@ const factsArticles: globalTypes.Article[] = [
         So to be environmentally sound, you have to give up softness and maybe end up with toilet paper that falls apart,
         rather than doing the job it was designed to do
       </p>
+      <img src=${imageUrl} alt="Lovely Pine tree" styles={height:12em;width:auto;}>
     </div>
     `
   },
