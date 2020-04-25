@@ -1,6 +1,14 @@
 @import "../../globals/colours";
 
-.topBox {
-  background-color: lightgreen;
+.desktopBox {
+  position:sticky;
+  top:0;
 }
-// background-color: $navBackground;
+
+.titleBox {
+  background-color: $navBackground;
+}
+
+.menuBox {
+  background-color: $navMenuBackground;
+}

@@ -15,13 +15,16 @@ $tpSecondary: grey;
 
 $headerBackground: #afadad;
 $headerBackgroundShade: scale-color($headerBackground, $lightness: -70%);
-$navBackground: scale-color($headerBackground, $saturation: +10%, $lightness: -20%);
+$navBackground: #7c5252;
+
 $pageBackground: scale-color($headerBackground, $saturation: -10%, $lightness: +40%);
 $footerBackground: $headerBackground;
 
 $bodyBackground: $pageBackground;
 $covidBackground: scale-color($bodyBackground, $hue: 30%, $lightness: +40%);
 $covidLinkBackground: scale-color($covidBackground, $lightness: -25%, $hue: -10%);
+
+$navMenuBackground: $covidBackground;
 
 /* short Jokes on a toilet roll */
 

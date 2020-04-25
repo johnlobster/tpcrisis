@@ -2,6 +2,7 @@ import React from 'react';
 
 import styles from "./Contribute.module.scss";
 
+import handle from "../../images/tHandle.png";
 
 import {contributions} from "../../http/contributions";
 
@@ -31,6 +32,8 @@ const Contribute: React.FunctionComponent<{}> = () => {
     cMessageUpdate(newMessage);
   }
 
+  const [flushing, flushingUpdate] = React.useState(false);
+
   const handleClear = (event: React.MouseEvent<HTMLElement>): void => {
     event.preventDefault();
     cMessageUpdate("");
@@ -38,12 +41,16 @@ const Contribute: React.FunctionComponent<{}> = () => {
     cNameUpdate("");
   }
 
+  
   // ToDo check that there are not multiple sends of same values
   const handleSend = (event: React.MouseEvent<HTMLElement>): void => {
     event.preventDefault(); 
     // event specific to the button or handle being clicked so don't need any event details
     // preventing default in case anything else attached to button
     
+    // set flushing for animations
+    flushingUpdate(true);
+
     contributions( cName, cSubject, cMessage)
       .then((success) => {
         if( success) {
@@ -51,6 +58,7 @@ const Contribute: React.FunctionComponent<{}> = () => {
         } else {
           console.log("message send failed");
         }
+        flushingUpdate(false);
       })
   }
 
@@ -74,7 +82,11 @@ const Contribute: React.FunctionComponent<{}> = () => {
         </div>
       </div>
 
-      <div className="row">
+      <div className={(flushing) ? (
+          "row " + styles.tpForm + " " + styles.formFlush
+        ) : (
+          "row " + styles.tpForm
+        )}>
         <div className="form col-12">
           <div>
             <div className={styles.nameBox + " form-group"}>
@@ -129,6 +141,16 @@ const Contribute: React.FunctionComponent<{}> = () => {
           <br />
           <button className="btn btn-primary" onClick={handleSend}>Send</button>
           <button className="btn btn-primary" onClick={handleClear}>Clear everything</button>
+          <br />
+          <div className={styles.handleBox}>
+            <img src={handle} alt="Toilet handle, flush me" onClick={handleSend}
+              className={(flushing) ? (
+                styles.tHandle + " " + styles.tHandleFlush
+              ) : (
+                  styles.tHandle 
+                )}
+            />
+          </div>
         </div>
       </div>
     </div>

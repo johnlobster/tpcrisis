@@ -11,7 +11,7 @@ export const tpNavList: globalTypes.NavList = [
   ],
   [
     "/Facts",
-    "TP information"
+    "\"Interesting\" things about toilet paper"
   ],
   [
     "/Insanity",
@@ -23,7 +23,7 @@ export const tpNavList: globalTypes.NavList = [
   ],
   [
     "/Contribute",
-    "Add some toilet paper"
+    "Send some toilet paper to website"
   ],
   [
     "/About",
