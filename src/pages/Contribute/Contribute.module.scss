@@ -4,3 +4,30 @@
 .page {
   background-color: $pageBackground;
 }
+
+.pageTitle {
+  font-size: 1.8em;
+  padding-bottom: 1.5em;
+  font-weight: bold;
+}
+
+.nameBox {
+  height: 4em;
+}
+// Might need a media query to get this right
+.nameForm {
+  // width: 60vw;
+  // min-width: 40%;
+  max-width: 80%;
+  overflow-x: auto;
+}
+.subjectForm {
+  width: 60vw;
+  min-width: 60%;
+}
+
+.messageForm {
+  // height: 20em; // might want to change for mobile
+  overflow-y: auto;
+  resize: none;
+}

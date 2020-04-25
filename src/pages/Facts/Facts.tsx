@@ -1,6 +1,5 @@
 import React from 'react';
 
-import TpLink from "../../components/TpLink/TpLink";
 import TpArticle from "../../components/TpArticle/TpArticle";
 import factsArticles from "./FactsArticles";
 
@@ -26,9 +25,15 @@ const Facts: React.FunctionComponent = () => {
   return (
     <div className={styles.page + " container-sm"}>
       <div className="row">
-        <div className={styles.pageTitle + " col-12"}>
-          Everything you ever wanted to know about toilet paper but were too embarrassed to ask
+        <div className="col-12">
+          <div className={styles.pageTitle}>
+            Everything you ever wanted to know about toilet paper but were too embarrassed to ask
+          </div>
+          <p>
+            You didn't ask for it, but here it is, the life and times of toilet paper
+          </p>
         </div>
+        
       </div>
 
       <div className="row">

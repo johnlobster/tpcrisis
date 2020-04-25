@@ -84,10 +84,13 @@ const About: React.FunctionComponent<{}> = () => {
           <ul>
             <li>
               Google (and similar) analytics. Provides the website owner with lots of useful information about how the website is being used,
-              but also supplies information about individual users
+              but also supplies information about individual users to other companies
             </li>
             <li>
               Social media share buttons. I would love you to talk about my website with your friends, but guess what ....
+            </li>
+            <li>
+              Code within ads that sends tracking information back to other companies and sets cookies. That's why no ads
             </li>
           </ul>
           <p>

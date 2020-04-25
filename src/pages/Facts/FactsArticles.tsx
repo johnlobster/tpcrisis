@@ -1,5 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 
 import * as globalTypes  from "../../globals/globalTypes";
 
@@ -9,7 +7,7 @@ import * as globalTypes  from "../../globals/globalTypes";
 // note that images would have to be linked to. Might have to do /public/articleImages otherwise could be hard to
 // refer to images
 
-// Note - body string is converted to html, not through jsx. So use class= instead of className=
+// Note - body string is converted directly to html, not through jsx. So use class= instead of className=
 const factsArticles: globalTypes.Article[] = [
   {
     index: 0,
@@ -22,7 +20,7 @@ const factsArticles: globalTypes.Article[] = [
         The question is not so much the history of toilet paper, but what people used before toilet paper
       </p>
       <p>
-        If you really need to know all of this in horrible detail, click below
+        If you really need to know more details, click below
       </p>
       <a href="http://www.toiletpaperhistory.net" class="artLink">
           Toilet Paper history at http://www.toiletpaperhistory.net
