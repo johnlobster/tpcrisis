@@ -1,0 +1,14 @@
+@import "../../globals/colours";
+
+.desktopBox {
+  position:sticky;
+  top:0;
+}
+
+.titleBox {
+  background-color: $navBackground;
+}
+
+.menuBox {
+  background-color: $navMenuBackground;
+}

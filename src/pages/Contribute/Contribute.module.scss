@@ -1,6 +1,99 @@
 @import "../../globals/colours";
 @import "../../globals/fonts";
 
+
+@keyframes handleFlushAnimation {
+  0%   {transform: rotate(0);}
+  50%  {transform: rotate(-45deg);}
+  100% {transform: rotate(0);}
+}
+
+@keyframes tpDispose {
+  0% {transform: scale(1) rotate(0) translate(0,0) ; opacity: 1; }
+
+  8% {
+    transform: scale(1.05) rotate(0) translate(0,0) ; opacity: 1;
+    border-color: scale-color($pageBackground, $lightness: -40% );
+    box-shadow: 3px 3px 5px $tpShadowColour}
+  10% {transform: scale(1.05) rotate(0) translate(0,0) ; opacity: 1;
+    border-color: scale-color($pageBackground, $lightness: -40% );
+    box-shadow: 3px 3px 5px $tpShadowColour}
+
+  30% {transform: scale(0.4) rotate(30deg) translate(0,0) ; opacity: 1; box-shadow:none; }
+
+  98% {transform: scale(0.1) rotate(270deg) translate(0,300px) ; opacity: 0.7; box-shadow:none; }
+  100% {transform: scale(0) rotate(270deg) translate(0,300px) ; opacity: 0; box-shadow:none; }
+}
+
 .page {
   background-color: $pageBackground;
+}
+
+.pageTitle {
+  font-size: 1.8em;
+  padding-bottom: 1.5em;
+  font-weight: bold;
+}
+
+.nameBox {
+  height: 4em;
+}
+// Might need a media query to get this right
+.nameForm {
+  // width: 60vw;
+  // min-width: 40%;
+  max-width: 80%;
+  overflow-x: auto;
+}
+.subjectForm {
+  width: 60vw;
+  max-width: 80%;
+}
+
+.messageForm {
+  // height: 20em; // might want to change for mobile
+  overflow-y: auto;
+  resize: none;
+}
+
+.handleBox {
+  display:flex;
+  justify-content: center;
+  padding-bottom: 2em;
+
+  
+}
+
+.tHandle {
+  height: 4.5em;
+  width: auto;
+  transform-origin: 75% 50%;
+
+  &:hover {
+    transform: scale(1.08);
+  } 
+}
+
+.tHandleFlush {
+  animation-name: handleFlushAnimation;
+  animation-duration: 1s ;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+
+}
+
+.tpForm {
+  background-color: $pageBackground;
+  border-style: solid;
+  border-width: 3px;
+  border-color: $pageBackground;
+  box-shadow: none;
+}
+
+.formFlush {
+  animation-name: tpDispose;
+  animation-duration: 2s ;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+
 }

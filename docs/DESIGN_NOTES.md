@@ -62,3 +62,20 @@ so the first thing the user sees is the 404 page. After that it routes ok as it 
 2 `index.html` loads files from `/static`, would need to change to `/tpcrisis/static` 
 Don't seem to have this problem on mobile ...
 
+#### Deploy testing with github pages
+
+Alter github settings, allow publishing to gh-pages branch
+
+```
+yarn add gh-pages
+gh-pages -d build
+```
+
+Basic build requires server
+yarn build
+```
+"build": "rm -rf build && react-scripts build",
+"predeploy": "yarn build",
+"deploy:gh": "gh-pages -d build",
+```
+

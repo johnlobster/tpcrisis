@@ -50,27 +50,31 @@ const Home: React.FunctionComponent<{}> = () => {
             <br />
             <p className={styles.covidTitle}>
               The Coronavirus is real
-          </p>
+            </p>
             <p>
               It's not a hoax, it's not a lie. It is very infectious and has killed many people around the world and will kill many more. Although this website is funny, the Coronavirus is not.
-          </p>
+            </p>
             <Link to="/Covid19" role="button" aria-haspopup="true" aria-expanded="false">
                 Click here for information about the Coronavirus
             </Link>
-            <br />
+            <Gap />
             <p>
               The toilet paper crisis is also real, which is much stranger. If Monty Python did a sketch about all the
               shelves being empty of toilet paper, we would laugh, but think that it was too far-fetched. Yet here we
-              are, running low on bathroom supplies.
-          </p>
+              are, running low on bathroom supplies. Click below for some essential tools
+            </p>
+            <TempLink to="#tpCalculator">
+              Toilet paper calculator, how long before raiding neighbors ?<br />
+            </TempLink>
+            <Gap />
+            <TempLink to="#tpJokes">
+              Toilet paper jokes, no guarantee of quality or softness<br />
+            </TempLink>
+            <Gap />
             <p>
               This website is dedicated to the humorous and satirical side of our obsession with toilet paper during a
               pandemic. Partly because toilet humor has always been my specialty, partly for, well, other reasons.
-          </p>
-            <p>
-              This page contains a toilet paper calculator, that works out how long you will be able to live in lock down
-              without having to raid your neighbors' supplies. There are also some simple jokes about toilet paper
-          </p>
+            </p>
 
             <div className={styles.covidLinkBox}>
               <p>
@@ -78,15 +82,7 @@ const Home: React.FunctionComponent<{}> = () => {
               </p>
               <Link to="/Covid19" role="button" aria-haspopup="true" aria-expanded="false">
                 Information about the Coronavirus <img src={hlink} alt="Hyperlink" className={styles.hyperlink} /><br />
-              </Link>
-              <Gap />
-              <TempLink to="#tpCalculator">
-                Toilet paper calculator, how close are we to the end of times ?<br />
-              </TempLink>
-              <Gap />
-              <TempLink to="#tpJokes">
-                Toilet paper jokes, no guarantee of quality or softness<br />
-              </TempLink>
+              </Link>              
               <Gap />
               <Link to="/Alternatives" role="button" aria-haspopup="true" aria-expanded="false">
                 Alternatives to toilet paper, you may need this<br />

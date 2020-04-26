@@ -1,16 +1,39 @@
 @import "../../globals/colours";
 
-.topBoxHover{
-  background-color: orange;
+
+
+.topBox {
+  background-color: $tpArticleBackground ;
+  overflow: hidden;
+  margin-bottom: 1em;
+  padding-top: 0.5em;
+  box-shadow: 
+    0em 0.2em 4px $tpShadowColour,
+    0em -0.2em 4px $tpShadowColour,
+    0.1em 0em 4px $tpShadowColour,
+    -0.1em 0em 4px $tpShadowColour; 
+    
+}
+
+.topBoxClosed {
+  box-shadow: none;
 
   &:hover {
-    transform: scale(1.01);
-    box-shadow: 0.2em 0.2em darkslategrey ;
+    transform: scale(1.02);
+    border-radius: 5px;
+    
+    box-shadow: 0.2em 0.2em 4px $tpShadowColour ;  
   }
 }
 
-.topBox {
-    background-color: rgb(255, 94, 0);
+.contentBox {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  display:none;
+}
+
+.contentBoxOpen {
+  display: block;
 }
 
 .midBox {

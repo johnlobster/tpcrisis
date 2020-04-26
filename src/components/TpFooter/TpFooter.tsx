@@ -19,15 +19,13 @@ const TpFooter: React.FunctionComponent<{}> = () => {
               This website serves no <NoBreak>cookies !!</NoBreak>
           </p>
           <p>
-            This website collects no data and uses no cookies or other similar technologies. There is no advertising,
-            so no secret cookies, tracking, 0 pixel ads, or anything like that. Not even Facebook and Google will know that 
+            This website collects no data and uses no cookies or other similar technologies. Nobody will know that 
             you are here. I hope that doesn't make you feel lonely.
-            <br />
-            <br />
-            <TpLink to="/About">
-              Click here to find out more about the lack of cookies
-            </TpLink>
           </p>
+          <TpLink to="/About">
+            Click here to find out more about the lack of cookies
+          </TpLink>
+          
             
           
         </div>
@@ -35,17 +33,18 @@ const TpFooter: React.FunctionComponent<{}> = () => {
 
       <div className="row mt-2">
         <div className="col-12 col-md-6">
-          <div>
-            Have the best toilet paper joke on the planet ? 
-            <br />
-            Know something cool ? 
-          </div>
+          <p>
+            Have the best toilet paper joke on the planet ? <br />
+            Know something cool ? <br />
+            Want to complain ? <br />
+            Click below to make your opinion heard
+          </p>
           <TpLink to ="/Contribute">
-            Click here to send me some great stuff
+            Send me some great stuff
           </TpLink>
           <br />
           <TpLink to="/About">
-            Click here to find out more about this website
+            Find out more about this website
           </TpLink>
         </div>
 

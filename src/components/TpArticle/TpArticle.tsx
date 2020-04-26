@@ -1,54 +1,61 @@
 import React, { useState } from 'react';
 import styles from "./TpArticle.module.scss";
 
+import * as global from "../../globals/globalTypes";
 
 interface  TpArticleProps {
-  sampleText: string
+  articleObj: global.Article
 }
 
+// ToDo TpArticle ought to set up it's own html, not page that calls it, would stop an extra render
+
+// ToDo Image
 
 const TpArticle: React.FunctionComponent<TpArticleProps> = (props) => {
 
-  const [open, setArticleState] = useState(false);
-
-  const [hoverMe, setHoverMeState] = useState(true);
+  const [articleOpen, setArticleState] = useState(false);
 
   const openArticle = ():void  => {
     setArticleState(true);
-    setHoverMeState(false);
-
   }
+
+  // ToDo - put the tag at the top <div>
 
   const closeArticle = (): void => {
     setArticleState(false);
-    setHoverMeState(true);
   }
 
   return (
     <div>
       
-      <p>Sample text (prop) is {props.sampleText}</p>
-      <div>
-        {props.children}
-      </div>
-      <div className={ hoverMe ? (
-          styles.topBoxHover + " row"
-        ):(
+      <div className= {
+        articleOpen ? (
           styles.topBox + " row"
-        )}>
-        <div className={styles.midBox + " col-12"}>
-          {(open) ? (
-            <div>
-              <h2>Open</h2>
-              <p>Commodo nisi ex aliquip elit elit exercitation pariatur cupidatat sit ea quis ipsum. Ut exercitation amet consequat Lorem minim laborum dolore incididunt veniam enim aliquip sit. Fugiat ea fugiat irure in nulla.</p>
-            </div>
-          ) : (
-            <h2>Closed</h2>
-          )}
+        ):( 
+            styles.topBox + " " + styles.topBoxClosed + " row"
+        )}
+      >
+        <div className="col-12">
+          <h2>{props.articleObj.title}</h2>
+
+          <div className= { articleOpen ? (
+            styles.contentBox + " " + styles.contentBoxOpen
+            ): (
+              styles.contentBox
+            )}
+            >
+              {props.children}
+          </div>
+
+          <div className={styles.midBox + " col-12"}>
+            <div className="btn btn-primary" onClick={openArticle}>Open</div>
+            <div className="btn btn-primary" onClick={closeArticle}>Closed</div>
+            <br />
+            <br />
+          </div> 
         </div>
-        <div className="btn btn-primary" onClick={openArticle}>Open</div>
-        <div className="btn btn-primary" onClick={closeArticle}>Closed</div>
-      </div> 
+        
+      </div>
     </div>
   );
 };

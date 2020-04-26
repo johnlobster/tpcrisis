@@ -1,6 +1,8 @@
 /*
   global styles for tpcrisis
 */
+@import "./colours";
+
 
 // when used on a tag, turns it into a flexbox and centers content verticallu and horizontally
 .tpFlexCenterContents {
@@ -8,3 +10,39 @@
   justify-content: center;
   align-items: center;
 }
+
+/* Global styles for articles */
+
+// copied from TpLink, not very efficient as repeating myself
+.artLink {
+  border-radius: 0.2em;
+  font-size: 1.1em; 
+  color: $tpTextLinkColour;
+  display: inline-block; // otherwise padding doesn't pad long lines
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  padding-bottom: 0.2em;
+  padding-top: 0.2em;
+
+  &:link {
+    color: $tpTextLinkColour;
+    
+  }
+
+  &:visited {
+    color: $tpVisitedColour;
+  }
+
+  &:hover {
+    color: $tpLinkHoverColour;
+    background-color: $tpLinkHoverBackground;
+    text-decoration: none;
+  }
+
+  // ToDo active - animation for active similar to Material Design
+  &:active {
+    color: $tpLinkActiveColour;
+    background-color: $tpLinkActiveBackground;
+  }
+
+} 
