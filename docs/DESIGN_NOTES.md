@@ -30,7 +30,9 @@ Starting with png
 2. Use `INLINE_RUNTIME_CHUNK=false` during build to prevent webpack inserting its own Javascript into `index.html`
 
 Issues
-- build has unique names confused, can't then load js, css files.
+- build has unique names confused, can't then load js, css files. Not a consistent problem
+
+
 #### Testing using github pages
 
 This was useful for initial testing and developing the flow to make the first render fast.
@@ -49,9 +51,14 @@ https://johnlobster.github.io/tpcrisis/
 ```
 Use github settings to enable github pages and set to gh-pages branch
 
-github pages doesn't quite work right for routing, it starts at
+Issues
+
+1 github pages doesn't quite work right for routing, it starts at
 ```
 /tpcrisis
 ```
 so the first thing the user sees is the 404 page. After that it routes ok as it is going through `react-router`, not the browser
+
+2 `index.html` loads files from `/static`, would need to change to `/tpcrisis/static` 
+Don't seem to have this problem on mobile ...
 
