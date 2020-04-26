@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import "../../globals/styles.scss";
 import styles from "./TpHeader.module.scss";
 import virus from "../../images/covid_19_1.png";
-import roll from "../../images/tRoll2.png";
+// import roll from "../../images/tRoll2.png";
+// don't need to go through 
 
 // bootstrap display class are used to make images and text appear in different orders
 
@@ -26,7 +27,7 @@ const TpHeader: React.FunctionComponent<{}> = () => {
           <Link
           to="/Home"
           role="button" aria-haspopup="true" aria-expanded="false">
-            <img className={`${styles.im}  ${styles.imTP}`} src={roll} alt="Toilet paper"></img>
+            <img className={`${styles.im}  ${styles.imTP}`} src="/assets/images/tRoll2.png" alt="Toilet paper"></img>
           </Link>
         </div>
 
@@ -42,7 +43,7 @@ const TpHeader: React.FunctionComponent<{}> = () => {
           <Link
             to="/Home"
             role="button" aria-haspopup="true" aria-expanded="false">
-            <img className={`${styles.im}  ${styles.imTP}`} src={roll} alt="Toilet paper"></img>
+            <img className={`${styles.im}  ${styles.imTP}`} src="/assets/images/tRoll2.png" alt="Toilet paper"></img>
           </Link>
         </div>
 
