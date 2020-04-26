@@ -14,11 +14,11 @@ const Covid19: React.FunctionComponent<{}> = () => {
             There are a number of names for what's going on
           </p>
           <dl className={styles.indent}>
-            <dt>Pandemic:</dt>
+            <dt>Pandemic</dt>
               <dd>The world wide spread of a disease</dd>
-            <dt>Coronavirus:</dt>
+            <dt>Coronavirus</dt>
               <dd>A type of virus</dd>
-            <dt>SARS-CoV-2: </dt>
+            <dt>SARS-CoV-2 </dt>
               <dd>
                 The virus that's causing all the trouble. 
                 Severe Acute Respiratory Syndrome Coronavirus 2
@@ -34,35 +34,27 @@ const Covid19: React.FunctionComponent<{}> = () => {
           </p>
 
           <p>
-            We are all naturally worried about the Coronavirus and it's impact on societies and economies. The situation
-            is constantly changing and some decisions have to made very quickly
-            I have put some basic facts on this page and information about identifying whether new information is true,
-            incomplete or false.
-          </p>
-          <p>
-            It's also important that the Pandemic shouldn't completely control our lives. There are opportunities to reach
-            out to neighbors, friends and family. There is also some humor to be found in the midst of this crisis.
-          </p>
-          <p>
             On this page, there a number of different topics. Click on one of the links below to go directly to that topic
             or read in sequence
           </p>
-            <TpLink to="#coronavirusInformation">
-              How to use different sources of information, not everything on the internet is true
-            </TpLink>
-            <br />
-            <TpLink to="#coronavirusReliable">
-              Reliable sources of Information - Doctors, Scientists, Statistics and Journalists
-            </TpLink>
-            <br />
-            <TpLink to="#coronavirusViruses">
-              Viruses, Coronavirus viruses, Influenza viruses and hand washing
-            </TpLink>
-            <br />
-            <TpLink to="#coronavirusLinks">
-              External websites with more information
-            </TpLink>
-            <br />
+          <TpLink to="#coronavirusViruses">
+            Viruses, Coronavirus viruses, Influenza viruses and hand washing
+          </TpLink>
+          <br />
+          <TpLink to="#coronavirusInformation">
+            How to use different sources of information, not everything on the internet is true
+          </TpLink>
+          <br />
+          <TpLink to="#coronavirusReliable">
+            Reliable sources of Information - Doctors, Scientists, Statistics and Journalists
+          </TpLink>
+          <br />
+          <TpLink to="#coronavirusLinks">
+            External websites with more information
+          </TpLink>
+          <br />
+
+          <h5 id="coronavirusViruses">Viruses, Coronavirus viruses, Influenza viruses and hand washing</h5>
 
           <h5 id="coronavirusInformation">Information</h5>
           <p>
@@ -94,9 +86,19 @@ const Covid19: React.FunctionComponent<{}> = () => {
           </p>
           Social media
 
+          <p>
+            We are all naturally worried about the Coronavirus and it's impact on societies and economies. The situation
+            is constantly changing and some decisions have to made very quickly
+            I have put some basic facts on this page and information about identifying whether new information is true,
+            incomplete or false.
+          </p>
+          <p>
+            It's also important that the Pandemic shouldn't completely control our lives. There are opportunities to reach
+            out to neighbors, friends and family. There is also some humor to be found in the midst of this crisis.
+          </p>
+          
           <h5 id="coronavirusReliable">Reliable information about the Coronavirus</h5>
 
-          <h5 id="coronavirusViruses">Viruses, Coronavirus viruses, Influenza viruses and hand washing</h5>
 
           <h5>SARS and MERS</h5>
 

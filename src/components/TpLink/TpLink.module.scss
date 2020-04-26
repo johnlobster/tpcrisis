@@ -10,10 +10,8 @@
   font-size: 1.1em; 
   color: $tpTextLinkColour;
   display: inline-block; // otherwise padding doesn't pad long lines
-  padding-left: 0.3em;
-  padding-right: 0.3em;
-  padding-bottom: 0.2em;
-  padding-top: 0.2em;
+  
+  padding: 0.3em 0.3em 0.4em 0;
 
 }
 

@@ -3,12 +3,17 @@
 .desktopBox {
   position:sticky;
   top:0;
+  background-color: $pageBackground;
 }
 
 .titleBox {
-  background-color: $navBackground;
+  background-color: $navMenuBackground;
+  font-weight: bold;
+  padding: 0.25em 0 0.25em 0.6em;
 }
 
 .menuBox {
   background-color: $navMenuBackground;
+  padding: 0.25em 0.25em 0.25em 0.6em;
+  font-size: 1.1em;
 }

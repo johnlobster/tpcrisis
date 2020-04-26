@@ -1,7 +1,9 @@
 @import "../../globals/colours";
 
 .topBox {
-  background-color: $navBackground;
+  background-color: $navMenuBackground;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
 }
 
 .dropdownBox {
@@ -11,6 +13,11 @@
   min-width: 80vw;
   max-width: 85vw;
   white-space: normal;
+  padding: 0 0.2em 0 0.4em;
 
+}
+
+.dropItem {
+  white-space: normal;
 }
 

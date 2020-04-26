@@ -21,7 +21,7 @@ const TpNavMobile: React.FunctionComponent = () => {
               {tpNavList.map((item, index) => {
                 return (
                   <TpLink
-                    className="dropdown-item"
+                    className={styles.dropItem + " dropdown-item"}
                     to={item[0]}
                     key={`key_${index}`}
                   >
