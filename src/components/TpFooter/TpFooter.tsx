@@ -32,7 +32,17 @@ const TpFooter: React.FunctionComponent<{}> = () => {
       </div>
 
       <div className="row mt-2">
-        <div className="col-12 col-md-6">
+        <div className="col-12 col-md-4">
+
+          {/* <TpLink to="/About">
+            Click here to make a donation
+          </TpLink> */}
+          <TpLink to="/About">
+            Find out more about this website
+          </TpLink>
+        </div>
+
+        <div className="col-12 col-md-8">
           <p>
             Have the best toilet paper joke on the planet ? <br />
             Know something cool ? <br />
@@ -42,17 +52,7 @@ const TpFooter: React.FunctionComponent<{}> = () => {
           <TpLink to ="/Contribute">
             Send me some great stuff
           </TpLink>
-          <br />
-          <TpLink to="/About">
-            Find out more about this website
-          </TpLink>
-        </div>
-
-        <div className="col-12 col-md-6">
-            
-          {/* <TpLink to="/About">
-            Click here to make a donation
-          </TpLink> */}
+          
         </div>
 
       </div>

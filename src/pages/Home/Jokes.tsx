@@ -31,7 +31,7 @@ const flushTime: number = 1900; // milliseconds
 
 class Jokes extends React.Component<Props, Partial<JokesState>> {
 
-  private currentJoke: string = "Flush the toilet for a joke, if you dare";
+  private currentJoke: string[] = ["Flush the toilet for a joke, if you dare"];
   private badJokes: globalTypes.JokeList = allJokes;
 
   state: JokesState = {
@@ -47,8 +47,6 @@ class Jokes extends React.Component<Props, Partial<JokesState>> {
 
   flushHandler: () => void = () => {
     // enable animation setting up next joke
-    console.log("Flush pressed");
-    console.log(this.state.flush);
 
     // only allow a flush if animations not already underway 
     if ( this.state.flush === FlushState.NoFlush) {
@@ -59,12 +57,12 @@ class Jokes extends React.Component<Props, Partial<JokesState>> {
 
       // wait until animations done before accepting next flush
       setTimeout(() => {
-        this.currentJoke = this.getJoke();
+        this.currentJoke = this.getJoke().split('\n');
+        console.log(this.currentJoke);
 
         this.setState({
           flush: FlushState.NoFlush
         });
-        console.log("Flush released");
 
       }, flushTime);
     }
@@ -112,7 +110,13 @@ class Jokes extends React.Component<Props, Partial<JokesState>> {
                   styles.tpJoke + " " + styles.tpFlush
                   )}
                 >
-                  {this.currentJoke}
+                  {this.currentJoke.map((jokeLine,index) => {
+                    return (
+                      <div className={styles.jokeLine} key={"key_" + index}>
+                        {jokeLine}
+                      </div>
+                    )})
+                  }
                 </div>
               </div>
             </div>

@@ -28,7 +28,7 @@ $navMenuBackground: $covidBackground;
 
 /* short Jokes on a toilet roll */
 
-$tpJokesBackgroundColour:  #e4e7bc;
+$tpJokesBackgroundColour:  #bfbfbf;
 $tpJokesShadowColour: #313131; 
 $tpJokesBorderColour: scale-color($tpJokesBackgroundColour, $lightness: -25%);
 
@@ -79,3 +79,5 @@ $titleTextColour-l1: scale-color($titleTextColour, $lightness: +15%);
 $titleTextColour-l2: scale-color($titleTextColour, $lightness: +30%);
 $titleTextColour-l3: scale-color($titleTextColour, $lightness: +40%);
 
+/* Darker shades */
+$tpTextColour-d2: scale-color($tpTextColour, $lightness: -30%);
