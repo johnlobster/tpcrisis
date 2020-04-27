@@ -67,7 +67,7 @@ const Contribute: React.FunctionComponent<{}> = () => {
       <div className="row">
         <div className="col-12">
           <div className={styles.pageTitle}>
-            Use this form to send me your complaints, jokes, amazing insights, cool web links, disgusting images,
+            Use this form to send me your complaints, jokes, amazing insights, cool web links, toilet paper (digital only), disgusting images,
             long essays or more complaints
           </div>
           <h4>If you send me anything, be careful because</h4>
@@ -117,7 +117,7 @@ const Contribute: React.FunctionComponent<{}> = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="contrMessage">Amazing stuff you want me to know</label>
+              <label htmlFor="contrMessage">Amazing stuff you want me to know, only accepts text, you will have to paste links to images</label>
               <textarea
                 className={styles.messageForm + " form-control"}
                 id="contrMessage"
