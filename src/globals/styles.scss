@@ -46,3 +46,36 @@
   }
 
 } 
+// This is to replace the bootstrap style
+.my-btn-primary {
+  color: white;
+  background-color: $tpPrimary;
+  border-color: $tpPrimary;
+  outline: none;
+
+  &:hover {
+    color: white;
+    background-color: $tpPrimary-d2;
+    border-color: $tpPrimary-d2;
+    box-shadow:
+      0 0 4px 1px $tpShadowColour,
+      0.25em 0.25em 3px $tpShadowColour;
+  }
+
+  &:active {
+    color: red;
+    background-color: $tpPrimary-d2;
+    border-color: $tpPrimary-l3;
+    box-shadow:
+      0 0 4px 1px $tpShadowColour,
+      0.25em 0.25em 3px $tpShadowColour;
+  }
+
+  // same as main, need it to  overwrite bootstrap. Note focus would overwrite hover, so have to have explicit no hover
+  &:focus:not(:hover) {
+    color: white;
+    background-color: $tpPrimary;
+    border-color: $tpPrimary;
+    box-shadow: none;
+  }
+}

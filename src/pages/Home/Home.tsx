@@ -52,7 +52,8 @@ const Home: React.FunctionComponent<{}> = () => {
               The Coronavirus is real
             </p>
             <p>
-              It's not a hoax, it's not a lie. It is very infectious and has killed many people around the world and will kill many more. Although this website is funny, the Coronavirus is not.
+              It's not a hoax, it's not a lie. It is very infectious, has killed many people around the world and will kill many more. Although this 
+              website is funny, the Coronavirus is not.
             </p>
             <Link to="/Covid19" role="button" aria-haspopup="true" aria-expanded="false">
                 Click here for information about the Coronavirus

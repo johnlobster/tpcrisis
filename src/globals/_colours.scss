@@ -8,7 +8,7 @@ $b4large: 992;
 $b4XLarge: 1200;
 
 /* base colours */
-$tpPrimary: blue;
+$tpPrimary: rgb(0, 140, 255);
 $tpSecondary: grey;
 
 /* backgrounds */
@@ -65,17 +65,17 @@ $covidTextLink: #0f4c81; // Pantone colour of the year 2020
 $covidTextLinkHover: scale-color($covidTextLink, $lightness: 10%); 
 
 /* Link colours */
-$tpTextLinkColour: scale-color($tpTextColour, $lightness: +40%, $saturation: 85%);
+$tpTextLinkColour: blue;
 $tpLinkHoverColour: scale-color($tpTextLinkColour, $lightness: -20%, $saturation: 10%);
 $tpLinkActiveColour: red;
-$tpVisitedColour: scale-color($tpTextLinkColour, $lightness: -30%);
+$tpVisitedColour: scale-color($tpTextLinkColour, $lightness: -50%, $saturation: 30%);
 
-$tpLinkHoverBackground: scale-color($bodyBackground, $lightness: -25%, $hue: -10%);
-$tpLinkActiveBackground: scale-color($bodyBackground, $lightness: -25%, $hue: -10%);
+$tpLinkHoverBackground: scale-color($bodyBackground, $lightness: -25%, $hue: -10%, $alpha: -30% );
+$tpLinkActiveBackground: scale-color($bodyBackground, $lightness: -5%, $hue: -10%, $alpha: -30% );
 // Note - Hover and Active should be different, do that can see when button pressed on desktop //
 
 /* Lighter shades */
 $titleTextColour-l1: scale-color($titleTextColour, $lightness: +15%);
-$titleTextColour-l1: scale-color($titleTextColour, $lightness: +30%);
-$titleTextColour-l1: scale-color($titleTextColour, $lightness: +40%);
+$titleTextColour-l2: scale-color($titleTextColour, $lightness: +30%);
+$titleTextColour-l3: scale-color($titleTextColour, $lightness: +40%);
 

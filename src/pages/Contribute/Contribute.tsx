@@ -139,8 +139,8 @@ const Contribute: React.FunctionComponent<{}> = () => {
         <div className="form col-12">
           Submit button and handle, clear form, message box for returned message
           <br />
-          <button className="btn btn-primary" onClick={handleSend}>Send</button>
-          <button className="btn btn-primary" onClick={handleClear}>Clear everything</button>
+          <button className="btn my-btn-primary" onClick={handleSend}>Send</button>
+          <button className="btn my-btn-primary" onClick={handleClear}>Clear everything</button>
           <br />
           <div className={styles.handleBox}>
             <img src={handle} alt="Toilet handle, flush me" onClick={handleSend}
