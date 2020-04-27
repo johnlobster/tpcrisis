@@ -5,6 +5,7 @@ import TpLink from '../../components/TpLink/TpLink';
 import NoBreak from '../../components/NoBreak/NoBreak';
 import tp from "../../images/empty-toilet-paper.jpg";
 import hazard from "../../images/hazard.png";
+import kitty from "../../images/tpCat.gif";
 
 import styles from "./Tp404.module.scss";
 
@@ -46,8 +47,8 @@ const Tp404: React.FunctionComponent<{}> = () => {
       </div>
       
       <div className="row pt-4 pb-4">
-        <div className={styles.cats + " col-8"}>
-            Cats maybe
+        <div className={styles.cats + " col-12"}>
+            <img src={kitty} alt="Cat shredding toilet roll" className={styles.kitty} />
         </div>
       </div>
 

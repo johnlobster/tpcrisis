@@ -58,4 +58,12 @@ $flashColour2: rgb(255, 95, 0);
 
 .cats {
     color: red;
+    display:flex;
+    justify-content: center;
+}
+
+.kitty {
+    height: auto;
+    width:30%;
+    min-width: 120px;
 }
