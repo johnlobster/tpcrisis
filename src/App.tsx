@@ -55,18 +55,22 @@ class App extends React.Component<Props, State>{
   componentDidMount() { 
     // When everything is ready, get rid of the spinner
     // access spinner directly because it is not in react app hierarchy
-    const fred = document.getElementById("loadingSpinner");
-    console.log("App components is mounting");
-    // console.log(fred);
-    if (fred) {
+    
+    console.log("App component mounted");
       // using a timeout might be overkill. Perhaps also fade in react app
       // ToDo alter timeout or remove it. Possible fade in of app
       setTimeout(() => { 
-        fred.style.display = "none";
-        console.log("spinner display written to");
-      }, 1000);
+        const spinner = document.getElementById("loadingSpinner");
+        const evilVirus = document.getElementById("loadingVirus");
+        if (spinner) {
+          spinner.style.display = "none";
+        }
+        if (evilVirus) {
+          evilVirus.style.display = "none";
+        }
+        console.log("hide loading images");
+      }, 2000);
       
-    }
     // set up window size event to change this.currentScreen if necessary
     window.addEventListener("resize", this.windowResizer );
     // call window resizer. Default was mobile (mobile first), but may not be

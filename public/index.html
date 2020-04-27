@@ -34,26 +34,41 @@
         background-color: rgb(80, 80, 80); 
         /* Maybe make background more interesting, repeated pattern, gradient */
       }
-      
+
       @keyframes spinMe {
         0% {
-          transform: translate(-50%, -50%) rotate(0deg);
+          transform:  rotate(0deg);
         }
         
         50% {
-          transform: translate(-50%, -50%) rotate(180deg);
+          transform:  rotate(180deg);
         }
         
         100% {
-          transform: translate(-50%, -50%) rotate(360deg);
+          transform:  rotate(360deg);
         }
       }
+
+      @keyframes virusWobble {
+        0%   { transform: translate(   0,  0  ) scale(0.8) rotate(0); opacity: 0;}
+        10%  { transform: translate(   0,  0) scale(1.0) rotate(-5deg); opacity: 0.8;}
+        20%  { transform: translate(-20px, -25px) scale(1.05) rotate(+5deg); opacity: 1;}
+        30%  { transform: translate(-45%, -40px) scale(1.0) rotate(-5deg); opacity: 0.8;}
+        40%  { transform: translate(-40px, -45px) scale(0.8) rotate(+5deg); opacity: 0;}
+        41%  { transform: translate(20vw, 40vh) scale(0.8) rotate(180deg); opacity: 0;}
+        50%  { transform: translate(28vw, 38vh) scale(0.8) rotate(175deg); opacity: 0.8;}
+        60%  { transform: translate(32vw, 42vh) scale(1.0) rotate(185deg); opacity: 1;}
+        70%  { transform: translate(28vw, 45vh) scale(0.8) rotate(175deg); opacity: 0.8;}
+        80%  { transform: translate(36vw, 48vh) scale(0.3) rotate(185deg); opacity: 0;}
+        100% { transform: translate(    0,     0) scale(0.3) rotate(0); opacity: 0;}
+      }
+
       #loadingSpinner {
-        height:30vh; 
-        max-width: 80vw;
+        width:25vw; 
+        min-width: 100px;
         position:fixed;
-        top: 50%;
-        left: 50%;
+        top: 40vh;
+        left: 37.5vw;
         
         animation-name: spinMe;
         animation-duration: 4s;
@@ -62,6 +77,19 @@
         animation-direction: normal;
 
         z-index: 1000;
+      }
+      #loadingVirus {
+        width:20vw; 
+        position:fixed;
+        top: 30vh;
+        left: 20vw;
+        
+        animation-name: virusWobble;
+        animation-duration: 6s;
+        animation-iteration-count:infinite;
+        animation-timing-function: linear;
+        
+        z-index: 900;
       }
     </style>
 
@@ -79,7 +107,12 @@
     
     <!-- <img id="loadingSpinner" src= "%PUBLIC_URL%/assets/images/tRoll2.png" alt="Toilet paper"> -->
     <img id="loadingSpinner" src="assets/images/tRoll2.png" alt="Spinning toilet roll, while website loads">
-              
+        
+    <!-- Virus image, moves around -->
+    <img id="loadingVirus" src="assets/images/evilVirus.png"
+      alt="Evil virus, seen only while website loads">
+
+
     <!-- react app will be inserted here -->
     <div id="root"></div>
     

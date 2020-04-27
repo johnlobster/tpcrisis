@@ -10,14 +10,12 @@ const TpNavDesktop: React.FunctionComponent = () => {
       <div className={styles.menuBox}>
         {tpNavList.map((navItem, navIndex) => {
           return (
-            <div>
-              <TpLink
-                to={navItem[0]}
-                key={`key_${navIndex}`}
-              >
-                {navItem[1]}
-              </TpLink>
-            </div>
+            <TpLink
+              to={navItem[0]}
+              key={"key_" + navIndex}
+            >
+              {navItem[1]}
+            </TpLink>
           );
         })}
       </div>
