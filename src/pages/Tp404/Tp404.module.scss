@@ -43,8 +43,13 @@ $flashColour2: rgb(255, 95, 0);
     text-align: center;
 }
 
-.tp img {
+
+.tp {
+    display:flex;
+    justify-content: center;
+    & img {
     height: 8rem;
+    }
 }
 
 .lost {

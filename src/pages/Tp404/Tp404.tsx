@@ -18,6 +18,7 @@ const Tp404: React.FunctionComponent<{}> = () => {
           <div className="col-4 col-md-3">
             <img src={hazard} alt="Hazard" className={`${styles.sign} ${styles.reflect}`}/>
           </div>
+
           <div className="col-8 col-md-6">
             <div className={styles.title4}>
               404
@@ -26,6 +27,7 @@ const Tp404: React.FunctionComponent<{}> = () => {
               Toilet Paper <NoBreak>Failure !!</NoBreak>
             </div> 
           </div>
+          
           <div className={styles.sign + " col-6 col-md-3 d-none d-md-block"}>
               <img src={hazard} alt="Hazard" className={styles.sign}/>
           </div>
