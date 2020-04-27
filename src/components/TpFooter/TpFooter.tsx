@@ -3,7 +3,7 @@ import React from 'react';
 import TpLink from "../TpLink/TpLink";
 import NoBreak from "../NoBreak/NoBreak";
 import styles from "./TpFooter.module.scss";
-import cookie from "../../images/cookie.gif";
+import cookie from "../../images/cookie2.gif";
 
 
 

@@ -2,6 +2,7 @@ import React from 'react';
 
 import styles from "./About.module.scss";
 import TpLink from "../../components/TpLink/TpLink";
+import cookie from "../../images/cookie2.gif";
 
 import LinkedIn from "../../images/LinkedIn-Blue-40@2x.png";
 
@@ -17,7 +18,7 @@ const About: React.FunctionComponent<{}> = () => {
       
       <div className="row">
         <div className="col-10 col-md-9">
-          
+
           <p>My name is John Webster and I approve this website</p>
           <p>If you wish to send comments or toilet paper related items (digital only please) for use in this website, please navigate or click below to 
             reach the contributions page
@@ -73,11 +74,12 @@ const About: React.FunctionComponent<{}> = () => {
       <div id="tpPrivcacy" className="row">
         <div className="col-12">
           <h3>Privacy and cookies</h3>
+          <img src={cookie} alt="No cookies here" className={styles.cookie} />
           <p>
             This website collects no data and uses no cookies or other similar technologies, 
             which is one way to meet the requirements of GPDR, CCPR, LGPD and any other standard.
           </p>
-          <p>
+          <p className={styles.clear}>
             I know I'm making a big fuss about this, but I'm amazed by all the sneaky methods some companies use to track people.
             Examples include
           </p>
@@ -94,7 +96,7 @@ const About: React.FunctionComponent<{}> = () => {
             </li>
           </ul>
           <p>
-            In many ways all this tracking doesn't bother me that much. It allows companies that are offering free services for us to make
+            In many ways all this tracking doesn't bother me that much. It allows companies that are offering free services to make
             money from those services, and companies should be able to make money. The privacy aspect makes me nervous though, but let's face it,
             I'm the kind of person that doesn't have a facebook account ...
           </p>
