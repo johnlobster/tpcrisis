@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a41c8e6c.chunk.css",
+    "main.js": "/static/js/main.e22fab23.chunk.js",
+    "main.js.map": "/static/js/main.e22fab23.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.4bb7ede8.js",
+    "runtime-main.js.map": "/static/js/runtime-main.4bb7ede8.js.map",
+    "static/js/2.0871ec76.chunk.js": "/static/js/2.0871ec76.chunk.js",
+    "static/js/2.0871ec76.chunk.js.map": "/static/js/2.0871ec76.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.ef769eb1b26d27725b070bdad4d29faa.js": "/precache-manifest.ef769eb1b26d27725b070bdad4d29faa.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.a41c8e6c.chunk.css.map": "/static/css/main.a41c8e6c.chunk.css.map",
+    "static/js/2.0871ec76.chunk.js.LICENSE.txt": "/static/js/2.0871ec76.chunk.js.LICENSE.txt",
+    "static/media/FlatTP1.jpg": "/static/media/FlatTP1.4f92f094.jpg",
+    "static/media/App.scss": "/static/media/paperBG.b477bcba.jpg",
+    "static/media/cookie2.gif": "/static/media/cookie2.cd5c8deb.gif",
+    "static/media/covid_19_1.png": "/static/media/covid_19_1.2d42abe7.png",
+    "static/media/empty-toilet-paper.jpg": "/static/media/empty-toilet-paper.ff76497e.jpg",
+    "static/media/hazard.png": "/static/media/hazard.0d742d62.png",
+    "static/media/tHandle.png": "/static/media/tHandle.3cfa5e06.png",
+    "static/media/Jokes.module.scss": "/static/media/tpTexture1.d990a6d7.jpg",
+    "static/media/tpCat.gif": "/static/media/tpCat.a2ecf992.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4bb7ede8.js",
+    "static/js/2.0871ec76.chunk.js",
+    "static/css/main.a41c8e6c.chunk.css",
+    "static/js/main.e22fab23.chunk.js"
+  ]
+}
