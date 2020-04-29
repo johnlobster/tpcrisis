@@ -65,20 +65,28 @@ class App extends React.Component<Props, State>{
     // access spinner directly because it is not in react app hierarchy
     
     console.log("App component mounted");
-      // using a timeout might be overkill. Perhaps also fade in react app
-      // ToDo alter timeout or remove it. Possible fade in of app
-      setTimeout(() => { 
-        const spinner = document.getElementById("loadingSpinner");
-        const evilVirus = document.getElementById("loadingVirus");
-        if (spinner) {
-          spinner.style.display = "none";
-        }
-        if (evilVirus) {
-          evilVirus.style.display = "none";
-        }
-        console.log("hide loading images");
-      }, 2000);
-      
+
+    // using a timeout might be overkill. Perhaps also fade in react app
+    // ToDo alter timeout or remove it. Possible fade in of app
+    setTimeout(() => {
+      const spinner = document.getElementById("loadingSpinner");
+      const evilVirus = document.getElementById("loadingVirus");
+      if (spinner) {
+        spinner.style.display = "none";
+      }
+      if (evilVirus) {
+        evilVirus.style.display = "none";
+      }
+      console.log("hide loading images");
+    }, 5000);
+    
+    // remove hidden attribute on react root
+    const reactRoot: HTMLElement | null = document.getElementById("root");
+    if(reactRoot) {
+      setTimeout(() => {
+        reactRoot.removeAttribute("hidden");
+      }, 3000)
+    }
     // set up window size event to change this.currentScreen if necessary
     window.addEventListener("resize", this.windowResizer );
     // call window resizer. Default was mobile (mobile first), but may not be
