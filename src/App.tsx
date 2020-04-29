@@ -31,11 +31,19 @@ class App extends React.Component<Props, State>{
   };
 
   // named function instead of anonymous, as needs to be called on mount
+  /* Using bootstrap medium size to switch between desktop and mobile. 
+     This might not be that great an idea, should perhaps be using large size to switch, however several components
+     use bootstrap classes d-md-none and so on
+     Would be much more consistent to pass in "currentScreen" as a property to the components that need it, and then
+     use that to switch between the different sizes
+
+  */
+ 
   windowResizer = () => {
     let newWidth: number = window.innerWidth;
 
     if (this.state.currentScreen === global.ScreenType.Mobile) {
-      if (newWidth >= global.windowDesktop) {
+      if (newWidth >= global.windowTablet) {
         console.log("Window size change - now desktop");
         this.setState(
           { currentScreen: global.ScreenType.Desktop }
@@ -43,7 +51,7 @@ class App extends React.Component<Props, State>{
       }
     }
     else {
-      if (newWidth < global.windowDesktop) {
+      if (newWidth < global.windowTablet) {
         console.log("Window size change - now mobile");
         this.setState(
           { currentScreen: global.ScreenType.Mobile }

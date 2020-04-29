@@ -4,6 +4,9 @@
 
 .tpContainer {
   background-color: $headerBackground; // header and footer the same
+  margin-top: 1em;
+  box-shadow:
+    0 -4px 6px -2px $tpShadowColour;
 }
 
 .cookieBox {

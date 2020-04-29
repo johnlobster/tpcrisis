@@ -11,15 +11,17 @@ import styles from "./Tp404.module.scss";
 
 const Tp404: React.FunctionComponent<{}> = () => {
   const location = useLocation();
+  const hostname = window.location.hostname;
+  
   return (
     <div className={styles.page + " container-sm"}>
 
       <div className="row pt-4">
-          <div className="col-4 col-md-3">
+        <div className={styles.signBox + " col-3"}>
             <img src={hazard} alt="Hazard" className={`${styles.sign} ${styles.reflect}`}/>
           </div>
 
-          <div className="col-8 col-md-6">
+          <div className={styles.titleBox + " col-6"}>
             <div className={styles.title4}>
               404
             </div>
@@ -28,32 +30,41 @@ const Tp404: React.FunctionComponent<{}> = () => {
             </div> 
           </div>
           
-          <div className={styles.sign + " col-6 col-md-3 d-none d-md-block"}>
+          <div className={styles.signBox + " col-3"}>
               <img src={hazard} alt="Hazard" className={styles.sign}/>
           </div>
         
       </div>
 
-      <div className="row pt-4">
-        <div className={styles.tp + " col-12 col-md-4"}>
-          <img src={tp} alt="No paper left" />
+      <div className="row pt-4 pb-4">
+        <div className={styles.tpBox + " col-6 col-md-3"}>
+          <img src={tp} alt="No Toilet paper left" />
         </div>
-        <div className="col-12 col-md-8">
+
+        <div className="col-12 col-md-6 d-none d-md-block">
           <div className={styles.lost}>
-            That means you got lost trying to get to the {location.pathname} page, how careless
-              </div>
+            That means you got lost trying to get to the {hostname}{location.pathname} page, how careless
+          </div>
+          <br />
+          <div className={styles.goHome}>
+            <TpLink to="home">Click here to go to the home page</TpLink>
+          </div>
+        </div>
+
+        <div className={styles.kittyBox + " col-6 col-md-3"}>
+          <img src={kitty} alt="Cat shredding toilet roll" className={styles.kitty} />
+        </div>
+        
+        <div className="col-12 col-md-6 pt-3 d-block d-md-none">
+          <div className={styles.lost}>
+            That means you got lost trying to get to the {hostname}{location.pathname} page, how careless
+          </div>
           <div className={styles.goHome}>
             <TpLink to="home">Click here to go back to the home page</TpLink>
           </div>
         </div>
-      </div>
-      
-      <div className="row pt-4 pb-4">
-        <div className={styles.cats + " col-12"}>
-            <img src={kitty} alt="Cat shredding toilet roll" className={styles.kitty} />
-        </div>
-      </div>
 
+      </div>
     </div>
   );
 }

@@ -17,6 +17,7 @@
 .tpContainer {
   background-color: $headerBackground;
   margin-bottom: 1em;
+  box-shadow: 0 4px 6px -2px $tpShadowColour;
 }
 
 // .imBox {
