@@ -18,12 +18,12 @@ const TpNavDesktop: React.FunctionComponent = () => {
     <div className={styles.desktopBox}>
       <h3 className={styles.titleBox} >Menu</h3>
       <div className={styles.menuBox}>
-        {tpNavList.map((navItem, navIndex) => {
+        {tpNavList.map((navItem, index) => {
           return (
             <div className={styles.stripey}>
               <TpLink
                 to={navItem[0]}
-                key={"key_" + navIndex}
+                key={`key_${index}`}
               >
                 {navItem[1]}
               </TpLink>

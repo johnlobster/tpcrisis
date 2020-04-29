@@ -25,6 +25,12 @@ export type Article = {
   link: string,
   body: string
 }
+
+export type ContributeReturn = {
+  succeed: boolean, 
+  responseString : String
+}
+
 // might add htmlTitle - put into document.title for improved seo
 
 

@@ -1,6 +1,8 @@
 import React from 'react';
 
 import styles from "./Contribute.module.scss";
+import { ContributeReturn } from "../../globals/globalTypes";
+
 
 import handle from "../../images/tHandle.png";
 
@@ -52,12 +54,13 @@ const Contribute: React.FunctionComponent<{}> = () => {
     flushingUpdate(true);
 
     contributions( cName, cSubject, cMessage)
-      .then((success) => {
-        if( success) {
+      .then((result:ContributeReturn) => {
+        if( result.succeed) {
           console.log("message successfully sent");
         } else {
           console.log("message send failed");
         }
+        console.log("Message from lambda " +result.responseString);
         flushingUpdate(false);
       })
   }
