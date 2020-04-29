@@ -112,13 +112,14 @@
       z-index: 900
     }
   </style>
-  <link rel="stylesheet"
+  <link 
+    id="bootstrapStylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-    crossorigin="anonymous" media="printer"
-    onload='this.onload=null;this.media="all"'>
-  <link href="/static/css/main.a41c8e6c.chunk.css" rel="stylesheet"
-  media="printer" onload='this.onload=null;this.media="all"'>
+    crossorigin="anonymous" rel="stylesheet" media="print"
+    >
+  <link id="reactStylesheet" href="/static/css/main.a41c8e6c.chunk.css" rel="stylesheet" media="print"
+  >
 </head>
 
 <body><noscript>You need to enable JavaScript to see this website</noscript><img
@@ -129,17 +130,18 @@
   <div id="root"></div>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous" defer="defer"></script>
+    crossorigin="anonymous" defer></script>
   <script
     src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous" defer="defer"></script>
+    crossorigin="anonymous" defer></script>
   <script
     src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous" defer="defer"></script>
+    crossorigin="anonymous" defer></script>
   <script src="/static/js/runtime-main.4bb7ede8.js" defer></script>
   <script src="/static/js/2.0871ec76.chunk.js" defer></script>
+  <script src="hackcss.js" defer></script>
   <script src="/static/js/main.e22fab23.chunk.js" defer></script>
 </body>
 
