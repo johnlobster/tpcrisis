@@ -65,7 +65,7 @@ const Home: React.FunctionComponent<{}> = () => {
               are, running low on bathroom supplies. Click below for some essential tools
             </p>
             <TempLink to="#tpCalculator">
-              Toilet paper calculator, how long before raiding neighbors ?<br />
+              Toilet paper calculator, how long before raiding neighbors' supplies ?<br />
             </TempLink>
             <Gap />
             <TempLink to="#tpJokes">

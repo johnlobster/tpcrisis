@@ -25,7 +25,8 @@ $covidBackground: scale-color($bodyBackground, $hue: 30%, $lightness: +40%);
 $covidLinkBackground: scale-color($covidBackground, $lightness: -25%, $hue: -10%);
 
 $navMenuBackground: $covidBackground;
-
+$navZebraTemp: scale-color( $covidBackground, $lightness: -10%, $saturation: -20%, $alpha: 0.12);
+$navZebra: change-color($navZebraTemp, $alpha: 0.6);
 /* short Jokes on a toilet roll */
 
 $tpJokesBackgroundColour:  #bfbfbf;

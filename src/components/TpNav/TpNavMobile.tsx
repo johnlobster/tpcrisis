@@ -9,6 +9,8 @@ import hamburger from "../../images/hamburgerWhite.png";
 
 // ToDo - something nicer than Menu + button. Hamburger
 // ToDo - toilet paper theming of some kind. Drop shadow when open
+
+// See also notes in Desktop
 const TpNavMobile: React.FunctionComponent = () => {
   return (
     <div className={styles.topBox + " container-sm"}>
@@ -25,13 +27,16 @@ const TpNavMobile: React.FunctionComponent = () => {
             <div className={styles.dropdownBox + " dropdown-menu"} aria-labelledby="dropdownMenuButton">
               {tpNavList.map((item, index) => {
                 return (
-                  <TpLink
-                    className={styles.dropItem + " dropdown-item"}
-                    to={item[0]}
-                    key={`key_${index}`}
-                  >
-                    {item[1]}
-                  </TpLink>
+                  <div className={styles.stripey}>
+                    <TpLink
+                      className={styles.dropItem + " dropdown-item"}
+                      to={item[0]}
+                      key={`key_${index}`}
+                    >
+                      {item[1]}
+                    </TpLink>
+                  </div>
+                  
                 );
               })}
             </div>
