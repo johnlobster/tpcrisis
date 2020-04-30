@@ -25,6 +25,14 @@
   100% {transform: scale(0) rotate(270deg) translate(0,300px) ; opacity: 0; box-shadow:none; }
 }
 
+// animation for "sending" message
+@keyframes msg {
+  0% {transform:translateX(0);}
+  25% {transform:translateX(-0.5em);}
+  75% {transform:translateX(0.5em);}
+  100% {transform:translateX(0);}
+
+}
 .page {
   background-color: $pageBackground;
 }
@@ -60,13 +68,11 @@
 .handleBox {
   display:flex;
   justify-content: center;
-  padding-bottom: 2em;
-
-  
+  align-content: center;
 }
 
 .tHandle {
-  height: 4.5em;
+  height: 3.5em;
   width: auto;
   transform-origin: 75% 50%;
 
@@ -97,4 +103,42 @@
   animation-iteration-count: 1;
   animation-timing-function: linear;
 
+}
+
+.controlsBox {
+  display:flex;
+  justify-content: space-evenly;
+  
+}
+.actionMessageBox {
+  font-size: 1.4em;
+  
+   min-height: 4em;
+  padding: 0.5em;
+  margin: 0.5em;
+
+  border-style: solid;
+  border-color: transparent;
+  border-width: 4px;
+  // flex: 0 0 auto;
+}
+
+.actionBadMessage {
+  color:red;
+  border-color: red;
+
+}
+
+.mBox {
+  min-height: 6em;
+  padding: 0.5em;
+  margin: 0.5em;
+  
+}
+
+.returnMessageAnimation {
+  animation-name: msg;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }

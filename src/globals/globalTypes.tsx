@@ -28,7 +28,7 @@ export type Article = {
 
 export type ContributeReturn = {
   succeed: boolean, 
-  responseString : String
+  responseString : string
 }
 
 // might add htmlTitle - put into document.title for improved seo

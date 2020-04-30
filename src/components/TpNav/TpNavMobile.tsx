@@ -31,7 +31,7 @@ const TpNavMobile: React.FunctionComponent = () => {
                     <TpLink
                       className={styles.dropItem + " dropdown-item"}
                       to={item[0]}
-                      key={`key_${index}`}
+                      key={"navM_" + index.toString()}
                     >
                       {item[1]}
                     </TpLink>

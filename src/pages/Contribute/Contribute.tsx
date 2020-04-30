@@ -43,7 +43,8 @@ const Contribute: React.FunctionComponent<{}> = () => {
     cNameUpdate("");
   }
 
-  
+  const [returnMessage, handleReturnMessage] = React.useState("");
+  const [returnGood, handleReturnGood] = React.useState(true);
   // ToDo check that there are not multiple sends of same values
   const handleSend = (event: React.MouseEvent<HTMLElement>): void => {
     event.preventDefault(); 
@@ -52,21 +53,31 @@ const Contribute: React.FunctionComponent<{}> = () => {
     
     // set flushing for animations
     flushingUpdate(true);
+  
+    handleReturnMessage("Sending message");
+    handleReturnGood(true);
 
     contributions( cName, cSubject, cMessage)
       .then((result:ContributeReturn) => {
         if( result.succeed) {
           console.log("message successfully sent");
+          handleReturnGood(true);
         } else {
           console.log("message send failed");
+          handleReturnGood(false);
         }
         console.log("Message from lambda " + result.responseString);
+        handleReturnMessage(result.responseString);
+
         flushingUpdate(false);
       })
       .catch((errorResult: ContributeReturn)=> {
         // ouch. Something went wrong
         console.log("Message not sent, promise from Contribute failed");
         console.log("Returned " + errorResult.responseString);
+        flushingUpdate(false);
+        handleReturnGood(false);
+        handleReturnMessage(errorResult.responseString);
       })
   }
 
@@ -144,12 +155,8 @@ const Contribute: React.FunctionComponent<{}> = () => {
       </div>
 
       <div className="row">
-        <div className="form col-12">
-          Submit button and handle, clear form, message box for returned message
-          <br />
-          <button className="btn my-btn-primary" onClick={handleSend}>Send</button>
-          <button className="btn my-btn-primary" onClick={handleClear}>Clear everything</button>
-          <br />
+        <div className={styles.controlsBox + " col-12"}>
+          <button className="btn my-btn-primary" onClick={handleSend}>Send message</button>
           <div className={styles.handleBox}>
             <img src={handle} alt="Toilet handle, flush me" onClick={handleSend}
               className={(flushing) ? (
@@ -159,8 +166,32 @@ const Contribute: React.FunctionComponent<{}> = () => {
                 )}
             />
           </div>
+          <button className="btn my-btn-primary" onClick={handleClear}>Clear everything</button>
+
         </div>
       </div>
+
+      <div className="row">
+        <div className=" col-12">
+          <div className={returnGood ? (
+            styles.actionMessageBox
+          ) : (
+            styles.actionMessageBox  + " " + styles.actionBadMessage
+          )}
+          >
+            <div className={(flushing) ? (
+              styles.returnMessageAnimation
+            ):(
+              " "
+            )}
+            >
+              {returnMessage}
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
     </div>
 
   );

@@ -23,7 +23,7 @@ const TpNavDesktop: React.FunctionComponent = () => {
             <div className={styles.stripey}>
               <TpLink
                 to={navItem[0]}
-                key={`key_${index}`}
+                key={"navD_" + index.toString()}
               >
                 {navItem[1]}
               </TpLink>

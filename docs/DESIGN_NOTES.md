@@ -78,4 +78,8 @@ yarn build
 "predeploy": "yarn build",
 "deploy:gh": "gh-pages -d build",
 ```
+#### Error messages from lambda contributions server
+
+User sees "cute" error messages. 
+
 
