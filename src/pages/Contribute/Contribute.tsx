@@ -60,8 +60,13 @@ const Contribute: React.FunctionComponent<{}> = () => {
         } else {
           console.log("message send failed");
         }
-        console.log("Message from lambda " +result.responseString);
+        console.log("Message from lambda " + result.responseString);
         flushingUpdate(false);
+      })
+      .catch((errorResult: ContributeReturn)=> {
+        // ouch. Something went wrong
+        console.log("Message not sent, promise from Contribute failed");
+        console.log("Returned " + errorResult.responseString);
       })
   }
 

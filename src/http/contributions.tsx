@@ -26,24 +26,25 @@ export const contributions: ( name:string, subject:string, message:string)
   // To do check input data. remove any escape characters etc., Check that all fields are present
 
   // read postAddress from environment variable
-  const postAddress = process.env.TP_CONTRIBUTION_LAMBDA_ADDRESS || "localhost:3001";
+  const postAddress = process.env.TP_CONTRIBUTION_LAMBDA_ADDRESS || "http://localhost:3001";
 
   return new Promise((resolve, reject) => {
+    console.log("Sending request to " + postAddress);
     axios.post(postAddress, {name: name, subject: subject, message: message})
       .then((response) => {
         if ((!response.data) || (!response.data.contributeReturn)) {
           // Although it returned, there wasn't any data 
-          resolve({succeed: false, responseString: "Somehow didn't like your information, maybe try again later ?"});
+          reject({succeed: false, responseString: "Somehow didn't like your information, maybe try again later ?"});
         } 
         else {
           if (response.data.contributeReturn === "No content") {
             // lambda server was sent bad data
-            resolve({ succeed: false, responseString: "Somehow couldn't send, maybe try again later ?" });
+            reject({ succeed: false, responseString: "Somehow couldn't send, maybe try again later ?" });
 
           }
           else if (response.data.contributeReturn === "Contribution failed"){
             // lambda server couldn't send email
-            resolve({ succeed: false, responseString: "This is not your day, maybe try again later ?" });
+            reject({ succeed: false, responseString: "This is not your day, maybe try again later ?" });
           }
           else if (response.data.contributeReturn === "Success") {
             // successful response from lambda, lambda able to send email
@@ -53,7 +54,7 @@ export const contributions: ( name:string, subject:string, message:string)
           }
           else{
             // lambda server sent unknown text
-            resolve({ succeed: false, responseString: "It didn't like your contribution, maybe try again another time ?" });
+            reject({ succeed: false, responseString: "It didn't like your contribution, maybe try again another time ?" });
           }
         }
 
