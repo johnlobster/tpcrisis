@@ -71,7 +71,7 @@ const About: React.FunctionComponent<{}> = () => {
         </div>
       </div>
 
-      <div id="tpPrivcacy" className="row">
+      <div id="tpPrivacy" className="row">
         <div className="col-12">
           <h3>Privacy and cookies</h3>
           <img src={cookie} alt="No cookies here" className={styles.cookie} />
@@ -93,6 +93,9 @@ const About: React.FunctionComponent<{}> = () => {
             </li>
             <li>
               Code within ads that sends tracking information back to other companies and sets cookies. That's why no ads
+            </li>
+            <li>
+              Images from other websites that can track behavior when the image is loaded
             </li>
           </ul>
           <p>

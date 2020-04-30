@@ -22,7 +22,7 @@ const TpFooter: React.FunctionComponent<{}> = () => {
             This website collects no data and uses no cookies or other similar technologies. Nobody will know that 
             you are here. I hope that doesn't make you feel lonely.
           </p>
-          <TpLink to="/About">
+          <TpLink to="/About#tpPrivacy">
             Click here to find out more about the lack of cookies
           </TpLink>
           

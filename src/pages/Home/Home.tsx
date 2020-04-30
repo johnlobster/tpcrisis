@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// import TpLink from "../../components/TpLink/TpLink";
-import hlink from "../../icons/icons8-linking-24.png";
+import TpLink from "../../components/TpLink/TpLink";
 
 import Calc from "./Calc";
 import Jokes from "./Jokes";
@@ -64,9 +63,9 @@ const Home: React.FunctionComponent<{}> = () => {
               shelves being empty of toilet paper, we would laugh, but think that it was too far-fetched. Yet here we
               are, running low on bathroom supplies. Click below for some essential tools
             </p>
-            <TempLink to="#tpCalculator">
-              Toilet paper calculator, how long before raiding neighbors' supplies ?<br />
-            </TempLink>
+            <TpLink scroll={true} to="#tpCalculator">
+              Toilet paper calculator, how long before raiding neighbors' supplies ?
+            </TpLink>
             <Gap />
             <TempLink to="#tpJokes">
               Toilet paper jokes, no guarantee of quality or softness<br />
@@ -82,7 +81,7 @@ const Home: React.FunctionComponent<{}> = () => {
                 Please click on the following links, or use the navigation menu to explore.
               </p>
               <Link to="/Covid19" role="button" aria-haspopup="true" aria-expanded="false">
-                Information about the Coronavirus <img src={hlink} alt="Hyperlink" className={styles.hyperlink} /><br />
+                Information about the Coronavirus<br />
               </Link>              
               <Gap />
               <Link to="/Alternatives" role="button" aria-haspopup="true" aria-expanded="false">
