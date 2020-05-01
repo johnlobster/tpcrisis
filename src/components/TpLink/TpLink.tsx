@@ -25,10 +25,10 @@ const TpLink: React.FunctionComponent<TpLinkProps> = ({...props}) => {
   // },[]);
   
 
-  let externalLink: boolean | undefined = false;
-  if( props.hasOwnProperty("external")) {
-    externalLink = props.external;
-  }
+  // let externalLink: boolean | undefined = false;
+  // if( props.hasOwnProperty("external")) {
+  //   externalLink = props.external;
+  // }
 
   let internalScroll: boolean | undefined = false;
   if (props.hasOwnProperty("scroll")) {
@@ -54,32 +54,8 @@ const TpLink: React.FunctionComponent<TpLinkProps> = ({...props}) => {
     );
   }
   
-  // `className="${cName}"`
-
-  // if (internalScroll) {
-
-  // } else {
-
-  // }
   
-  // const scroller = (kids: React.ReactNode) => {
-  //   return(
-  //     <span onClick={scrollMe} className={styles.scrollStyle} role="button" aria-haspopup="true" aria-expanded="false">
-  //       {kids}
-  //     </span>
-  //   );
-  // }
-  // const linker = (kids: React.ReactNode) => {
-  //   return (
-  //     <div
-  //       to={props.to}
-  //       {...kids}
-  //       >
-  //     </div>
-  //   );
-  // }
 
-  const meme: boolean = props.hasOwnProperty("className");
   return (
     
 
@@ -105,14 +81,3 @@ const TpLink: React.FunctionComponent<TpLinkProps> = ({...props}) => {
 
 export default TpLink;
 
-// {
-// !internalScroll && props.hasOwnProperty("className") ? (
-//   <Link to={props.to} className={props.className}>
-//     {props.children}
-//   </Link>
-// ) : (
-//     <Link to={props.to}>
-//       {props.children}
-//     </Link>
-//   )
-// }
