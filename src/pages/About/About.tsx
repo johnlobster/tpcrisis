@@ -4,7 +4,7 @@ import styles from "./About.module.scss";
 import TpLink from "../../components/TpLink/TpLink";
 import cookie from "../../images/cookie2.gif";
 
-import LinkedIn from "../../images/LinkedIn-Blue-40@2x.png";
+import LinkedIn from "../../images/linkedInLogo.png";
 
 const About: React.FunctionComponent<{}> = () => {
   return (
