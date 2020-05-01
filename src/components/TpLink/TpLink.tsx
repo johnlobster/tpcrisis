@@ -12,11 +12,18 @@ interface  TpLinkProps {
   external?: boolean,
   scroll?: boolean
 }
-const TpLink: React.FunctionComponent<TpLinkProps> = (props) => {
-  let passClassName: string | undefined = "";
-  if( props.hasOwnProperty("className")) {
-    passClassName = props.className;
-  }
+const TpLink: React.FunctionComponent<TpLinkProps> = ({...props}) => {
+  // let passClassName: boolean = false;
+  // let cName: string | undefined ="";
+  // const [passMe, handlePassMe] = React.useState(false);
+
+  // React.useEffect(() => {
+  //   if (props.hasOwnProperty("className")) {
+  //     handlePassMe(true);
+  //     passClassName=true;
+  //   }
+  // },[]);
+  
 
   let externalLink: boolean | undefined = false;
   if( props.hasOwnProperty("external")) {
@@ -35,7 +42,7 @@ const TpLink: React.FunctionComponent<TpLinkProps> = (props) => {
       console.log("Scrolling to " + props.to);
       element.scrollIntoView()
     } else {
-      console.log("COuldn't scroll to " + props.to);
+      console.log("Couldn't scroll to " + props.to);
     }
   }
 
@@ -47,26 +54,65 @@ const TpLink: React.FunctionComponent<TpLinkProps> = (props) => {
     );
   }
   
+  // `className="${cName}"`
 
+  // if (internalScroll) {
+
+  // } else {
+
+  // }
+  
+  // const scroller = (kids: React.ReactNode) => {
+  //   return(
+  //     <span onClick={scrollMe} className={styles.scrollStyle} role="button" aria-haspopup="true" aria-expanded="false">
+  //       {kids}
+  //     </span>
+  //   );
+  // }
+  // const linker = (kids: React.ReactNode) => {
+  //   return (
+  //     <div
+  //       to={props.to}
+  //       {...kids}
+  //       >
+  //     </div>
+  //   );
+  // }
+
+  const meme: boolean = props.hasOwnProperty("className");
   return (
+    
+
     <span className={styles.linkStyle}  >
       {internalScroll ? (
         <Scroller>
           {props.children}
         </Scroller>
-      ):(
-        <Link to={props.to}>
-          {props.children} 
-          <span className={styles.iconBox}>
-              <span className={styles.iconStyle}></span>
-          </span>
-        </Link>
+      ) : (
+        props.hasOwnProperty("className") ? (
+            <Link to={props.to} className={props.className}>
+              {props.children}
+            </Link>
+          ) : (<Link to={props.to}>
+            {props.children}
+          </Link>)
+          
       )}
-      
-      {externalLink && " Ex Link "}
+
     </span>
   );
 };
 
 export default TpLink;
 
+// {
+// !internalScroll && props.hasOwnProperty("className") ? (
+//   <Link to={props.to} className={props.className}>
+//     {props.children}
+//   </Link>
+// ) : (
+//     <Link to={props.to}>
+//       {props.children}
+//     </Link>
+//   )
+// }
