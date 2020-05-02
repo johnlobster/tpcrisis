@@ -5,46 +5,114 @@ import NoBreak from "../../components/NoBreak/NoBreak";
 import styles from "./Calc.module.scss";
 import tpMath from "./tpMath";
 
+import * as tpData from "../../markdownish/calculatorComments";
 
 interface Props { }
 
-// the number of rolls per year, as input by the user. Change in state causes a redraw of the results
 interface CalcState {
   rollsPerYear: number,
   rollsLeft: number,
   numPeople: number,
+  numPeopleString: string,
+  rollsLeftString: string,
+  rollsPerYearString: string
 };
 class Calc extends React.Component<Props, Partial<CalcState>> {
 
   state: CalcState = {
     rollsPerYear: 100,
     rollsLeft: 12,
-    numPeople: 2
+    numPeople: 2,
+    numPeopleString: tpData.numberOfPeopleData[2].comment,
+    rollsLeftString: tpData.rollsLeftData[1].comment,
+    rollsPerYearString: tpData.rollsPerYearData[4].comment
   };
 
+
+  // setStrings = ():void => {
+  //   for (let i: number = 0; i < tpData.rollsLeftData.length; i++) {
+  //     if (this.state.rollsLeft < tpData.rollsLeftData[i].maxNumber ) {
+  //       this.setState({ rollsLeftString: tpData.rollsLeftData[i].comment});
+  //       break; 
+  //     }
+  //   }
+  //   for (let i: number = 0; i < tpData.numberOfPeopleData.length; i++) {
+  //     if (this.state.numPeople < tpData.numberOfPeopleData[i].maxNumber) {
+  //       this.setState({ numPeopleString: tpData.numberOfPeopleData[i].comment });
+  //       break;
+  //     }
+  //   }
+  //   for (let i: number = 0; i < tpData.rollsPerYearData.length;i++) {
+  //     if (this.state.rollsLeft < tpData.rollsPerYearData[i].maxNumber) {
+  //       this.setState({ rollsPerYearString: tpData.rollsPerYearData[i].comment });
+  //       break;
+  //     }
+  //   }
+  // }
+
+  // componentDidMount() {
+  //   // set up the strings with values from 
+  //   for (let i: number = 0; i < tpData.rollsLeftData.length; i++) {
+  //     if (Number(value) < tpData.rollsLeftData[i].maxNumber) {
+  //       this.setState({ rollsLeftString: tpData.rollsLeftData[i].comment });
+  //       break;
+  //     }
+  //   }
+  //   for (let i: number = 0; i < tpData.numberOfPeopleData.length; i++) {
+  //     if (this.state.numPeople < tpData.numberOfPeopleData[i].maxNumber) {
+  //       this.setState({ numPeopleString: tpData.numberOfPeopleData[i].comment });
+  //       break;
+  //     }
+  //   }
+  //   for (let i: number = 0; i < tpData.rollsPerYearData.length; i++) {
+  //     if (this.state.rollsLeft < tpData.rollsPerYearData[i].maxNumber) {
+  //       this.setState({ rollsPerYearString: tpData.rollsPerYearData[i].comment });
+  //       break;
+  //     }
+  //   }
+  // }
   handleInputChange = (event: React.FormEvent<HTMLInputElement> ):void =>  {
     event.preventDefault();
     const {name, value} = event.target as HTMLInputElement; // target properties are strings
     console.log("Change event " + name + " new value " + value);
     if( name === "rPerYear") {
-      if( Number(value) > 0 ) { // can't use no toilet paper
+      // negative values so sarcastic remarks can be made. Check no divide by zero
+      if( Number(value) > -100 ) { 
         this.setState({
           rollsPerYear: Number(value)
         });
+        for (let i: number = 0; i < tpData.rollsPerYearData.length; i++) {
+          if (Number(value) < tpData.rollsPerYearData[i].maxNumber) {
+            this.setState({ rollsPerYearString: tpData.rollsPerYearData[i].comment });
+            break;
+          }
+        }
       }
     }
     else if( name === "nPeople") {
-      if (Number(value) >= 1) { // can't have less than 1 person
+      if (Number(value) >= -10) { 
         this.setState({
           numPeople: Number(value)
         });
+        for (let i: number = 0; i < tpData.numberOfPeopleData.length; i++) {
+          if (Number(value) < tpData.numberOfPeopleData[i].maxNumber) {
+            this.setState({ numPeopleString: tpData.numberOfPeopleData[i].comment });
+            break;
+          }
+        }
       }
     } 
     else {
-      if (Number(value) >= 0) { // can't have less than 0 rolls
+      if (Number(value) >= -10) { 
         this.setState({
           rollsLeft: Number(value)
         });
+        for (let i: number = 0; i < tpData.rollsLeftData.length; i++) {
+          if (Number(value) < tpData.rollsLeftData[i].maxNumber) {
+          this.setState({ rollsLeftString: tpData.rollsLeftData[i].comment });
+          break;
+        }
+      }
       }
     }
   }
@@ -92,7 +160,9 @@ class Calc extends React.Component<Props, Partial<CalcState>> {
               </div>
 
               <div className="col-6">
-                Insert witty comment
+                <div className={styles.tpCommentBox}>
+                  {this.state.rollsLeftString}
+                </div>
               </div>
 
             </div>
@@ -115,7 +185,9 @@ class Calc extends React.Component<Props, Partial<CalcState>> {
               </div>
 
               <div className="col-6">
-                Insert witty comment
+                <div className={styles.tpCommentBox}>
+                  {this.state.numPeopleString}
+                </div>
               </div>
 
             </div>
@@ -138,7 +210,9 @@ class Calc extends React.Component<Props, Partial<CalcState>> {
               </div>
 
               <div className="col-6">
-                Insert witty comment
+                <div className={styles.tpCommentBox}>
+                  {this.state.rollsPerYearString}
+                </div>
               </div>
 
             </div>

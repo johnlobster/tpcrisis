@@ -44,6 +44,7 @@ $calcBoxBackground: scale-color($pageBackground, $lightness: 60%, $saturation: -
 .tpInputBox {
 }
 
+// To do The boxes would work better as grid, rather than flex
 .rollBox {
   background-color: $calcBoxBackground;
   font-size: 1.2em;
@@ -54,9 +55,24 @@ $calcBoxBackground: scale-color($pageBackground, $lightness: 60%, $saturation: -
   border-width: 0.15em;
   border-radius: 0.5em;
 
-  width: 60%;
+  width: 85%;
 
   & input {
-    font-size: 2em;
+    font-size: 1.5em;
+    font-weight: bold;
   }
+}
+
+.tpCommentBox {
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  margin: 0.5em;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.15em;
+  border-radius: 0.5em;
+
+  width: 90%;
+  height:87%;
 }

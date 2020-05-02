@@ -31,7 +31,30 @@ export type ContributeReturn = {
   responseString : string
 }
 
-// might add htmlTitle - put into document.title for improved seo
+// types used by comments in toilet roll calculator
+export type RollsLeftInfo = {
+  maxNumber: number,
+  comment: string,
+  colour: string
+}
+export type RollsLeftInfoList = RollsLeftInfo[];
+
+export type PeopleInfo = {
+  maxNumber: number,
+  comment: string,
+  colour: string
+}
+export type PeopleInfoList = PeopleInfo[];
+
+export type PerYear = {
+  maxNumber: number,
+  comment: string,
+  colour: string
+}
+export type PerYearList = PerYear[];
+
+
+// might add htmlTitle - put into document.title for improved seo. All page strings, data should really be here
 
 
 // not just types but some constants

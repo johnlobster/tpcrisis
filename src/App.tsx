@@ -78,15 +78,15 @@ class App extends React.Component<Props, State>{
         evilVirus.style.display = "none";
       }
       console.log("hide loading images");
-    }, 5000);
+    }, 1000);
     
     // remove hidden attribute on react root
-    const reactRoot: HTMLElement | null = document.getElementById("root");
-    if(reactRoot) {
-      setTimeout(() => {
-        reactRoot.removeAttribute("hidden");
-      }, 3000)
-    }
+    // const reactRoot: HTMLElement | null = document.getElementById("root");
+    // if(reactRoot) {
+    //   setTimeout(() => {
+    //     reactRoot.removeAttribute("hidden");
+    //   }, 500)
+    // }
     // set up window size event to change this.currentScreen if necessary
     window.addEventListener("resize", this.windowResizer );
     // call window resizer. Default was mobile (mobile first), but may not be
