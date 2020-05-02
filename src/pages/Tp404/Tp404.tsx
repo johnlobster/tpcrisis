@@ -43,11 +43,12 @@ const Tp404: React.FunctionComponent<{}> = () => {
 
         <div className="col-12 col-md-6 d-none d-md-block">
           <div className={styles.lost}>
-            That means you got lost trying to get to the {hostname}{location.pathname} page, how careless
+            That means you got lost trying to get to the {hostname}{location.pathname} page, how careless.
+            Or maybe you got a virus
           </div>
           <br />
           <div className={styles.goHome}>
-            <TpLink to="home">Click here to go to the home page</TpLink>
+            <TpLink to="/Home">Click here to go to the home page</TpLink>
           </div>
         </div>
 
@@ -58,9 +59,10 @@ const Tp404: React.FunctionComponent<{}> = () => {
         <div className="col-12 col-md-6 pt-3 d-block d-md-none">
           <div className={styles.lost}>
             That means you got lost trying to get to the {hostname}{location.pathname} page, how careless
+            Or maybe you got a virus
           </div>
           <div className={styles.goHome}>
-            <TpLink to="home">Click here to go back to the home page</TpLink>
+            <TpLink to="/Home">Click here to go back to the home page</TpLink>
           </div>
         </div>
 

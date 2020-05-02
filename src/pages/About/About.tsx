@@ -64,12 +64,12 @@ const About: React.FunctionComponent<{}> = () => {
         </div>
       </div>
 
-      <div className="row">
+      {/* <div className="row">
         <div className="col-12">
           <h3>Key software used to build this website</h3>
           <p>Image. react etc.stack overflow</p>
         </div>
-      </div>
+      </div> */}
 
       <div id="tpPrivacy" className="row">
         <div className="col-12">

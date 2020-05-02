@@ -7,32 +7,6 @@ import Calc from "./Calc";
 import Jokes from "./Jokes";
 import styles from "./Home.module.scss";
 
-// TempLink allows this page to link to hashes on this page without going through react-router
-// add this functionality into TpLink later (detects hash, etc)
-// uses same (similar) styles as the other covid links
-
-interface tLink {
-  to: string
-}
-const TempLink: React.FunctionComponent<tLink> = (props) => {
-
-  const clickMe = (event: React.MouseEvent):void  =>  {
-    const element = document.querySelector(props.to);
-    if (element) {
-      console.log("Scrolling to " + props.to);
-      element.scrollIntoView()
-    } else {
-      console.log("COuldn't scroll to " + props.to);
-    }
-  }
-
-  return (
-    <span onClick={clickMe} className={styles.tLinkStyle} role="button" aria-haspopup="true" aria-expanded="false" >
-        {props.children}
-    </span>
-  );
-
-}
 const Gap: React.FunctionComponent<{}> = () => {
   return (
     <div className={styles.gap}></div>
@@ -67,9 +41,9 @@ const Home: React.FunctionComponent<{}> = () => {
               Toilet paper calculator, how long before raiding neighbors' supplies ?
             </TpLink>
             <Gap />
-            <TempLink to="#tpJokes">
+            <TpLink scroll={true} to="#tpJokes">
               Toilet paper jokes, no guarantee of quality or softness<br />
-            </TempLink>
+            </TpLink>
             <Gap />
             <p>
               This website is dedicated to the humorous and satirical side of our obsession with toilet paper during a

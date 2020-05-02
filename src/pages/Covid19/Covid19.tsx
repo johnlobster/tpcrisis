@@ -37,26 +37,26 @@ const Covid19: React.FunctionComponent<{}> = () => {
             On this page, there a number of different topics. Click on one of the links below to go directly to that topic
             or read in sequence
           </p>
-          <TpLink to="#coronavirusViruses">
+          <TpLink scroll={true} to="#coronavirusViruses">
             Viruses, Coronavirus viruses, Influenza viruses and hand washing
           </TpLink>
           <br />
-          <TpLink to="#coronavirusInformation">
+          {/* <TpLink to="#coronavirusInformation">
             How to use different sources of information, not everything on the internet is true
           </TpLink>
-          <br />
-          <TpLink to="#coronavirusReliable">
+          <br /> */}
+          {/* <TpLink to="#coronavirusReliable">
             Reliable sources of Information - Doctors, Scientists, Statistics and Journalists
           </TpLink>
-          <br />
-          <TpLink to="#coronavirusLinks">
+          <br /> */}
+          <TpLink scroll={true} to="#coronavirusLinks">
             External websites with more information
           </TpLink>
           <br />
 
           <h5 id="coronavirusViruses">Viruses, Coronavirus viruses, Influenza viruses and hand washing</h5>
 
-          <h5 id="coronavirusInformation">Information</h5>
+          {/* <h5 id="coronavirusInformation">Information</h5>
           <p>
             Like everything nowadays, there is lots of information about the coronavirus available on the Internet. 
             Like everything else, some information is accurate, some information is incomplete, some information is a wild guess 
@@ -95,12 +95,12 @@ const Covid19: React.FunctionComponent<{}> = () => {
           <p>
             It's also important that the Pandemic shouldn't completely control our lives. There are opportunities to reach
             out to neighbors, friends and family. There is also some humor to be found in the midst of this crisis.
-          </p>
+          </p> */}
           
-          <h5 id="coronavirusReliable">Reliable information about the Coronavirus</h5>
+          {/* <h5 id="coronavirusReliable">Reliable information about the Coronavirus</h5>
 
 
-          <h5>SARS and MERS</h5>
+          <h5>SARS and MERS</h5> */}
 
           <h5 id="coronavirusLinks">More information outside this website, not an exhaustive list</h5>
 
@@ -141,7 +141,7 @@ const Covid19: React.FunctionComponent<{}> = () => {
             Fake news
           </p>
           <TpLink to="https://www.theonion.com">
-            Satire about the news. Funny, not true<br />
+            Satire about the news. Funny, not true. More fun than most news sources<br />
             https://www.theonion.com
           </TpLink>
         </div>
