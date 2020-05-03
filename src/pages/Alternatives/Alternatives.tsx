@@ -1,5 +1,6 @@
 import React from 'react';
 
+import TpLink from "../../components/TpLink/TpLink";
 import TpArticle from "../../components/TpArticle/TpArticle";
 import alternativesArticles from "./alternativesArticles";
 
@@ -41,7 +42,7 @@ const Alternatives: React.FunctionComponent<{}> = () => {
         </div>
       </div>
         
-      <div id="emergencyTp" className="row">
+      {/* <div id="emergencyTp" className="row"> Add in a future release
         <div className=" col-12">
           <div className={styles.emergencyTitle}>
             Free Emergency Toilet Paper
@@ -53,7 +54,7 @@ const Alternatives: React.FunctionComponent<{}> = () => {
             Link to print pdf of emergency toilet paper
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="row mt-4">
         <div className=" col-12">
@@ -62,7 +63,9 @@ const Alternatives: React.FunctionComponent<{}> = () => {
             {alternativesArticles.map((article) => {
               return (
                 <li key={article.index}>
-                  {article.link}
+                  <TpLink scroll to={"#" + article.tag}>
+                    {article.link}
+                  </TpLink>
                 </li>
               )
             }

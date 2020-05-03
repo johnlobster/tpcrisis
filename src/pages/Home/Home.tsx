@@ -75,7 +75,7 @@ const Home: React.FunctionComponent<{}> = () => {
               </Link>
               <Gap />
               <Link to="/About" role="button" aria-haspopup="true" aria-expanded="false">
-                About this website and how to donate if you think throwing away money is a good idea<br />
+                About this website. Maybe someone will be interested<br />
               </Link>
               <Gap />
             </div>

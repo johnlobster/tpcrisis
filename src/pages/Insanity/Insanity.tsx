@@ -1,5 +1,6 @@
 import React from 'react';
 
+import TpLink from "../../components/TpLink/TpLink"
 import TpArticle from "../../components/TpArticle/TpArticle";
 import insanityArticles from "./insanityArticles";
 
@@ -36,7 +37,9 @@ const Insanity: React.FunctionComponent<{}> = () => {
             {insanityArticles.map((article) => {
               return (
                 <li key={article.index}>
-                  {article.link}
+                  <TpLink scroll to={"#" + article.tag}>
+                    {article.link}
+                  </TpLink>
                 </li>
               )
             }

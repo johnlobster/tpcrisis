@@ -8,12 +8,12 @@ $b4large: 992;
 $b4XLarge: 1200;
 
 /* base colours */
-$tpPrimary: rgb(0, 140, 255);
+$tpPrimary: rgb(0, 102, 255);
 $tpSecondary: grey;
 
 /* backgrounds */
 
-$headerBackground: #afadad;
+$headerBackground: #a5a39c;
 $headerBackgroundShade: scale-color($headerBackground, $lightness: -70%);
 $navBackground: #7c5252;
 
@@ -58,9 +58,9 @@ $tpSecondary-l2: scale-color($tpSecondary, $lightness: +30%);
 $tpSecondary-l3: scale-color($tpSecondary, $lightness: +45%); 
 
 /* text colours */
-$titleTextColour: #020944; /* very dark blue */
-$tpTextColour: #2c2e52;
-$covidText: #742e2e; /* dark red */
+$titleTextColour: #030733; /* very dark blue */
+$tpTextColour: #151627;
+$covidText: #471c1c; /* dark red */
 $covidTextTitle: scale-color($covidText, $lightness: 30%, $saturation: 80% );
 $covidTextLink: #0f4c81; // Pantone colour of the year 2020
 $covidTextLinkHover: scale-color($covidTextLink, $lightness: 10%); 

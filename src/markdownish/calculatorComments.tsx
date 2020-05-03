@@ -10,6 +10,26 @@ export const rollsLeftData: globals.RollsLeftInfoList = [
     colour: "red",  
   },
   {
+    maxNumber: 1,
+    comment: "Time to panic",
+    colour: "red",
+  },
+  {
+    maxNumber: 2,
+    comment: "Don't let anyone touch your last roll !!",
+    colour: "red",
+  },
+
+  {
+    maxNumber: 7,
+    comment: "A six pack or less. I would start getting worried if I were you.",
+    colour: "red",
+  }, {
+    maxNumber: 25,
+    comment: "Should be good for a while",
+    colour: "red",
+  },
+  {
     maxNumber: 40,
     comment: "Seems like you are well prepared ",
     colour: "green",
@@ -24,7 +44,7 @@ export const rollsLeftData: globals.RollsLeftInfoList = [
 
 export const numberOfPeopleData: globals.PeopleInfoList = [
   {
-    maxNumber: 0,
+    maxNumber: 1,
     comment: "What are you, a serial killer ?",
     colour: "red",
   },
@@ -39,12 +59,12 @@ export const numberOfPeopleData: globals.PeopleInfoList = [
     colour: "green",
   },
   {
-    maxNumber: 5,
+    maxNumber: 8,
     comment: "A good group of people",
     colour: "green",
   },
   {
-    maxNumber: 12,
+    maxNumber: 20,
     comment: "That's a team, not a household",
     colour: "orange",
   },

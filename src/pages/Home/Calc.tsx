@@ -24,57 +24,13 @@ class Calc extends React.Component<Props, Partial<CalcState>> {
     rollsLeft: 12,
     numPeople: 2,
     numPeopleString: tpData.numberOfPeopleData[2].comment,
-    rollsLeftString: tpData.rollsLeftData[1].comment,
+    rollsLeftString: tpData.rollsLeftData[4].comment,
     rollsPerYearString: tpData.rollsPerYearData[4].comment
   };
 
-
-  // setStrings = ():void => {
-  //   for (let i: number = 0; i < tpData.rollsLeftData.length; i++) {
-  //     if (this.state.rollsLeft < tpData.rollsLeftData[i].maxNumber ) {
-  //       this.setState({ rollsLeftString: tpData.rollsLeftData[i].comment});
-  //       break; 
-  //     }
-  //   }
-  //   for (let i: number = 0; i < tpData.numberOfPeopleData.length; i++) {
-  //     if (this.state.numPeople < tpData.numberOfPeopleData[i].maxNumber) {
-  //       this.setState({ numPeopleString: tpData.numberOfPeopleData[i].comment });
-  //       break;
-  //     }
-  //   }
-  //   for (let i: number = 0; i < tpData.rollsPerYearData.length;i++) {
-  //     if (this.state.rollsLeft < tpData.rollsPerYearData[i].maxNumber) {
-  //       this.setState({ rollsPerYearString: tpData.rollsPerYearData[i].comment });
-  //       break;
-  //     }
-  //   }
-  // }
-
-  // componentDidMount() {
-  //   // set up the strings with values from 
-  //   for (let i: number = 0; i < tpData.rollsLeftData.length; i++) {
-  //     if (Number(value) < tpData.rollsLeftData[i].maxNumber) {
-  //       this.setState({ rollsLeftString: tpData.rollsLeftData[i].comment });
-  //       break;
-  //     }
-  //   }
-  //   for (let i: number = 0; i < tpData.numberOfPeopleData.length; i++) {
-  //     if (this.state.numPeople < tpData.numberOfPeopleData[i].maxNumber) {
-  //       this.setState({ numPeopleString: tpData.numberOfPeopleData[i].comment });
-  //       break;
-  //     }
-  //   }
-  //   for (let i: number = 0; i < tpData.rollsPerYearData.length; i++) {
-  //     if (this.state.rollsLeft < tpData.rollsPerYearData[i].maxNumber) {
-  //       this.setState({ rollsPerYearString: tpData.rollsPerYearData[i].comment });
-  //       break;
-  //     }
-  //   }
-  // }
   handleInputChange = (event: React.FormEvent<HTMLInputElement> ):void =>  {
     event.preventDefault();
     const {name, value} = event.target as HTMLInputElement; // target properties are strings
-    console.log("Change event " + name + " new value " + value);
     if( name === "rPerYear") {
       // negative values so sarcastic remarks can be made. Check no divide by zero
       if( Number(value) > -100 ) { 
