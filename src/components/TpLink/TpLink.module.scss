@@ -46,6 +46,11 @@
 // this is tweaked as a covid19 style on home page, needs fixing
 .scrollStyle {
   
+  border-radius: 0.2em;
+  font-size: 1.1em; 
+  display: inline-block; // otherwise padding doesn't pad long lines
+  
+  padding: 0.3em 0.3em 0.4em 0;
   color: $covidTextLink;
   cursor: pointer;
   

@@ -74,7 +74,7 @@ const Alternatives: React.FunctionComponent<{}> = () => {
 
       {alternativesArticles.map((article) => {
         return (
-          <TpArticle key={article.index} articleObj={article}>
+          <TpArticle key={article.index} theArticle={article}>
             <div id={article.tag}>
             </div>
           </TpArticle>

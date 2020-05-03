@@ -26,6 +26,9 @@
   }
 }
 
+.articleButtonBox {
+  margin: 0.5em auto 0.5em auto;
+}
 .contentBox {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -36,6 +39,13 @@
   display: block;
 }
 
-.midBox {
-  color: darkgreen;
+.endBox {
+  display:none;
+}
+
+.endBoxOpen {
+  display: flex;
+}
+.articleCloseButtonBox {
+  margin-bottom: 0.5em;
 }

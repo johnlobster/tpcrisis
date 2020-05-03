@@ -1,5 +1,6 @@
 import React from 'react';
 
+import TpLink from "../../components/TpLink/TpLink"
 import TpArticle from "../../components/TpArticle/TpArticle";
 import factsArticles from "./FactsArticles";
 
@@ -43,7 +44,9 @@ const Facts: React.FunctionComponent = () => {
             {factsArticles.map((article) => {
               return (
                 <li key={article.index}>
-                  {article.link}
+                  <TpLink scroll to={"#" + article.tag}>
+                    {article.link}
+                  </TpLink>
                 </li>
               )}
             )}
@@ -54,7 +57,7 @@ const Facts: React.FunctionComponent = () => {
 
       {factsArticles.map( (article)=> {
         return (
-          <TpArticle key={article.index} articleObj={article}>
+          <TpArticle key={article.index} theArticle={article}>
             <div id={article.tag}>
             </div>
           </TpArticle>

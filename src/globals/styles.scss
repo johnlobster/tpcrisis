@@ -13,6 +13,11 @@
 
 /* Global styles for articles */
 
+// image styling
+
+.artImage {
+  margin: 0.6em;
+}
 // copied from TpLink, not very efficient as repeating myself
 .artLink {
   border-radius: 0.2em;
@@ -46,6 +51,9 @@
   }
 
 } 
+
+// End of article styles /////////////////////////////////////////////////////////////////////////////////
+
 // This is to replace the bootstrap style
 .my-btn-primary {
   color: white;

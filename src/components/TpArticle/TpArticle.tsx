@@ -4,7 +4,7 @@ import styles from "./TpArticle.module.scss";
 import * as global from "../../globals/globalTypes";
 
 interface  TpArticleProps {
-  articleObj: global.Article
+  theArticle: global.Article
 }
 
 // ToDo TpArticle ought to set up it's own html, not page that calls it, would stop an extra render
@@ -20,11 +20,13 @@ const TpArticle: React.FunctionComponent<TpArticleProps> = (props) => {
   }
 
   // ToDo - put the tag at the top <div>
+  // To do move the function that inserts the body as html into tpArticle
 
   const closeArticle = (): void => {
     setArticleState(false);
   }
 
+  
   return (
     <div>
       
@@ -35,27 +37,38 @@ const TpArticle: React.FunctionComponent<TpArticleProps> = (props) => {
             styles.topBox + " " + styles.topBoxClosed + " row"
         )}
       >
-        <div className="col-12">
-          <h2>{props.articleObj.title}</h2>
-
-          <div className= { articleOpen ? (
-            styles.contentBox + " " + styles.contentBoxOpen
-            ): (
-              styles.contentBox
-            )}
-            >
-              {props.children}
-          </div>
-
-          <div className={styles.midBox + " col-12"}>
-            <div className="btn btn-primary" onClick={openArticle}>Open</div>
-            <div className="btn btn-primary" onClick={closeArticle}>Closed</div>
-            <br />
-            <br />
-          </div> 
+        <div className="col-9">
+          <h2>{props.theArticle.title}</h2>
         </div>
-        
+        <div className={styles.articleButtonBox + " col-3"}>
+            {! articleOpen && (
+              <button className="btn btn-primary" onClick={openArticle}>Show article</button>
+            ) }
+        </div>
       </div>
+
+      <div className={articleOpen ? (
+        styles.contentBox + " " + styles.contentBoxOpen + " row"
+      ) : (
+          styles.contentBox + " row"
+        )}
+      >
+        <div className="col-12">
+          {props.children}
+        </div>    
+      </div>
+
+      <div className={ articleOpen ? (
+        styles.endBox + " " + styles.endBoxOpen + " row justify-content-end"
+      ) : (
+        styles.endBox + " row  justify-content-end"
+        )}
+      >
+        <div className={styles.articleCloseButtonBox + " col-3"}>
+          <button className="btn btn-primary" onClick={closeArticle}>Close article</button>
+        </div>
+      </div> 
+        
     </div>
   );
 };

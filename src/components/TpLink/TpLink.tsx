@@ -46,7 +46,7 @@ const TpLink: React.FunctionComponent<TpLinkProps> = ({...props}) => {
     }
   }
 
-  const Scroller: React.FunctionComponent = (sProps) => {
+  const ScrollMe: React.FunctionComponent = (sProps) => {
     return (
       <span onClick={scrollMe} className={styles.scrollStyle} role="button" aria-haspopup="true" aria-expanded="false">
         {sProps.children}
@@ -61,9 +61,9 @@ const TpLink: React.FunctionComponent<TpLinkProps> = ({...props}) => {
 
     <span className={styles.linkStyle}  >
       {internalScroll ? (
-        <Scroller>
+        <ScrollMe>
           {props.children}
-        </Scroller>
+        </ScrollMe>
       ) : (
         props.hasOwnProperty("className") ? (
             <Link to={props.to} className={props.className}>
