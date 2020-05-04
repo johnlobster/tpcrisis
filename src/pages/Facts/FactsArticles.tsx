@@ -1,7 +1,7 @@
 
 import * as globalTypes  from "../../globals/globalTypes";
 
-const imageUrl = process.env.PUBLIC_URL + "/assets/images/pineTree.png";
+const imageUrl1 = process.env.PUBLIC_URL + "/assets/images/Facts/pineTree.png";
 
 // list of articles. body can contain string literal or be read from another file
 // prebuild script would convert markdown files into strings in a file that could be written into factsArticles
@@ -39,7 +39,7 @@ const factsArticles: globalTypes.Article[] = [
     body: `
     <div >
       <div class="clearfix">
-        <img class="float-left artImage" src=${imageUrl} alt="Lovely Pine tree" style="height:12em;">
+        <img class="float-left artImage" src=${imageUrl1} alt="Lovely Pine tree" style="height:12em;">
         <p>
           To make toilet paper soft and strong, it has to have a high proportion of wood pulp straight from a tree.
           So to be environmentally sound, you have to give up softness and maybe end up with toilet paper that falls apart,
