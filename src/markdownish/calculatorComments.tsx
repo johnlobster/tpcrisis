@@ -83,6 +83,11 @@ export const rollsPerYearData: globals.PerYearList = [
     colour: "red",
   },
   {
+    maxNumber: 1,
+    comment: "This is suspicious and breaks the calculator",
+    colour: "red",
+  },
+  {
     maxNumber: 15,
     comment: "Do you even wipe ?",
     colour: "red",

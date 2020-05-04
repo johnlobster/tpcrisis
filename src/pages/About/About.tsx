@@ -28,7 +28,7 @@ const About: React.FunctionComponent<{}> = () => {
               Comment on website or send cool stuff about toilet paper to me
             </TpLink>
           </p>
-          <p>If you wish to find out more about me, please feel free to click on the LinkedIn logo, which leaves this website</p>
+          <p>If for some non-stalking reason you wish to find out more about me, please feel free to click on the LinkedIn logo</p>
         </div>
         <div className="col-8 col-md-3">
           <a href="https://www.linkedin.com/in/JohnWWebster">

@@ -19,21 +19,23 @@ interface CalcState {
 };
 class Calc extends React.Component<Props, Partial<CalcState>> {
 
+  // The comments are a list of elements - here I hard code comments for initial values
   state: CalcState = {
     rollsPerYear: 100,
     rollsLeft: 12,
     numPeople: 2,
     numPeopleString: tpData.numberOfPeopleData[2].comment,
     rollsLeftString: tpData.rollsLeftData[4].comment,
-    rollsPerYearString: tpData.rollsPerYearData[4].comment
+    rollsPerYearString: tpData.rollsPerYearData[5].comment
   };
 
   handleInputChange = (event: React.FormEvent<HTMLInputElement> ):void =>  {
     event.preventDefault();
+    // To do change something so user can enter '-'
     const {name, value} = event.target as HTMLInputElement; // target properties are strings
     if( name === "rPerYear") {
-      // negative values so sarcastic remarks can be made. Check no divide by zero
-      if( Number(value) > -100 ) { 
+      // negative values allowed so sarcastic remarks can be made. Check no divide by zero
+      if( Number(value) >= -1 ) { 
         this.setState({
           rollsPerYear: Number(value)
         });
@@ -46,7 +48,7 @@ class Calc extends React.Component<Props, Partial<CalcState>> {
       }
     }
     else if( name === "nPeople") {
-      if (Number(value) >= -10) { 
+      if (Number(value) >= -1) { 
         this.setState({
           numPeople: Number(value)
         });
@@ -59,7 +61,7 @@ class Calc extends React.Component<Props, Partial<CalcState>> {
       }
     } 
     else {
-      if (Number(value) >= -10) { 
+      if (Number(value) >= -1) { 
         this.setState({
           rollsLeft: Number(value)
         });
@@ -176,9 +178,9 @@ class Calc extends React.Component<Props, Partial<CalcState>> {
           </div>
         </div>
 
-        <div className="row">
+        <div className="row mt-3">
           <div className="col-12">
-            <h5>How many toilet rolls do I use in a <NoBreak>year ?</NoBreak></h5>
+            <h4>How many toilet rolls do I use in a <NoBreak>year ?</NoBreak></h4>
             <p>
               I did extensive research on this topic (Google and Bing), and found a huge variation in numbers
             </p>

@@ -2,12 +2,20 @@
 // utility function for Calc module
 
 export default function tpMath(rollsLeft: number, rollsPerYear: number, numPeople: number):string {
+  let outString: string = "";
+
   const consumption: number = numPeople * (rollsPerYear / 52);
   const weeksLeft: number = Math.floor(rollsLeft / consumption);
   const daysLeft: number = Math.round(rollsLeft % consumption);
 
-  let outString: string = "";
-  if (weeksLeft === 0) {
+  if (consumption === 0) {
+    // check for divide by zero
+    outString = "I'M FEELING VERY CONFUSED";
+  }
+  else if ( weeksLeft < 0 ) {
+    outString = "YOU OWE TOILET PAPER, PROBABLY A NEW GOVERNMENT TAX";
+  }
+  else if (weeksLeft === 0) {
     if (daysLeft === 0) {
       outString = "TPCRISIS NO TOILET PAPER";
     }
