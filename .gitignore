@@ -13,6 +13,7 @@
 
 # temporary, experiments
 /temp
+/perl/*.html
 
 # misc
 .DS_Store

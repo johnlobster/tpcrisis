@@ -28,7 +28,12 @@ const TpArticle: React.FunctionComponent<TpArticleProps> = (props) => {
 
   
   return (
-    <div>
+    <div className={
+      articleOpen ? (
+        styles.articleBox + " " + styles.articleBoxOpen + " container-sm"
+      ) : (
+        styles.articleBox + " container-sm"
+      )}>
       
       <div className= {
         articleOpen ? (

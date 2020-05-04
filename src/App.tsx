@@ -78,7 +78,7 @@ class App extends React.Component<Props, State>{
         evilVirus.style.display = "none";
       }
       console.log("hide loading images");
-    }, 3000);
+    }, 1000);
     
     // remove hidden attribute on react root
     // const reactRoot: HTMLElement | null = document.getElementById("root");

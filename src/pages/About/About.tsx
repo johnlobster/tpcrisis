@@ -106,7 +106,7 @@ const About: React.FunctionComponent<{}> = () => {
         </div>
       </div>
 
-      <div id="tpCopyright" className="row">
+      <div id="tpCopyright" className="row pb-3">
         <div className="col-12">
           
           <h4>Copyright information for this website</h4>
