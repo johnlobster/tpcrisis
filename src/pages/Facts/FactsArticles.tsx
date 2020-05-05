@@ -1,7 +1,9 @@
 
 import * as globalTypes  from "../../globals/globalTypes";
 
-const imageUrl1 = process.env.PUBLIC_URL + "/assets/images/Facts/pineTree.png";
+import softness from "../../markdownish/FactsArticles/softness";
+import history from "../../markdownish/FactsArticles/history";
+
 
 // list of articles. body can contain string literal or be read from another file
 // prebuild script would convert markdown files into strings in a file that could be written into factsArticles
@@ -15,42 +17,15 @@ const factsArticles: globalTypes.Article[] = [
     title: "History of toilet paper",
     tag: "factsHistory",
     link: "The history of toilet paper, if you really have to know",
-    body : `
-    <div>
-      <p>
-        The usual question is not so much the history of toilet paper, but what people used before toilet paper. 
-        A slightly scary thought.
-      </p>
-      <p>
-        If you really need to know more details, click below
-      </p>
-      <a href="http://www.toiletpaperhistory.net" class="artLink">
-          Toilet Paper history at http://www.toiletpaperhistory.net
-      </a>
-      </p>
-    </div>
-    `
+    body : history
+    
   },
   {
     index: 1,
     title: "Strength, Softness and the Environment",
     tag: "factsStrength",
     link: "About strength, softness, and environment impact",
-    body: `
-    <div >
-      <div class="clearfix">
-        <img class="float-left artImage" src=${imageUrl1} alt="Lovely Pine tree" style="height:12em;">
-        <p>
-          To make toilet paper soft and strong, it has to have a high proportion of wood pulp straight from a tree.
-          So to be environmentally sound, you have to give up softness and maybe end up with toilet paper that falls apart,
-          rather than doing the job it was designed to do
-        </p>
-      </div>
-      <p>
-          Another interesting paragraph
-        </p>
-    </div>
-    `
+    body: softness
   }
   
 ];

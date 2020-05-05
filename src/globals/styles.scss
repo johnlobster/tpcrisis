@@ -3,8 +3,15 @@
 */
 @import "./colours";
 
+// media queries
+$windowXS:  576px ; // x small (less than)
+$windowMobile:  576px ; // small (greater than or equal)
+$windowTablet:  768px ; // medium
+$windowDesktop:  992px ; // large
+$windowXL:  1200px ; // x large
 
-// when used on a tag, turns it into a flexbox and centers content verticallu and horizontally
+
+// when used on a tag, turns it into a flexbox and centers content vertically and horizontally
 .tpFlexCenterContents {
   display: flex;
   justify-content: center;
@@ -18,6 +25,47 @@
 .artImage {
   margin: 0.6em;
 }
+
+// image with a title
+// use as
+// <div class="imageWithTitle">
+//   <img ...>
+//   <span>The title of the image</span>
+// </div>
+// title MUST be enclosed in a span
+.artImageWithTitle {
+  display: inline-grid;
+  grid-template-columns: 200px;
+  grid-template-rows: auto auto;
+  padding-bottom: 0.6em;
+
+    & img {
+      margin: 0 0.6em 0.3em 0.6em;
+      
+      grid-row: 1 2;
+    }
+    & span {
+      grid-row-start: 2;
+    }
+}
+// Float Left
+// responsive using media query
+// to use with bootstrap clear fix
+// <div class="clearfix">
+//   <div class=artFloatLeft>
+//     <div> something else </div>
+//   </div>
+// </div> 
+.artFloatLeft { // mobile first
+  float: none;
+}
+
+@media only screen and (min-width: $windowMobile) {
+  .artFloatLeft {
+    float: left;
+  }
+}
+
 // copied from TpLink, not very efficient as repeating myself
 .artLink {
   border-radius: 0.2em;
