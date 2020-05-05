@@ -42,10 +42,10 @@ const TpArticle: React.FunctionComponent<TpArticleProps> = (props) => {
             styles.topBox + " " + styles.topBoxClosed + " row"
         )}
       >
-        <div className="col-9">
+        <div className="col-8 col-md-9">
           <h2>{props.theArticle.title}</h2>
         </div>
-        <div className={styles.articleButtonBox + " col-3"}>
+        <div className={styles.articleButtonBox + " col-4 col-md-3"}>
             {! articleOpen && (
               <button className="btn btn-primary" onClick={openArticle}>Show article</button>
             ) }
@@ -69,7 +69,7 @@ const TpArticle: React.FunctionComponent<TpArticleProps> = (props) => {
         styles.endBox + " row  justify-content-end"
         )}
       >
-        <div className={styles.articleCloseButtonBox + " col-3"}>
+        <div className={styles.articleCloseButtonBox + " col-4 col-md-3"}>
           <button className="btn btn-primary" onClick={closeArticle}>Close article</button>
         </div>
       </div> 

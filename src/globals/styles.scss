@@ -23,7 +23,7 @@ $windowXL:  1200px ; // x large
 
 // image styling - could add a frame or something like that
 .artImage {
-  margin: 0.6em;
+  margin: 0.2em 2em 0.6em 0.6em;
 }
 
 // image with a title
@@ -33,21 +33,23 @@ $windowXL:  1200px ; // x large
 //   <span>The title of the image</span>
 // </div>
 // title MUST be enclosed in a span
+
 .artImageWithTitle {
   display: inline-grid;
-  grid-template-columns: 200px;
+  grid-template-columns: min-content;
   grid-template-rows: auto auto;
   padding-bottom: 0.6em;
 
     & img {
-      margin: 0 0.6em 0.3em 0.6em;
+      margin: 0.25em 2em 0.3em 0.6em;
       
-      grid-row: 1 2;
+      grid-row: 1 / 2;
     }
     & span {
       grid-row-start: 2;
     }
 }
+
 // Float Left
 // responsive using media query
 // to use with bootstrap clear fix
@@ -67,6 +69,7 @@ $windowXL:  1200px ; // x large
 }
 
 // copied from TpLink, not very efficient as repeating myself
+// To do use a sass mixin or something to dry this out
 .artLink {
   border-radius: 0.2em;
   font-size: 1.1em; 
@@ -99,6 +102,15 @@ $windowXL:  1200px ; // x large
   }
 
 } 
+
+.artReferences {
+  margin-left: 1em;
+  margin-bottom: 0.6rem;
+
+  & a {
+    display: block; // don't have to add <br /> in html
+  }
+}
 
 // End of article styles /////////////////////////////////////////////////////////////////////////////////
 
