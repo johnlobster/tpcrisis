@@ -37,7 +37,7 @@ const TpFooter: React.FunctionComponent<{}> = () => {
           {/* <TpLink to="/About">
             Click here to make a donation
           </TpLink> */}
-          <TpLink to="/About">
+          <TpLink to="/About#tpContact">
             Find out more about this website
           </TpLink>
         </div>
@@ -59,7 +59,7 @@ const TpFooter: React.FunctionComponent<{}> = () => {
 
       <div className="row pb-2 pt-2">
         <div className={styles.copyright + " col-12"}>
-          <TpLink to="/About">
+          <TpLink to="/About#tpCopyright">
             © 2020 John Webster MIT licence
           </TpLink>
         </div>

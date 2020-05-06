@@ -1,14 +1,14 @@
 // Article on softness, strength and the environment
 
 // images
-const imageUrl1: string = process.env.PUBLIC_URL + "/assets/images/articles/Facts/pineTree.png";
+const pineTree: string = process.env.PUBLIC_URL + "/assets/images/articles/Facts/pineTree.png";
 const pulp: string = process.env.PUBLIC_URL + "/assets/images/articles/Facts/pulp.jpg";
 const fsc: string = process.env.PUBLIC_URL + "/assets/images/articles/Facts/fscLogo.jpg";
 
 const softness: string = `
 <div>
   <div class="clearfix">
-    <img class="artFloatLeft artImage" src=${imageUrl1} alt="Lovely Pine tree" style="height:12em;">
+    <img class="artFloatLeft artImage" src=${pineTree} alt="Lovely Pine tree" style="height:12em;">
     <p>
       To make toilet paper soft and strong, it has to have a high proportion of wood pulp straight from a tree.
       So to be environmentally sound, you have to give up softness and maybe end up with toilet paper that falls apart,
