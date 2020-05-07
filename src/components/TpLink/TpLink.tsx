@@ -13,28 +13,15 @@ interface  TpLinkProps {
   scroll?: boolean
 }
 const TpLink: React.FunctionComponent<TpLinkProps> = ({...props}) => {
-  // let passClassName: boolean = false;
-  // let cName: string | undefined ="";
-  // const [passMe, handlePassMe] = React.useState(false);
-
-  // React.useEffect(() => {
-  //   if (props.hasOwnProperty("className")) {
-  //     handlePassMe(true);
-  //     passClassName=true;
-  //   }
-  // },[]);
-  
-
-  // let externalLink: boolean | undefined = false;
-  // if( props.hasOwnProperty("external")) {
-  //   externalLink = props.external;
-  // }
 
   let internalScroll: boolean | undefined = false;
   if (props.hasOwnProperty("scroll")) {
     internalScroll = props.scroll;
     
   }
+
+  // external link will start with http
+  let externalLink: boolean =  /^http/.test(props.to) ;
 
   const scrollMe = (event: React.MouseEvent): void => {
     const element = document.querySelector(props.to);
@@ -66,13 +53,27 @@ const TpLink: React.FunctionComponent<TpLinkProps> = ({...props}) => {
         </ScrollMe>
       ) : (
         props.hasOwnProperty("className") ? (
-            <Link to={props.to} className={props.className}>
+          externalLink ? (
+            <a className={props.className} href={props.to}>
+              {props.children}
+            </a>
+          ): (
+            <Link to = {props.to} className={props.className}>
               {props.children}
             </Link>
-          ) : (<Link to={props.to}>
-            {props.children}
-          </Link>)
-          
+          )
+        ) : (
+          externalLink ? (
+            <a href={props.to}>
+              {props.children}
+            </a>
+          ) : (
+            <Link to={props.to} >
+              {props.children}
+            </Link>
+          )
+        )
+
       )}
 
     </span>

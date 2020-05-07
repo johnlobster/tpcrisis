@@ -30,13 +30,12 @@ const About: React.FunctionComponent<{}> = () => {
           </p>
           <p>If for some non-stalking reason you wish to find out more about me, please feel free to click on the LinkedIn logo</p>
         </div>
-        <div className="col-8 col-md-3">
+        <div className={styles.linkedInBox + " col-8 col-md-3"}>
           <a href="https://www.linkedin.com/in/JohnWWebster">
             <img src={LinkedIn} alt="Clickable LinkedIn logo, find out more about me"  className={styles.contactLI} />
           </a>
         </div>
       </div>
-
 
       
       {/* <div id="tpDonate" className="row">
@@ -49,17 +48,33 @@ const About: React.FunctionComponent<{}> = () => {
       <div id="tpStuff" className="row">
         <div className="col-12">
           <h3>Stuff I used</h3>
-          <p>Humour inspired by Monty Python, Mad Magazine and a number of other sources too dubious to mention</p>
-          <h5>Sources (links to external pages)</h5>
-          <p>
-            <TpLink to="http://www.toiletpaperhistory.net">History of toilet paper</TpLink><br />
-            <TpLink to="https://trueplumbers.com/blog/do-you-use-more-toilet-paper-than-the-average-person/">
-              trueplumbers.com Toilet paper usage</TpLink><br />
-            <TpLink to="https://www.tissueworldmagazine.com/">Tissue world magazine Industry newsletter for pulp products</TpLink><br />
-            <TpLink to="https://en.wikipedia.org/wiki/Toilet_paper">
-              Wikipedia on toilet paper - I don't know how they could keep a straight face writing this
-            </TpLink> <br />
+          <p>Humour inspired by Monty Python, Mad Magazine, bathroom walls and a 
+            number of other sources too dubious to mention
           </p>
+          <p>
+            Special thanks to
+          </p>
+          <ul>
+            <li>Joseph C. Gayetty</li>
+            <li>Google search</li>
+            <li>Stack overflow</li>
+            <li>Netlify</li>
+            <li>React.js</li>
+            <li>Bootstrap</li>
+            <li>Github</li>
+            <li>Tim Berners-Lee (with a little assistance from Al Gore)</li>
+          </ul>
+          <h3>Sources (links to external pages)</h3>
+          <p>
+            Each of the following websites has been tested for strength and softness
+          </p>
+          <TpLink to="http://www.toiletpaperhistory.net">History of toilet paper</TpLink><br />
+          <TpLink to="https://trueplumbers.com/blog/do-you-use-more-toilet-paper-than-the-average-person/">
+            trueplumbers.com Toilet paper usage</TpLink><br />
+          <TpLink to="https://www.tissueworldmagazine.com/">Tissue world magazine Industry newsletter for pulp products</TpLink><br />
+          <TpLink to="https://en.wikipedia.org/wiki/Toilet_paper">
+            Wikipedia on toilet paper - I don't know how they could keep a straight face writing this
+          </TpLink> <br />
           {/* <h5>Licenses</h5> */}
         </div>
       </div>

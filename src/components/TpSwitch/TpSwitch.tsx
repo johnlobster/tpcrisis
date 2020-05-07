@@ -11,6 +11,7 @@ import Contribute from "../../pages/Contribute/Contribute";
 import About from "../../pages/About/About";
 
 const TpSwitch: React.FunctionComponent = () => {
+
   return (
     <Switch>
       <Route exact path='/' component={Home} />
@@ -22,8 +23,9 @@ const TpSwitch: React.FunctionComponent = () => {
       <Route path='/Insanity' component={Insanity} />
       <Route path='/Contribute' component={Contribute} />
 
-      {/*  Without path, routes anything*/}
       <Route component={Tp404} />
+
+
     </Switch>
   );
 }

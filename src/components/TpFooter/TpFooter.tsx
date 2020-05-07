@@ -31,12 +31,15 @@ const TpFooter: React.FunctionComponent<{}> = () => {
         </div>
       </div>
 
-      <div className="row mt-2">
-        <div className="col-12 col-md-4">
+      <div className="row mt-4">
 
+        <div className="col-12 col-md-4">
           {/* <TpLink to="/About">
             Click here to make a donation
           </TpLink> */}
+          <p>
+            Feeling bored ? Stressed out about toilet paper ? Click below if life is really that bad
+          </p>
           <TpLink to="/About#tpContact">
             Find out more about this website
           </TpLink>
@@ -49,12 +52,15 @@ const TpFooter: React.FunctionComponent<{}> = () => {
             Want to complain ? <br />
             Click below to make your opinion heard
           </p>
-          <TpLink to ="/Contribute">
+          <TpLink to="/Contribute">
             Send me some great stuff
           </TpLink>
-          
+
         </div>
 
+        
+
+        
       </div>
 
       <div className="row pb-2 pt-2">
