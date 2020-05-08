@@ -1,7 +1,8 @@
-# Toilet Paper Crisis
-## Design Notes
+# Design Notes for Toilet Paper Crisis 
 
 A website dedicated to the glorious irony of toilet paper being sold out during the covid-19 crisis
+
+https://tpapercrisis.com
 
 **John Webster**
 
@@ -11,73 +12,61 @@ LinkedIn : https://www.linkedin.com/in/johnwwebster/
 
 Portfolio : https://johnlobster.github.io/portfolio/
 
-#### Favicon generation
+#### Development philosophy
 
-Starting with png
+* use sprint approach (Agile philosophy) to create and release working code all the time
+* Kanban planning approach using Trello. Also contains notes for writing content
+* Prioritize for each release and create a checklist for release
+* Mobile first, reactive UI
+* use `react`, `jsx`, `sass`, `css-modules` to create a structured, modular design with good "separation of concerns"
+* use existing tools, such as bootstrap to simplify styling and `create-react-app` to handle building,
+bundling and development testing 
+* Static site, so no content management system (CMS) such as Wordpress
+
+
+#### Favicon generation
 
 #### Deployment optimizations
 
 - remove source maps
+- reduce image and gif sizes
 
 #### Loading page
 
 - spinning toilet roll(png) - should inline instead of loading from a file
-- background color (linen)
 
 #### Fast first render
 
 1. Put all code for first render in `index.html`. Includes html, css and Javascript if required.
-2. Use `INLINE_RUNTIME_CHUNK=false` during build to prevent webpack inserting its own Javascript into `index.html`
+1. Use `INLINE_RUNTIME_CHUNK=false` during build to prevent webpack inserting its own Javascript into `index.html`
+1. Script (perl) used in build script to change `index.html` to add `defer` to every external `<script>` and `media="printer"` to every stylesheet `<link>`
+1. code in `index.tsx` to identify stylesheets with `media="printer"` and change to `media="all"`
+1. deploy script in `package.json` to build, run post build script (3,4), push to `github` on `release` branch
 
-Issues
-- build has unique names confused, can't then load js, css files. Not a consistent problem
+from `package.json`
+```
+"prebuild": "rm -rf build",
+"build": "cross-env INLINE_RUNTIME_CHUNK=false react-scripts build && echo 'to run server: yarn serve build'",
+"deploy:netlify": "yarn prebuild && yarn build && yarn postbuildPerl && yarn gh-pages -d build -b release &&  echo 'pushed to Netlify: https://thirsty-newton-960ddf.netlify.app/'",
+```
 
+`cross-env` is a cross environment environment variable setter
+
+`gh-pages` is intended for pushing to github pages, but can push to any branch
+
+`postbuildPerl.pl` is a perl script to post-process `index.html`. I chose perl because I have written 
+similar scripts many times
 
 #### Testing using github pages
 
-This was useful for initial testing and developing the flow to make the first render fast.
+This was tried for initial testing but didn't work. For some reason github pages and `react-router` could
+not work together, with inconsistent navigation
 
-Added following to `package.json`
-```
-"prebuild": "rm -rf build",
-"build": "cross-env INLINE_RUNTIME_CHUNK=false react-scripts build",
-"deploy:gh": "yarn prebuild && yarn build && gh-pages -d build",
-```
-Requires `gh-pages` and `cross-env`. `cross-env` is a cross environment environment variable setter
+#### TpLink component
 
-Access at
-```
-https://johnlobster.github.io/tpcrisis/
-```
-Use github settings to enable github pages and set to gh-pages branch
+This started off as a wrapper around `<Link>` to make styling consistent and modular. In the end it was able to 
+to scroll to items on a page and create external anchors directly, instead of using `<Link>`
 
-Issues
-
-1 github pages doesn't quite work right for routing, it starts at
-```
-/tpcrisis
-```
-so the first thing the user sees is the 404 page. After that it routes ok as it is going through `react-router`, not the browser
-
-2 `index.html` loads files from `/static`, would need to change to `/tpcrisis/static` 
-Don't seem to have this problem on mobile ...
-
-#### Deploy testing with github pages
-
-Alter github settings, allow publishing to gh-pages branch
-
-```
-yarn add gh-pages
-gh-pages -d build
-```
-
-Basic build requires server
-yarn build
-```
-"build": "rm -rf build && react-scripts build",
-"predeploy": "yarn build",
-"deploy:gh": "gh-pages -d build",
-```
 #### Error messages from lambda contributions server
 
 User sees "cute" error messages. 
