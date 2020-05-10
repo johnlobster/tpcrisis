@@ -2,7 +2,9 @@
 
 A website dedicated to the glorious irony of toilet paper being sold out during the covid-19 crisis
 
-Source code : https://github.com/johnlobster/tpcrisis
+Deployed at : https://tpapercrisis.com
+
+Source code : https://github.com/johnlobster/tpcrisis (public access)
 
 **John Webster**
 
@@ -12,23 +14,21 @@ LinkedIn : https://www.linkedin.com/in/johnwwebster/
 
 Portfolio : https://johnlobster.github.io/portfolio/
 
-## Deployed at
-
-https://tpapercrisis.com
-
-## Sample page
+## Example
 
 ![](docs/sample.gif)
 
 ## Technologies
 
 * react
-* create-react-app                                                                                                * react-router  
+* create-react-app
+* react-router  
 * html                                                                                                              
 * sass and css                                                                                                              
 * Typescript                                                                                                       
 * GitHub                                                                                                            
 * Bootstrap
+* Trello (for planning)
 
 ## Design goals
 
@@ -45,6 +45,6 @@ Deployed on Netlify. Pushing to `release` branch on github will trigger a new de
 
 ## Technical and design details
 
-[TECH.md](docs/TECH.md)
+[docs/TECH.md](docs/TECH.md)
 
 

@@ -28,6 +28,13 @@ const About: React.FunctionComponent<{}> = () => {
               Comment on website or send cool stuff about toilet paper to me
             </TpLink>
           </p>
+          <p>
+            If your life is really sad, you can find the source code for this website at
+          </p>
+          <TpLink to="https://github.com/johnlobster/tpcrisis">
+            <code className={styles.githubLink}>GitHub source code</code>
+          </TpLink>
+          <p></p>
           <p>If for some non-stalking reason you wish to find out more about me, please feel free to click on the LinkedIn logo</p>
         </div>
         <div className={styles.linkedInBox + " col-8 col-md-3"}>
@@ -62,9 +69,9 @@ const About: React.FunctionComponent<{}> = () => {
             <li>React.js</li>
             <li>Bootstrap</li>
             <li>Github</li>
-            <li>Tim Berners-Lee (with a little assistance from Al Gore)</li>
+            <li>Tim Berners-Lee (with a little assistance from Al Gore I hear)</li>
           </ul>
-          <h3>Sources (links to external pages)</h3>
+          <h3>Selected sources (links to external pages)</h3>
           <p>
             Each of the following websites has been tested for strength and softness
           </p>
