@@ -2,42 +2,33 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-      <loc>http://www.example.com/</loc>
-      <changefreq>weekly</changefreq>
-  </url>
-
    <url>
-      <loc>http://www.example.com/Home</loc>
-      <changefreq>weekly</changefreq>
+      <loc>https://tpapercrisis.com/</loc>
+      <changefreq>monthly</changefreq>
    </url>
    <url>
-      <loc>http://www.example.com/About</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.1</priority>
+      <loc>https://tpapercrisis.com/Home</loc>
+      <changefreq>monthly</changefreq>
    </url>
    <url>
-      <loc>http://www.example.com/Alternatives</loc>
+      <loc>https://tpapercrisis.com/About</loc>
       <changefreq>weekly</changefreq>
    </url>
    <url>
-      <loc>http://www.example.com/Contribute</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.1</priority>
-   </url>
-   <url>
-      <loc>http://www.example.com/Covid19</loc>
+      <loc>https://tpapercrisis.com/Alternatives</loc>
       <changefreq>weekly</changefreq>
    </url>
    <url>
-      <loc>http://www.example.com/Facts</loc>
+      <loc>https://tpapercrisis.com/Covid19</loc>
       <changefreq>weekly</changefreq>
    </url>
-  <url>
-      <loc>http://www.example.com/Insanity</loc>
+   <url>
+      <loc>https://tpapercrisis.com/Facts</loc>
       <changefreq>weekly</changefreq>
    </url>
-
-   
+   <url>
+      <loc>https://tpapercrisis.com/Insanity</loc>
+      <changefreq>weekly</changefreq>
+   </url>
 
 </urlset>
