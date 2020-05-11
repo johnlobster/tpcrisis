@@ -12,14 +12,7 @@ import history from "../../markdownish/FactsArticles/history";
 
 // Note - body string is converted directly to html, not through jsx. So use class= instead of className=
 const factsArticles: globalTypes.Article[] = [
-  {
-    index: 0,
-    title: "History of toilet paper",
-    tag: "factsHistory",
-    link: "The history of toilet paper, if you really have to know",
-    body : history
-    
-  },
+  
   {
     index: 1,
     title: "Strength, Softness and the Environment",
@@ -52,3 +45,12 @@ export default factsArticles;
 //     </div>
 //     `
 // }
+
+// {
+//   index: 0,
+//     title: "History of toilet paper",
+//       tag: "factsHistory",
+//         link: "The history of toilet paper, if you really have to know",
+//           body : history
+
+// },

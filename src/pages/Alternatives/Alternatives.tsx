@@ -58,6 +58,12 @@ const Alternatives: React.FunctionComponent<{}> = () => {
 
       <div className="row mt-4">
         <div className=" col-12">
+          <h4>Articles coming soon</h4>
+        </div>
+      </div>
+
+      {/* <div className="row mt-4">
+        <div className=" col-12">
           <h4>List of articles</h4>
           <ul>
             {alternativesArticles.map((article) => {
@@ -83,7 +89,7 @@ const Alternatives: React.FunctionComponent<{}> = () => {
           </TpArticle>
         );
       })
-      }
+      } */}
 
     </div>
   );

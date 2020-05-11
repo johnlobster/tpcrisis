@@ -6,6 +6,7 @@ import factsArticles from "./FactsArticles";
 
 import styles from "./Facts.module.scss";
 
+// Insert article as html
 // ToDo - add this into useEffect as anonymous function
 // ToDo - move into TpArticle
 const tfn: () => void = ()=> {

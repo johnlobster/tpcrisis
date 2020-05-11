@@ -26,7 +26,9 @@ export const contributions: ( name:string, subject:string, message:string)
   // To do check input data. remove any escape characters etc., Check that all fields are present
 
   // read postAddress from environment variable
-  const postAddress = process.env.TP_CONTRIBUTION_LAMBDA_ADDRESS || "http://localhost:3001";
+  // const postAddress = process.env.TP_CONTRIBUTION_LAMBDA_ADDRESS || "http://localhost:3001";
+
+  const postAddress = "https://tpmailsender.wl.r.appspot.com";
 
   return new Promise((resolve, reject) => {
     console.log("Sending request to " + postAddress);
