@@ -52,7 +52,10 @@ export const contributions: ( name:string, subject:string, message:string)
             // successful response from lambda, lambda able to send email
             resolve({ 
               succeed: true, 
-              responseString: "Yippee ! Your message was sent, who knows what will happen next, maybe a free roll of toilet paper" });
+              responseString: `
+                Yippee ! Your message was sent, who knows what will happen next ?
+                Maybe you'll get a free roll of toilet paper
+              `});
           }
           else{
             // lambda server sent unknown text
