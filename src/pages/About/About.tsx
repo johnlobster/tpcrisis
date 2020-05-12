@@ -133,7 +133,7 @@ const About: React.FunctionComponent<{}> = () => {
           
           <h4>Copyright information for this website</h4>
           <p>There has to be some small print somewhere, so here it is.</p>
-          <p>This website is licensed using the MIT license - you are free to copy or change things, but if you are foolish enough
+          <p>This website is licensed using the MIT license - you are free to copy or change things, but if you are lazy enough
           to want to use a large chunk
           of the site, then include the following notice
           </p>
@@ -150,6 +150,13 @@ const About: React.FunctionComponent<{}> = () => {
           </div>
           
         </div>
+      </div>
+
+      <div id="tpVersion" className="row pb-3">
+        <div className="col-12">
+          <h5>Version 1.0.1 of website</h5>
+        </div>
+
       </div>
 
 

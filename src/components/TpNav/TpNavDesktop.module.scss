@@ -18,9 +18,18 @@
   font-size: 1.1em;
 }
 
-.stripey:nth-child(2n) {
-  background-color: $navZebra ;
+.stripey {
   padding-left: 0.2em;
   padding-right: 0.2em;
   border-radius: 0.2em;
+
+  &:nth-child(2n) {
+  background-color: $navZebra ;
+  }
+}
+
+.iconStyle {
+  display: inline-block;
+  height: 1em;
+  padding-right: 0.2em;
 }

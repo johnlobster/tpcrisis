@@ -1,9 +1,11 @@
 import React from 'react';
+import { useLocation } from "react-router-dom";
 import TpLink from '../TpLink/TpLink';
 
 import styles from "./TpNavMobile.module.scss";
 import { tpNavList} from "./links";
 
+import tpIcon from "../../images/tRollIcon.png";
 import hamburger from "../../images/hamburgerWhite.png";
 
 
@@ -12,6 +14,8 @@ import hamburger from "../../images/hamburgerWhite.png";
 
 // See also notes in Desktop
 const TpNavMobile: React.FunctionComponent = () => {
+  const location = useLocation();
+  const locationRegExp = new RegExp(`\\${location.pathname}`, "i");
   return (
     <div className={styles.topBox + " container-sm"}>
       <div className="row">
@@ -33,6 +37,11 @@ const TpNavMobile: React.FunctionComponent = () => {
                       to={item[0]}
                       key={"navM_" + index.toString()}
                     >
+                      {locationRegExp.test(item[0]) &&
+                        <img
+                          src={tpIcon}
+                          alt="small icon of toilet paper roll"
+                          className={styles.iconStyle} />}
                       {item[1]}
                     </TpLink>
                   </div>
