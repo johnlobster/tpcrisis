@@ -1,3 +1,5 @@
+import React from "react";
+
 
 export type JokeList = string[];
 
@@ -16,6 +18,16 @@ export type NavList = NavItem[];
 // link:   Text to be used for links that point to this article
 // tag:    id="" field for Article
 // body:   string that can contain html. Will be inserted as innerHTML into article when instantiated on page
+
+export type Article2 = {
+  index: number,
+  title: string,
+  tag: string,
+  image?: string | undefined,
+  link: string,
+  body: React.FunctionComponent
+}
+// making the body jsx allows easier input and stops us having to insert body string as html
 
 export type Article = {
   index: number,

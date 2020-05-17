@@ -54,7 +54,7 @@ const Contribute: React.FunctionComponent<{}> = () => {
     // set flushing for animations
     flushingUpdate(true);
   
-    handleReturnMessage("Sending message");
+    handleReturnMessage("Sending message, may be slow");
     handleReturnGood(true);
 
     contributions( cName, cSubject, cMessage)

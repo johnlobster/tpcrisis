@@ -1,5 +1,8 @@
 import * as globalTypes from "../../globals/globalTypes"; 
 
+// this is the list of pages. used by single page app parts of website
+// ToDo add SEO information 
+
 export const tpNavList: globalTypes.NavList = [
   [
     "/Home",

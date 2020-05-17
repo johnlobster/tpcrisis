@@ -78,7 +78,8 @@ const Covid19: React.FunctionComponent<{}> = () => {
             <p>
               Coronavirus is a group of viruses that cause diseases in mammals and birds. On an electron microscope the spike
               proteins on the outside look a little like the halo around the sun, which is a bit like a crown, which is where the
-              name coronavirus comes from. Very few coronaviruses cause disease in people, but SARS-CoV-2 does. 
+              name coronavirus comes from. Very few coronaviruses cause disease in people, but SARS-CoV-2 does, and it is a nasty
+              illness. 
             </p>
           </div>
           
@@ -104,7 +105,7 @@ const Covid19: React.FunctionComponent<{}> = () => {
           <p>
             Our bodies are pretty smart and they can detect a viral infection. The first defense is to produce more snot(mucous), hoping to 
             wash away the infection, which is where the runny nose comes from. The body will also raise its temperature, trying to 
-            kill the virus, other forms of inflammation can start, the white blood cells try to kill the virus and other 
+            kill the virus, other forms of inflammation start, the white blood cells try to kill the virus and even more 
             mechanisms kick in. The bodies last defence is to analyze the virus and make 
             antibodies that are specific to killing that virus. This takes longer to happen than the other mechanisms.
           </p>
@@ -167,7 +168,7 @@ const Covid19: React.FunctionComponent<{}> = () => {
             <li>Make themselves and their associates look good</li>
           </ol>
             The first is important as you might imagine. The second is human nature. After all, you might shave, put on makeup or both before
-            going out - everyone want to look good. For example, the World Health Organization (WHO) cannot afford to make any specific 
+            going out - everyone wants to look good. For example, the World Health Organization (WHO) cannot afford to make any specific 
             country look bad. That could lead to loss of funding, but more importantly, loss of access to the health care system
             of that country, which interferes with the organizations purpose.
           <p>

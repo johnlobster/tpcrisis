@@ -1,7 +1,7 @@
 import React from 'react';
 
 import TpLink from "../../components/TpLink/TpLink"
-import TpArticle from "../../components/TpArticle/TpArticle";
+import TpArticle from "../../components/TpArticle/TpArticle2";
 import factsArticles from "./FactsArticles";
 
 import styles from "./Facts.module.scss";
@@ -9,20 +9,20 @@ import styles from "./Facts.module.scss";
 // Insert article as html
 // ToDo - add this into useEffect as anonymous function
 // ToDo - move into TpArticle
-const tfn: () => void = ()=> {
-  factsArticles.forEach( (article) => {
-    const x: HTMLElement | null = document.getElementById(article.tag);
-    if (x) {
-      x.innerHTML = article.body;
-    }
-  });
-}
+// const tfn: () => void = ()=> {
+//   factsArticles.forEach( (article) => {
+//     const x: HTMLElement | null = document.getElementById(article.tag);
+//     if (x) {
+//       x.innerHTML = article.body;
+//     }
+//   });
+// }
 
 // ToDo create a list of articles to navigate to. If gets long, should itself be able to expand. Possibly an article itself
 //      some confusion about how tag is used. Should be used for start of article, not to insert HTML. use insert_{tag}
 const Facts: React.FunctionComponent = () => {
 
-  React.useEffect(tfn,[]);
+  // React.useEffect(tfn,[]);
 
   return (
     <div className={styles.page + " container-sm"}>
@@ -59,8 +59,7 @@ const Facts: React.FunctionComponent = () => {
       {factsArticles.map( (article)=> {
         return (
           <TpArticle key={article.index} theArticle={article}>
-            <div id={article.tag}>
-            </div>
+            
           </TpArticle>
           );
         })
@@ -70,3 +69,7 @@ const Facts: React.FunctionComponent = () => {
 }
 
 export default Facts;
+
+// {/* <div id={article.tag}>
+//   {article.body()}
+// </div> */}
