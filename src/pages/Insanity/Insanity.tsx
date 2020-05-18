@@ -2,25 +2,11 @@ import React from 'react';
 
 import TpLink from "../../components/TpLink/TpLink"
 import TpArticle from "../../components/TpArticle/TpArticle";
-import insanityArticles from "./insanityArticles";
+// import insanityArticles from "./insanityArticles";
 
 import styles from "./Insanity.module.scss";
 
-// ToDo - add this into useEffect as anonymous function
-// ToDo - move into TpArticle
-const tfn: () => void = () => {
-  insanityArticles.forEach((article) => {
-    const x: HTMLElement | null = document.getElementById(article.tag);
-    if (x) {
-      x.innerHTML = article.body;
-    }
-  });
-}
-
-
 const Insanity: React.FunctionComponent<{}> = () => {
-
-  React.useEffect(tfn, []);
 
   return (
     <div className={styles.page + " container-sm"}>

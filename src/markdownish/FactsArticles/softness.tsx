@@ -1,14 +1,15 @@
 // Article on softness, strength and the environment
+import React from 'react';
 
 // images
 const pineTree: string = process.env.PUBLIC_URL + "/assets/images/articles/Facts/pineTree.png";
 const pulp: string = process.env.PUBLIC_URL + "/assets/images/articles/Facts/pulp.jpg";
 const fsc: string = process.env.PUBLIC_URL + "/assets/images/articles/Facts/fscLogo.jpg";
 
-const softness: string = `
+const softness: React.FunctionComponent = () => { return(
 <div>
-  <div class="clearfix">
-    <img class="artFloatLeft artImage" src=${pineTree} alt="Lovely Pine tree" style="height:12em;">
+  <div className="clearfix">
+    <img className="artFloatLeft artImage" src={pineTree} alt="Lovely Pine tree" style={{height:'12em'}} />
     <p>
       To make toilet paper soft and strong, it has to have a high proportion of wood pulp straight from a tree.
       So to be environmentally sound, you have to give up softness and maybe end up with toilet paper that falls apart,
@@ -24,8 +25,8 @@ const softness: string = `
   </div>
 
   <h3>Sustainability</h3>
-  <div class="clearfix">
-    <img class="artFloatLeft artImage" src=${fsc} alt="Logo of the Forest Sustainability Commission" style="height:8em;">
+  <div className="clearfix">
+    <img className="artFloatLeft artImage" src={fsc} alt="Logo of the Forest Sustainability Commission" style={{height:'8em'}} />
     <p>
       As you can imagine, companies are under pressure to be more friendly towards the environment, not to mention competition
       from the "eco" companies that sell 100% recycled toilet paper. Major brands have focussed on making the entire process more
@@ -37,9 +38,9 @@ const softness: string = `
   </div>
 
   <h3>It's all about the pulp</h3>
-  <div class="clearfix">
-    <div class="artFloatLeft artImageWithTitle">
-      <img src=${pulp} alt="Different colors of wood pulp" style="height:8em;">
+  <div className="clearfix">
+    <div className="artFloatLeft artImageWithTitle">
+      <img src={pulp} alt="Different colors of wood pulp" style={{height:'8em'}} />
       <span>Dried wood pulp, bleached by different amounts</span>
     </div>
     <p>
@@ -59,16 +60,16 @@ const softness: string = `
   </p>
 
   <h3>Links to further information online</h3>
-  <div class="artReferences">
-    <a class="artLink" href="https://en.m.wikipedia.org/wiki/Pulp_(paper)">Wikipedia on pulp</a>
-    <a class="artLink" href="https://www.papernet.com/americas/usa/en/virgin-vs-recycled-paper">
+  <div className="artReferences">
+    <a className="artLink" href="https://en.m.wikipedia.org/wiki/Pulp_(paper)">Wikipedia on pulp</a>
+    <a className="artLink" href="https://www.papernet.com/americas/usa/en/virgin-vs-recycled-paper">
       Industry article comparing recycled and virgin paper
     </a>
-    <a class="artLink" href="https://amp.theguardian.com/environment/2019/jul/05/toilet-paper-less-sustainable-researchers-warn">
+    <a className="artLink" href="https://amp.theguardian.com/environment/2019/jul/05/toilet-paper-less-sustainable-researchers-warn">
       Discussion of toilet paper sustainability (The Guardian newspaper)
     </a>
   </div>
 </div>
-`
+);}
 
 export default softness;

@@ -19,7 +19,7 @@ export type NavList = NavItem[];
 // tag:    id="" field for Article
 // body:   string that can contain html. Will be inserted as innerHTML into article when instantiated on page
 
-export type Article2 = {
+export type Article = {
   index: number,
   title: string,
   tag: string,
@@ -28,15 +28,6 @@ export type Article2 = {
   body: React.FunctionComponent
 }
 // making the body jsx allows easier input and stops us having to insert body string as html
-
-export type Article = {
-  index: number,
-  title: string,
-  tag: string,
-  image?: string | undefined,
-  link: string,
-  body: string
-}
 
 export type ContributeReturn = {
   succeed: boolean, 

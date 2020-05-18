@@ -7,8 +7,6 @@ interface  TpArticleProps {
   theArticle: global.Article
 }
 
-// ToDo TpArticle ought to set up it's own html, not page that calls it, would stop an extra render
-
 // ToDo Image
 
 const TpArticle: React.FunctionComponent<TpArticleProps> = (props) => {
@@ -18,10 +16,6 @@ const TpArticle: React.FunctionComponent<TpArticleProps> = (props) => {
   const openArticle = ():void  => {
     setArticleState(true);
   }
-
-  // ToDo - put the tag at the top <div>
-  // To do move the function that inserts the body as html into tpArticle
-
   const closeArticle = (): void => {
     setArticleState(false);
   }
@@ -59,7 +53,7 @@ const TpArticle: React.FunctionComponent<TpArticleProps> = (props) => {
         )}
       >
         <div className="col-12">
-          {props.children}
+          {articleOpen && <props.theArticle.body />}
         </div>    
       </div>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import TpLink from "../../components/TpLink/TpLink"
-import TpArticle from "../../components/TpArticle/TpArticle2";
+import TpArticle from "../../components/TpArticle/TpArticle";
 import factsArticles from "./FactsArticles";
 
 import styles from "./Facts.module.scss";

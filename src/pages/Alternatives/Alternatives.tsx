@@ -2,25 +2,12 @@ import React from 'react';
 
 import TpLink from "../../components/TpLink/TpLink";
 import TpArticle from "../../components/TpArticle/TpArticle";
-import alternativesArticles from "./alternativesArticles";
+// import alternativesArticles from "./alternativesArticles";
 
 import styles from "./Alternatives.module.scss";
 
-// ToDo - add this into useEffect as anonymous function
-// ToDo - move into TpArticle
-const tfn: () => void = () => {
-  alternativesArticles.forEach((article) => {
-    const x: HTMLElement | null = document.getElementById(article.tag);
-    if (x) {
-      x.innerHTML = article.body;
-    }
-  });
-}
-
 
 const Alternatives: React.FunctionComponent<{}> = () => {
-
-  React.useEffect(tfn, []);
 
   return (
     <div className={styles.page + " container-sm"}>
